@@ -1,5 +1,5 @@
 {
   "type": "article",
   "layout": "layouts/article.html",
-  "permalink": "/articles/{{ page.date | dateYear }}/{{ page.fileSlug }}/"
+  "permalink": "/blog/{{ page.date | dateYear }}/{{ page.fileSlug }}/"
 }
