@@ -3,6 +3,10 @@
   margin-top: get-size('600') !important;
   margin-left: -#{get-size('300')} !important;
 
+  li {
+    display: inline-block;
+  }
+
   a {
     display: inline-grid;
     padding: 0 get-size('300');
@@ -48,7 +52,7 @@
         opacity: 1;
       }
       &:after {
-        transform: translate3d(-50%, -50%, 0) scale(1);
+        transform: translate3d(-50%, -50%, 0) scale(0.9);
       }
       svg {
         fill: get-color('primary');
