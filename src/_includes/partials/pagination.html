@@ -1,0 +1,18 @@
+{% if pagination.href.next or pagination.href.previous %}
+  <footer class="[ pagination ] [ panel ] [ bg-light-glare ]">
+    <div class="wrapper">
+      <nav class="pagination__inner" aria-label="Pagination links">
+        {% if pagination.href.next %}
+          <a href="{{ pagination.href.next }}{{ paginationAnchor }}" data-direction="forwards">
+            <span>{{ paginationNextText if paginationNextText else 'Next' }}</span>
+          </a>
+        {% endif %}
+        {% if pagination.href.previous %}
+          <a href="{{ pagination.href.previous }}{{ paginationAnchor }}" data-direction="backwards">
+            <span>{{ paginationPrevText if paginationPrevText else 'Previous' }}</span>
+          </a>
+        {% endif %}
+      </nav>
+    </div>
+  </footer>
+{% endif %}

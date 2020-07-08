@@ -3,19 +3,23 @@
 
 {% set pageHeaderTitle = title %}
 {% set pageHeaderSummary = content %}
+{% set postListItems = pagination.items %}
+
+{# If this is a tag, grab those items instead as one large collection #}
+{% if tag %}
+  {% set postListItems = collections[tag] %}
+  {% set pageHeaderTitle %}
+    <span class="visually-hidden">Blog posts filed under: </span>{{ tag }}
+  {% endset %}
+{% endif %}
 
 {% block content %}
   {% include "partials/page-header.html" %}
 
-  <article class="[ posts ] [ gap-top-800 md:gap-top-900 gap-bottom-800 md:gap-top-900 ]">
-    <div class="[ wrapper ] [ flow flow-space-900 ]">
-      {% for item in collections.posts %}
-        {% if item.data.type == 'article' %}
-          {% include "partials/feed/article.html" %}
-        {% else %}
-          {% include "partials/feed/note.html" %}
-        {% endif %}
-      {% endfor %}
-    </div>
-  </article>
+  {% include "partials/post-list.html" %}
+
+  {% if not tag %}
+    {% include "partials/pagination.html" %}
+  {% endif %}
+
 {% endblock %}

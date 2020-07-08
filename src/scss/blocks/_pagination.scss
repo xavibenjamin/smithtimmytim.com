@@ -1,0 +1,5 @@
+.pagination__inner {
+  display: flex;
+  justify-content: space-between;
+  @include apply-utility('measure', 'long');
+}
