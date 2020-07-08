@@ -1,4 +1,5 @@
 {
   "type": "article",
-  "layout": "layouts/article.html"
+  "layout": "layouts/article.html",
+  "permalink": "/articles/{{ page.date | dateYear }}/{{ page.fileSlug }}/"
 }

@@ -5,6 +5,7 @@ const dateReadable = require('./src/filters/date-readable.js');
 const dateIso = require('./src/filters/date-iso.js');
 const dateNote = require('./src/filters/date-note.js');
 const dateNotePermalink = require('./src/filters/date-note-permalink.js');
+const dateYear = require('./src/filters/date-year.js');
 
 // Plugins
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
@@ -41,6 +42,7 @@ module.exports = (config) => {
   config.addFilter('dateIso', dateIso);
   config.addFilter('dateNote', dateNote);
   config.addFilter('dateNotePermalink', dateNotePermalink);
+  config.addFilter('dateYear', dateYear);
 
   // Plugins
   config.addPlugin(syntaxHighlight);
