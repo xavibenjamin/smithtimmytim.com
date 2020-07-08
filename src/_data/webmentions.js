@@ -9,7 +9,7 @@ module.exports = async () => {
   url = `${API_ORIGIN}?domain=${domain}&token=${token}`;
   try {
     let json = await Cache(url, {
-      duration: '3h',
+      duration: '2hr',
       type: 'json',
     });
     return json;

@@ -1,12 +1,20 @@
 {% set absoluteUrl %}{{ site.url }}{{ page.url }}{% endset %}
 {% set mentions = webmentions.children | webmentionsForUrl(absoluteUrl) %}
+{% set likeCount = webmentions.children | webmentionCountByType(absoluteUrl, "like-of") %}
 
 {% if mentions.length %}
 <div class="webmentions panel bg-light-glare">
-  <div class="wrapper flow">
-    <h2 class="webmentions__headline">Webmentions</h2>
+  <div class="wrapper">
     <div class="webmentions__inner">
-
+      <h2 class="webmentions__headline">
+        Webmentions
+        {% if likeCount %}
+          <span class="webmention__likes">
+            {% include "partials/icons/icon-heart.svg" %}
+            <span class="likes__count">{{ likeCount }}</span>
+          </span>
+        {% endif %}
+      </h2>
       <ol class="webmentions__list">
         {% for webmention in mentions | reverse %}
           <li class="webmentions__item">
@@ -14,7 +22,6 @@
           </li>
         {% endfor %}
       </ol>
-
     </div>
   </div>
 </div>

@@ -5,29 +5,25 @@
 .webmentions__headline {
   font-size: get-size('800');
   @include apply-utility('font', 'display');
-  margin-bottom: get-size('700');
 }
 
-.webmentions__facepile {
-  display: flex;
-  margin-bottom: get-size('800');
-  * {
-    width: 2.2rem;
-    height: 2.2rem;
-    border-radius: 100%;
-    + * {
-      margin-left: -#{get-size('300')};
-    }
+.webmention__likes {
+  display: inline-flex;
+  margin-left: get-size('300');
+  svg {
+    fill: get-color('light-shade');
+    width: get-size('500');
   }
 
-  span {
-    color: get-color('dark-shade');
-    font-size: get-size('300');
-    background-color: get-color('light');
-    text-align: center;
+  .likes__count {
+    font-size: get-size('400');
     font-weight: bold;
-    line-height: 2.2rem;
+    margin-left: 0.5rem;
   }
+}
+
+.webmentions__list {
+  margin-top: get-size('700') !important;
 }
 
 .webmentions__item {
