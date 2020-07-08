@@ -1,0 +1,9 @@
+<ul class="blogroll">
+  {% for item in blogroll.items %}
+    {% if item.siteName %}
+      <li><a href="{{ item.url }}" class="blogroll__link" target="_blank"><em>{{ item.siteName }}</em></a> by {{ item.author }}</li>
+    {% else %}
+      <li><a href="{{ item.url }}" class="blogroll__link" target="_blank">{{ item.author }}</a></li>
+    {% endif %}
+  {% endfor %}
+</ul>

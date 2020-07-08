@@ -1,0 +1,11 @@
+.headline {
+  font-size: get-size('800');
+  font-weight: bold;
+  max-width: 49rem;
+
+  @include apply-utility('font', 'display');
+
+  @include media-query('lg') {
+    font-size: get-size('900');
+  }
+}

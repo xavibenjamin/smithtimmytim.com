@@ -1,0 +1,19 @@
+<a href="#main-content" class="skip-link button">Skip to content</a>
+<header class="site-header" role="banner"{% if isCaseStudy %} style="background-color: #{{ color }}" data-variant="light"{% endif %}>
+  <div class="wrapper">
+    <div class="site-header__inner">
+      <a href="/" aria-label="{{ site.name }} - home" class="site-name">
+        {% include "partials/icons/icon-smith-logo.svg" %}
+      </a>
+      <nav class="[ nav ] [ site-header__nav ]" aria-label="Primary">
+        <ul class="nav__list">
+          {% for item in navigation.items %}
+            <li>
+              <a href="{{ item.url }}" {{ helpers.getLinkActiveState(item.url, page.url) | safe }}>{{ item.text }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>

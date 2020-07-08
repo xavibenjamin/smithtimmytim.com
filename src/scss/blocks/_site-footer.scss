@@ -1,0 +1,23 @@
+.site-footer {
+  padding: get-size('900') 0;
+}
+
+.site-footer__inner {
+  display: grid;
+  grid-gap: get-size('700');
+
+  @include media-query('md') {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: get-size('800');
+  }
+}
+
+.site-footer__link {
+  color: get-color('light-shade');
+}
+
+.footer__heading {
+  color: get-color('light');
+  margin-bottom: get-size('400');
+  font-size: get-size('600');
+}

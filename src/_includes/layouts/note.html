@@ -1,0 +1,26 @@
+{% extends "layouts/base.html" %}
+{% set pageCriticalStyles = ['css/note.css'] %}
+
+{% set metaTitle = 'Note: ' + page.date | dateNote + ' - ' + site.name %}
+
+{% set pageHeaderSummary %}
+  <p>Subscribe to the <a href="/blog/feed.xml">RSS Feed</a>.</p>
+
+  <h1 class="note__title"><a href="{{ page.url }}" class="[ note__url ] [ u-url ]">{{ page.date | dateNote | widont }}</a></h1>
+{% endset %}
+
+
+{% block content %}
+  <article class="h-entry">
+
+    {% include "partials/page-header.html" %}
+
+    <div class="[ wrapper ] [ gap-top-700 md:gap-top-900 gap-bottom-700 md:gap-bottom-900 ]">
+      <article class="page-content flow flow-space-500 e-content">
+        {{ content | safe }}
+      </article>
+    </div>
+    
+  </article>
+
+{% endblock %}

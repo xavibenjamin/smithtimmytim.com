@@ -1,0 +1,47 @@
+.cover {
+  @include media-query('md') {
+    height: 75vh;
+  }
+}
+
+.cover__inner {
+  display: flex;
+  flex-direction: column-reverse;
+
+  @include media-query('md') {
+    flex-direction: row;
+  }
+}
+
+.cover__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: get-size('700') 0;
+
+  @include media-query('md') {
+    margin-right: get-size('800');
+    max-width: 55ch;
+  }
+}
+
+.cover__media {
+  max-width: 40rem;
+
+  img {
+    width: 100vw;
+    max-width: none;
+    margin-left: 50%;
+    transform: translateX(-50%);
+
+    @include media-query('md') {
+      width: 100%;
+      object-fit: cover;
+      height: 75vh;
+    }
+  }
+}
+
+.cover__description {
+  margin-top: get-size('600');
+}

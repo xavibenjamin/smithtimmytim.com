@@ -1,0 +1,14 @@
+.featured-image {
+  position: relative;
+
+  &:before {
+    background-color: get-color('light-glare');
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 50%;
+    left: 0;
+    right: 0;
+    top: 0;
+  }
+}

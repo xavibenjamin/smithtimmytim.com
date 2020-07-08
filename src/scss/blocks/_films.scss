@@ -1,0 +1,93 @@
+.films {
+  padding: get-size('700');
+
+  @include media-query('md') {
+    padding: get-size('700');
+    // max-width: 28rem;
+  }
+
+  &:after {
+    background-color: get-color('dark');
+    background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0'%3F%3E%3Csvg xmlns='http://www.w3.org/2000/svg' enable-background='new 0 0 24 24' viewBox='0 0 24 24' fill='%23fff'%3E%3Cpath d='m16.007 12.007h-12.014c-1.101 0-1.993.892-1.993 1.993v8.007c0 1.101.892 1.993 1.993 1.993h12.015c1.1 0 1.992-.892 1.992-1.993v-8.007c0-1.101-.892-1.993-1.993-1.993zm-1.007-12.007c-2.761 0-5 2.239-5 5 0-2.761-2.239-5-5-5s-5 2.239-5 5 2.239 5 5 5h10c2.761 0 5-2.239 5-5s-2.239-5-5-5zm-10 7c-1.103 0-2-.897-2-2s.897-2 2-2 2 .897 2 2-.897 2-2 2zm10 0c-1.103 0-2-.897-2-2s.897-2 2-2 2 .897 2 2-.897 2-2 2zm5 8v6l4 2v-10z'%3E%3C/path%3E%3C/svg%3E");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 45%;
+    border-radius: 100%;
+    color: get-color('light');
+    content: '';
+    display: block;
+    font-size: get-size('900');
+
+    position: absolute;
+    top: -2.6rem;
+    left: -1.4rem;
+
+    width: 4rem;
+    height: 4rem;
+
+    z-index: 2;
+  }
+}
+
+.film__items {
+  margin-top: get-size('600');
+}
+
+.film__entry {
+  a {
+    display: grid;
+    grid-template-columns: 5rem 1fr;
+    grid-gap: get-size('500');
+
+    &:focus,
+    &:hover {
+      background-color: rgba(get-color('light'), 0.6);
+    }
+  }
+
+  + .film__entry {
+    margin-top: get-size('500');
+    padding-top: get-size('500');
+    border-top: 2px solid get-color('light-shade');
+  }
+}
+
+.film__media {
+  img {
+    border: 1px solid get-color('light-shade');
+    border-radius: 0.25rem;
+  }
+}
+
+.film__url {
+  text-decoration: none;
+}
+
+.film__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  span {
+    line-height: 1.1;
+  }
+}
+
+.film__title {
+  color: get-color('dark');
+  margin-bottom: 0.35rem;
+
+  font-weight: bold;
+  @include apply-utility('font', 'heading');
+}
+
+.film__watched-date {
+  color: get-color('dark-glare');
+  font-size: get-size('400');
+}
+
+.film__rating {
+  color: get-color('primary');
+  font-size: get-size('400');
+  margin-top: get-size('300');
+}

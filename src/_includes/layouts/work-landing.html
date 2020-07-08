@@ -1,0 +1,37 @@
+{% extends "layouts/base.html" %}
+{% set pageCriticalStyles = ['css/work.css'] %}
+
+{% set pageHeaderTitle = title %}
+{% set pageHeaderSummary = content %}
+
+{% block content %}
+
+  {% include "partials/page-header.html" %}
+
+  <article class="[ portfolio ] [ wrapper ] [ gap-top-900 gap-bottom-900 ]">
+    {% for item in collections.work %}
+    <figure class="[ portfolio__item ] [ flow flow-space-500 ]">
+      <div 
+        class="[ portfolio-item__media ] [ frame ]"
+        data-frame="primary">
+        <img 
+          src="{{ item.data.thumb }}"
+          alt="Thumbnail image for {{ item.title }}"
+        />
+      </div>
+
+      <figcaption class="[ portfolio-item__content ] [ flow ]">
+        <h2 class="portfolio-item__heading">
+          <a href="{{ item.url }}">{{ item.data.title }}</a>
+        </h2>
+        <p class="[ portfolio-item__description ] [ hyphens ]">
+          {{ item.data.subhead }}
+        </p>
+      </figcaption>
+    </figure>
+  {% endfor %}
+  </article>
+
+{% endblock %}
+
+

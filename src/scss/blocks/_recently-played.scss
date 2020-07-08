@@ -1,0 +1,102 @@
+.recently-played__inner {
+  position: relative;
+
+  &:after {
+    background-color: get-color('primary');
+    background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0'%3F%3E%3Csvg xmlns='http://www.w3.org/2000/svg' enable-background='new 0 0 24 24' viewBox='0 0 24 24' fill='%23fff'%3E%3Cpath d='m23.164 1.68-4-.667c-.609-.101-1.164.369-1.164.987v11.605c-.715-.373-1.575-.591-2.5-.591-2.485 0-4.5 1.567-4.5 3.5s2.015 3.5 4.5 3.5 4.5-1.567 4.5-3.5c0-.171-.034-.335-.065-.5h.065v-9.5l2.836.473c.609.101 1.164-.369 1.164-.987v-3.333c0-.489-.353-.906-.836-.987zm-10.164 6.32v-3.347c0-.489-.353-.906-.836-.986l-4-.667c-.609-.102-1.164.368-1.164.986v12.605c-.715-.373-1.575-.591-2.5-.591-2.485 0-4.5 1.567-4.5 3.5s2.015 3.5 4.5 3.5 4.5-1.567 4.5-3.5c0-.171-.034-.335-.065-.5h.065v-10.487l2.836.473c.609.102 1.164-.368 1.164-.986z'%3E%3C/path%3E%3C/svg%3E");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 45%;
+    border-radius: 100%;
+    color: get-color('light');
+    content: '';
+    display: block;
+
+    position: absolute;
+    bottom: 97%;
+    left: 80%;
+
+    width: 5rem;
+    height: 5rem;
+
+    z-index: 2;
+
+    @include media-query('md') {
+      bottom: 105%;
+      left: 0;
+    }
+
+    @include media-query('lg') {
+      bottom: 103%;
+      left: -1.4rem;
+
+      width: 7rem;
+      height: 7rem;
+    }
+  }
+}
+
+.recently-played__list {
+  display: flex;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-top: get-size('700') !important;
+}
+
+.track {
+  padding-bottom: get-size('700');
+  + .track {
+    margin-left: get-size('500');
+  }
+}
+
+.track__url {
+  display: inline-block;
+  text-decoration: none;
+  opacity: 1;
+  transition: opacity 0.2s;
+
+  &:hover,
+  &:focus {
+    .track__name,
+    .track__artist {
+      color: get-color('primary');
+    }
+
+    .track__media {
+      opacity: 0.7;
+    }
+  }
+}
+
+.track__name {
+  color: get-color('dark');
+  display: block;
+  font-size: 0.9rem;
+  font-weight: bold;
+  line-height: 1.3;
+  transition: color 0.2s;
+}
+
+.track__artist {
+  color: get-color('dark-glare');
+  display: block;
+  font-size: 0.9rem;
+  line-height: 1.1;
+  margin-top: 0.3rem;
+  transition: color 0.2s;
+}
+
+.track__media {
+  margin-bottom: get-size('300');
+  width: 15rem;
+  height: 15rem;
+
+  opacity: 1;
+  transition: opacity 0.2s;
+
+  img {
+    border: 1px solid get-color('dark');
+    border-radius: 0.25rem;
+  }
+}

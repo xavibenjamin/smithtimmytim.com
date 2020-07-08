@@ -1,0 +1,50 @@
+.button {
+  @extend .radius;
+
+  background: get-color('primary');
+  border: 0;
+  color: get-color('light');
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 700;
+  line-height: 1;
+  padding: 0.8rem 2rem;
+  text-decoration: none;
+  text-align: center;
+  transition: background 300ms ease-in-out;
+  text-transform: uppercase;
+  font-size: get-size('400');
+
+  // Make sure hover state trumps all variants with a good ol’ important
+  &:hover {
+    background: get-color('primary-shade');
+    color: get-color('light') !important;
+  }
+
+  // Add a ghost modifier
+  &[data-variant='ghost'] {
+    background: transparent;
+    border: 2px solid;
+    color: get-color('primary');
+
+    &:hover,
+    &:focus {
+      background: get-color('primary');
+      border-color: get-color('primary');
+    }
+  }
+
+  &[data-variant='light'] {
+    background: transparent;
+    border: 2px solid;
+    color: get-color('light');
+
+    &:hover,
+    &:focus {
+      background: rgba(white, 0.1) !important;
+      border-color: get-color('light');
+      color: get-color('light') !important;
+      outline-color: get-color('light');
+    }
+  }
+}

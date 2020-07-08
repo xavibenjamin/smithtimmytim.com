@@ -1,0 +1,14 @@
+.site-name {
+  display: inline-grid;
+
+  .site-header[data-variant='light'] & {
+    svg {
+      fill: get-color('light');
+    }
+  }
+
+  svg {
+    width: 5rem;
+    fill: get-color('primary');
+  }
+}

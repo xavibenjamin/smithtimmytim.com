@@ -1,0 +1,21 @@
+{% extends "layouts/base.html" %}
+{% set pageCriticalStyles = ['css/blog.css'] %}
+
+{% set pageHeaderTitle = title %}
+{% set pageHeaderSummary = content %}
+
+{% block content %}
+  {% include "partials/page-header.html" %}
+
+  <article class="[ posts ] [ gap-top-800 md:gap-top-900 gap-bottom-800 md:gap-top-900 ]">
+    <div class="[ wrapper ] [ flow flow-space-900 ]">
+      {% for item in collections.posts %}
+        {% if item.data.type == 'article' %}
+          {% include "partials/feed/article.html" %}
+        {% else %}
+          {% include "partials/feed/note.html" %}
+        {% endif %}
+      {% endfor %}
+    </div>
+  </article>
+{% endblock %}

@@ -1,0 +1,14 @@
+.site-header {
+  padding: get-size('300') 0;
+
+  &[data-variant='light'] {
+    border-bottom: 1px solid rgba(get-color('light'), 0.4);
+  }
+}
+
+.site-header__inner {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}

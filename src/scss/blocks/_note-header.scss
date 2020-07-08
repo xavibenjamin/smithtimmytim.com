@@ -1,0 +1,9 @@
+.note__title {
+  font-size: get-size('700');
+  margin-top: get-size('700');
+}
+
+.note__url {
+  color: get-color('dark');
+  text-decoration-color: get-color('secondary-glare');
+}

@@ -1,0 +1,35 @@
+{% extends "layouts/base.html" %}
+{% set pageCriticalStyles = ['css/article.css'] %}
+
+{% set pageHeaderTitle = title | widont %}
+
+{% set pageHeaderSummary %}
+
+  <h2 class="article__subhead subhead">{{ subhead }}</h2>
+
+  <div class="article__meta">
+    <a href="{{ page.url }}" class="article__date u-url">{{ page.date | dateReadable }}</a>
+    <span class="article__reading-time">{{ content | readingTime }}</span>
+  </div>
+
+{% endset %}
+
+
+{% block content %}
+
+  {% include "partials/page-header.html" %}
+
+  {% if featuredImage %}
+  <figure class="featured-image">
+    <div class="wrapper">
+      <img src="{{ featuredImage }}" alt="Featured Image for {{ title }}" loading="lazy">
+    </div>
+  </figure>
+  {% endif %}
+
+  <div class="[ wrapper ] [ gap-top-700 md:gap-top-900 gap-bottom-700 md:gap-bottom-900 ]">
+    <article class="page-content flow flow-space-500 e-content">
+      {{ content | safe }}
+    </article>
+  </div>
+{% endblock %}

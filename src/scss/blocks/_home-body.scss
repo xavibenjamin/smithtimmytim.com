@@ -1,0 +1,29 @@
+.home-body__inner {
+  display: grid;
+  grid-template-areas:
+    'body'
+    'sidebar';
+  grid-gap: get-size('900');
+
+  @include media-query('md') {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 'sidebar body';
+    grid-gap: get-size('800');
+    align-items: center;
+  }
+
+  @include media-query('lg') {
+    grid-template-columns: minmax(auto, 30rem) minmax(auto, 31rem);
+    grid-template-areas: 'sidebar body';
+    grid-gap: get-size('800');
+    align-items: center;
+  }
+}
+
+.home-body__sidebar {
+  grid-area: sidebar;
+}
+
+.home-body__content {
+  grid-area: body;
+}

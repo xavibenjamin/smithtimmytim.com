@@ -1,0 +1,27 @@
+.meta-box {
+  border-left: 2px solid get-color('primary');
+  margin-inline-start: get-size('500');
+  padding: get-size('400') get-size('600');
+  float: right;
+
+  h4 {
+    font-size: get-size('300');
+    font-weight: 900;
+    text-transform: uppercase;
+  }
+
+  p {
+    margin-bottom: get-size('400');
+  }
+
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  p,
+  li {
+    font-size: get-size('400');
+  }
+}

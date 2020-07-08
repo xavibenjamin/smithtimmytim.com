@@ -1,0 +1,13 @@
+.blogroll {
+  column-count: 2;
+  font-size: get-size('400');
+  margin-top: get-size('500') !important;
+
+  li + li {
+    margin-top: 0.4rem;
+  }
+}
+
+.blogroll__link {
+  color: get-color('light-shade');
+}

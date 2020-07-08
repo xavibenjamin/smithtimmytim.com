@@ -1,0 +1,262 @@
+// // -------------------------------
+
+pre {
+  font-family: JetBrains Mono, Operator Mono, monospace;
+  line-height: 1.5;
+  overflow-x: auto;
+  white-space: pre;
+  code {
+    background: none;
+    padding: 0;
+  }
+}
+
+code {
+  background: get-color('dark');
+  border-radius: 0.25rem;
+  color: get-color('primary-glare');
+  font-family: JetBrains Mono, Operator Mono, monospace;
+  font-size: 0.9em;
+  line-height: 1.5;
+  padding: 1px 4px;
+  white-space: pre;
+  pre & {
+    color: inherit;
+  }
+  a & {
+    color: inherit;
+  }
+}
+
+pre[class*='language-'] {
+  border-radius: 0.25rem;
+  margin-bottom: 1.8rem;
+  margin-top: 1.8rem;
+  padding: get-size('600') !important;
+}
+
+/*!
+ * Prism.js - Ocean Theme CSS
+ * SCSS style based on "Boxy Theme - Ocean" from Sublime Text 3.
+ * @author Justin Mathew
+ */
+
+// Color Vars
+$ocean: #171c28;
+$ocean-alt: #1d2433;
+$ocean-alt2: #2f3b54;
+$grey: #6679a4;
+$red: #ef6b73;
+$orange: #ffae57;
+$yellow: #ffd580;
+$green: #bae67e;
+$aqua: #5ccfe6;
+$blue: #4387cc;
+$purple: #c3a6ff;
+
+// Code Blocks
+code[class*='language-'],
+pre[class*='language-'] {
+  color: $grey;
+  background: none;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5;
+  tab-size: 2;
+  hyphens: none;
+}
+
+:not(pre) > code[class*='language-'],
+pre[class*='language-'] {
+  background: darken(get-color('dark-shade'), 5%);
+}
+code[class*='language-'] {
+  color: #ccc;
+}
+
+// Inline Code
+:not(pre) > code[class*='language-'] {
+  padding: 0.1em;
+  border-radius: 0.3em;
+  white-space: normal;
+}
+
+// Namespace
+.namespace {
+  // opacity: .7;
+}
+
+// Token
+.token {
+  &.comment,
+  &.prolog,
+  &.doctype,
+  &.cdata {
+    color: $grey;
+  }
+  .punctuation {
+    color: $aqua;
+  }
+  &.property,
+  &.tag,
+  &.boolean,
+  &.number,
+  &.constant,
+  &.symbol,
+  &.deleted {
+    color: $red;
+  }
+  &.selector,
+  &.attr-name,
+  &.string,
+  &.char,
+  &.builtin,
+  &.inserted {
+    color: $purple;
+  }
+  &.operator,
+  &.entity,
+  &.url {
+    color: $green;
+    background: hsla(0, 0%, 100%, 0.5);
+  }
+  &.atrule,
+  &.attr-value,
+  &.keyword {
+    color: $green;
+  }
+  &.function {
+    color: $blue;
+  }
+  &.regex,
+  &.important,
+  &.variable {
+    color: $purple;
+  }
+  &.bold {
+    font-weight: bold;
+  }
+  &.italic {
+    font-style: italic;
+  }
+  &.entity {
+    cursor: help;
+  }
+}
+
+// PHP Syntax
+code[class*='language-php'] {
+  .token {
+    &.delimiter {
+      color: $aqua;
+    }
+    &.keyword {
+      color: $blue;
+    }
+    &.string {
+      color: $green;
+    }
+  }
+}
+
+// CSS Syntax
+code[class*='language-css'] {
+  color: $orange;
+  .token {
+    &.property {
+      color: $yellow;
+    }
+    &.important {
+      color: $orange !important;
+    }
+    &.punctuation {
+      color: #ccc;
+    }
+  }
+}
+
+// Pre
+pre {
+  &.line-numbers {
+    position: relative;
+    padding-left: 3.8em;
+    counter-reset: linenumber;
+    & > code {
+      position: relative;
+      white-space: inherit;
+    }
+  }
+  &.code-toolbar {
+    position: relative;
+    & > .toolbar {
+      position: absolute;
+      top: 0.2em;
+      right: 0.2em;
+      a {
+        cursor: pointer;
+      }
+      button {
+        background: none;
+        border: 0;
+        color: inherit;
+        font: inherit;
+        line-height: normal;
+        overflow: visible;
+        padding: 0;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+      }
+      a,
+      button,
+      span {
+        border: 2px solid $ocean-alt;
+        padding: 0 6px;
+        display: inline-block;
+        border-radius: 4px;
+        color: $grey;
+        text-transform: uppercase;
+        font-size: 13px;
+        &:hover {
+          border-color: lighten($ocean-alt, 5%);
+          color: lighten($grey, 8%);
+        }
+      }
+      .toolbar-item {
+        display: inline-block;
+      }
+    }
+  }
+}
+
+// Line Numbers
+.line-numbers {
+  .line-numbers-rows {
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    font-size: 100%;
+    left: -3.8em;
+    width: 3em; /* works for line-numbers below 1000 lines */
+    letter-spacing: -1px;
+    border-right: 1px dotted $ocean-alt2;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    & > span {
+      pointer-events: none;
+      display: block;
+      counter-increment: linenumber;
+      &:before {
+        content: counter(linenumber);
+        color: $grey;
+        display: block;
+        padding-right: 0.8em;
+        text-align: right;
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+.next {
+  padding: get-size('900') 0;
+}
+
+.next__title {
+  color: rgba(black, 0.65);
+  font-size: get-size('400');
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.next__project-title {
+  color: get-color('light-glare');
+  font-size: get-size('700');
+  font-weight: normal;
+}
+
+.next__project-subhead {
+  color: rgba(get-color('light'), 0.8);
+  margin-top: get-size('300');
+}
+
+.next__button {
+  margin-top: get-size('600');
+}

@@ -1,0 +1,4 @@
+{
+  "layout": "layouts/work-item.html",
+  "permalink": "/work/{{ page.fileSlug }}/"
+}

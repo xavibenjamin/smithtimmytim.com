@@ -1,0 +1,52 @@
+{
+  "items": [
+    {
+      "author": "Catt Small",
+      "url": "https://cattsmall.com/"
+    },
+    {
+      "author": "Matt Birchler",
+      "url": "https://birchtree.me/",
+      "siteName": "BirchTree"
+    },
+    {
+      "author": "Mike Haynes",
+      "url": "https://mikehayn.es/"
+    },
+    {
+      "author": "Laura Kalbag",
+      "url": "https://laurakalbag.com/"
+    },
+    {
+      "author": "Robin Rendle",
+      "url": "https://www.robinrendle.com/"
+    },
+    {
+      "author": "Katy DeCorah",
+      "url": "https://katydecorah.com/"
+    },
+    {
+      "author": "Nick Heer",
+      "url": "https://pxlnv.com/",
+      "siteName": "Pixel Envy"
+    },
+    {
+      "author": "Manton Reece",
+      "url": "https://www.manton.org/"
+    },
+    {
+      "author": "Dave Rupert",
+      "url": "https://daverupert.com/"
+    },
+    {
+      "author": "David Sparks",
+      "url": "https://www.macsparky.com/",
+      "siteName": "MacSparky"
+    },
+    {
+      "author": "Kyle Dreger",
+      "url": "https://audaciousfox.net/",
+      "siteName": "Audacious Fox"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+.page-content {
+  > :not([class*='-bleed']) {
+    max-width: 48rem;
+  }
+
+  h2 {
+    margin-top: get-size('900');
+  }
+
+  h3 {
+    margin-top: get-size('700');
+  }
+
+  blockquote:not([class]) {
+    color: get-color('dark-glare');
+    border-left: 0.4rem solid get-color('primary');
+    padding-left: get-size('400');
+  }
+
+  .case-study__body & {
+    > p:first-of-type {
+      font-size: get-size('600');
+      line-height: 1.5;
+    }
+  }
+}

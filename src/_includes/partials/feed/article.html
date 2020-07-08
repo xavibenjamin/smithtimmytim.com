@@ -1,0 +1,22 @@
+<article class="feed-post feed-entry h-entry">
+  <header class="feed-post__header flow flow-space-400">
+    <a href="#" class="feed-post__category">{{ item.data.tags[0] }}</a>
+    <div class="feed-post__hgroup">
+      <h1 class="[ feed-post__title ] [ p-name ]"><a href="{{ item.url }}">{{ item.data.title }}</a></h1>
+      {% if item.data.subhead %}
+        <h2 class="feed-post__subhead">{{ item.data.subhead }}</h2>
+      {% endif %}
+    </div>
+
+    <div class="feed-post__meta">
+      <a href="{{ item.url }}" class="[ feed-post__date ] [ u-url ]">
+        <time datetime="{{ item.date | dateIso }}" class="dt-published">{{ item.date | dateReadable }}</time>
+      </a>
+      <span class="feed-post__reading-time">{{ item | readingTime }}</span>
+    </div>
+  </header>
+
+  <div class="[ page-content ] [ flow  flow-space-500 gap-top-700 ] [ e-content ]">
+    {{ item.templateContent | safe }}
+  </div>
+</article>

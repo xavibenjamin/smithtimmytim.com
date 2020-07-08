@@ -1,0 +1,13 @@
+.header-anchor {
+  color: get-color('primary');
+  font-size: 0.8em;
+  font-weight: 400;
+  margin-inline-start: 0.4rem;
+  text-decoration: none;
+  transition: color 300ms ease-in-out;
+
+  &:hover,
+  &:focus {
+    color: get-color('dark-glare');
+  }
+}

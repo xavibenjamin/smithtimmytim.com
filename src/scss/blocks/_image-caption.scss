@@ -1,0 +1,12 @@
+.image__caption {
+  color: get-color('dark-glare');
+  font-size: get-size('400');
+  margin-top: get-size('600');
+
+  @include apply-utility('measure', 'medium');
+
+  &[data-variant='top'] {
+    margin-top: 0;
+    margin-bottom: get-size('600');
+  }
+}

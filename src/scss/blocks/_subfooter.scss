@@ -1,0 +1,17 @@
+.subfooter {
+  small {
+    display: block;
+    font-size: get-size('400');
+    max-width: 24rem;
+    + small {
+      margin-top: get-size('300');
+    }
+  }
+
+  svg {
+    fill: get-color('primary');
+    width: 1em;
+    position: relative;
+    top: 2px;
+  }
+}

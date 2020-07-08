@@ -1,0 +1,114 @@
+// First up: config and functions
+@import 'config';
+
+// Next: pull in gorko for design tokens
+@import '../../node_modules/gorko/gorko.scss';
+
+@import 'reset';
+
+// Global styles start
+:root {
+  --flow-space: #{get-size('600')};
+}
+
+html {
+  font-size: clamp(14px, 2.5vw, 15.5px);
+}
+
+body {
+  background: get-color('light');
+  color: get-color('dark');
+  line-height: 1.6;
+  font-size: get-size('500');
+
+  @include apply-utility('font', 'base');
+}
+
+a:not([class]) {
+  color: get-color('secondary');
+  font-weight: 700;
+  text-decoration-color: get-color('secondary-glare');
+
+  &:visited {
+    color: get-color('dark-glare');
+  }
+}
+
+:focus {
+  outline: 2px dashed get-color('primary');
+  outline-offset: 0.25rem;
+}
+
+main:focus {
+  outline: none;
+}
+
+h1 {
+  color: get-color('dark-shade');
+  font-weight: 800;
+
+  @include apply-utility('font', 'display');
+  @include apply-utility('leading', 'flat');
+}
+
+h2,
+h3 {
+  font-weight: 700;
+  hyphens: none;
+
+  @include apply-utility('font', 'heading');
+  @include apply-utility('leading', 'flat');
+}
+
+h2 {
+  color: get-color('dark-shade');
+}
+
+h3 {
+  color: get-color('dark');
+}
+
+// High contrast selection because it can help visually-impaired
+// folks read the text easier
+::selection {
+  color: get-color('light');
+
+  background: rgba(get-color('dark'), 0.99);
+}
+
+// Scrollbar styles
+::-webkit-scrollbar {
+  height: 1rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: get-color('primary-glare');
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: get-color('primary');
+}
+
+// Import blocks
+@import 'blocks/button';
+@import 'blocks/page-header';
+@import 'blocks/skip-link';
+@import 'blocks/site-name';
+@import 'blocks/site-header';
+@import 'blocks/nav';
+@import 'blocks/site-footer';
+@import 'blocks/newsletter-form';
+@import 'blocks/social-links';
+@import 'blocks/blogroll';
+@import 'blocks/subfooter';
+
+// Import utilities
+@import 'utilities/flow';
+@import 'utilities/radius';
+@import 'utilities/visually-hidden';
+@import 'utilities/wrapper';
+@import 'utilities/headline';
+@import 'utilities/hyphens';
+@import 'utilities/frame';
+@import 'utilities/site-wrap';
+@import 'utilities/panel';

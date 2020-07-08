@@ -1,0 +1,43 @@
+.feed-entry {
+  + .feed-entry {
+    margin-top: 8rem;
+  }
+}
+
+.feed-post__header {
+  @include apply-utility('measure', 'long');
+}
+
+.feed-post__category {
+  font-size: get-size('400');
+  font-weight: bold;
+
+  color: get-color('primary');
+  text-transform: uppercase;
+}
+
+.feed-post__title {
+  font-size: get-size('800');
+
+  a {
+    color: get-color('dark-shade');
+    text-decoration: none;
+  }
+}
+
+.feed-post__subhead {
+  font-size: get-size('600');
+  font-weight: normal;
+  color: get-color('dark-glare');
+}
+
+.feed-post__date {
+  color: get-color('dark-glare');
+  font-size: get-size('400');
+}
+
+.feed-post__reading-time {
+  font-size: get-size('300');
+  font-weight: bold;
+  margin-inline-start: 0.5rem;
+}

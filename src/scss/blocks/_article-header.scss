@@ -1,0 +1,26 @@
+.article__category {
+  color: get-color('primary');
+  font-size: get-size('400');
+  font-weight: bold;
+
+  text-transform: uppercase;
+}
+
+.article__subhead {
+  color: get-color('dark-glare');
+}
+
+.article__meta {
+  margin-top: get-size('600');
+}
+
+.article__date {
+  color: get-color('dark-glare');
+  text-decoration-color: get-color('light-shade');
+}
+
+.article__reading-time {
+  font-weight: bold;
+  margin-inline-start: 0.5rem;
+  font-size: get-size('400');
+}

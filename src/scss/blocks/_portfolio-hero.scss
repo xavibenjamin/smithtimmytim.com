@@ -1,0 +1,8 @@
+.portfolio-hero {
+  padding-top: get-size('900');
+  overflow: hidden;
+}
+
+.portfolio-hero__subhead {
+  color: rgba(get-color('light'), 0.8);
+}

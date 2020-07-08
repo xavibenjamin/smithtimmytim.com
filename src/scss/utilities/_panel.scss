@@ -1,0 +1,7 @@
+.panel {
+  padding: get-size('700') 0;
+
+  @include media-query('md') {
+    padding: get-size('900') 0;
+  }
+}
