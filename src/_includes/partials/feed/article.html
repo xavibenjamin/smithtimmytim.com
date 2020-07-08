@@ -16,6 +16,12 @@
     </div>
   </header>
 
+  {% if item.data.featuredImage %}
+    <figure class="feed-post__featured-image gap-top-700">
+      <img src="{{ item.data.featuredImage }}" alt="Featured Image for {{ item.data.title }}" loading="lazy" />
+    </figure>
+  {% endif %}
+
   <div class="[ page-content ] [ flow  flow-space-500 gap-top-700 ] [ e-content ]">
     {{ item.templateContent | safe }}
   </div>
