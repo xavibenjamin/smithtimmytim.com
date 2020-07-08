@@ -1,0 +1,21 @@
+{% set absoluteUrl %}{{ site.url }}{{ page.url }}{% endset %}
+{% set mentions = webmentions.children | webmentionsForUrl(absoluteUrl) %}
+
+{% if mentions.length %}
+<div class="webmentions panel bg-light-glare">
+  <div class="wrapper flow">
+    <h2 class="webmentions__headline">Webmentions</h2>
+    <div class="webmentions__inner">
+
+      <ol class="webmentions__list">
+        {% for webmention in mentions | reverse %}
+          <li class="webmentions__item">
+            {% include "partials/webmention.html" %}
+          </li>
+        {% endfor %}
+      </ol>
+
+    </div>
+  </div>
+</div>
+{% endif %}

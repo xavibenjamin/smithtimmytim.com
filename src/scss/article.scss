@@ -12,6 +12,7 @@ $outputTokenCSS: false;
 @import 'blocks/header-anchor';
 @import 'blocks/featured-image';
 @import 'blocks/article-header';
+@import 'blocks/webmentions';
 
 // Pull in utilities
 @import 'utilities/subhead';

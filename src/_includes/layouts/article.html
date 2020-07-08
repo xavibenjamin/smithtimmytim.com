@@ -17,19 +17,24 @@
 
 {% block content %}
 
-  {% include "partials/page-header.html" %}
+  <article class="h-entry">
+    {% include "partials/page-header.html" %}
 
-  {% if featuredImage %}
-  <figure class="featured-image">
-    <div class="wrapper">
-      <img src="{{ featuredImage }}" alt="Featured Image for {{ title }}" loading="lazy">
+    {% if featuredImage %}
+    <figure class="featured-image">
+      <div class="wrapper">
+        <img src="{{ featuredImage }}" alt="Featured Image for {{ title }}" loading="lazy">
+      </div>
+    </figure>
+    {% endif %}
+
+    <div class="[ wrapper ] [ gap-top-700 md:gap-top-900 gap-bottom-700 md:gap-bottom-900 ]">
+      <article class="page-content flow flow-space-500 e-content">
+        {{ content | safe }}
+      </article>
     </div>
-  </figure>
-  {% endif %}
 
-  <div class="[ wrapper ] [ gap-top-700 md:gap-top-900 gap-bottom-700 md:gap-bottom-900 ]">
-    <article class="page-content flow flow-space-500 e-content">
-      {{ content | safe }}
-    </article>
-  </div>
+    {% include "partials/webmention-list.html" %}
+  </article>
+
 {% endblock %}
