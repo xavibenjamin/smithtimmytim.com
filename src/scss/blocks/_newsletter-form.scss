@@ -8,7 +8,7 @@
 
   justify-items: start;
 
-  max-width: 50rem;
+  max-width: 45rem;
 
   @include media-query('md') {
     grid-template-columns: 1fr 1fr;
