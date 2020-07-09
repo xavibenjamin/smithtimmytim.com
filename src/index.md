@@ -3,7 +3,7 @@ title: 'Tim Smith (@smithtimmytim) is a geek, coffee snob, and maker of stuff'
 layout: 'layouts/home.html'
 ---
 
-I'm a geek who loves *Star Wars*, [coffee](https://youtu.be/sNlf_SLh_v4), taking pictures, spending time with friends, [reading comics](https://leagueofcomicgeeks.com/profile/smithtimmytim), writing on my blog, [making YouTube videos](https://www.youtube.com/smithtimmytim), [watching movies](https://letterboxd.com/ttimsmith/), playing board games, and spending time naked near water (except lakes 🤮).
+I love *Star Wars*, [coffee](https://youtu.be/sNlf_SLh_v4), taking pictures, spending time with friends, [reading comics](https://leagueofcomicgeeks.com/profile/smithtimmytim), writing on my blog, [making YouTube videos](https://www.youtube.com/smithtimmytim), [watching movies](https://letterboxd.com/ttimsmith/), playing board games, and spending time naked near water (except lakes&nbsp;🤮).
 
 I was born and raised in Southern California. In 2012, I moved to Minnesota and spent seven years there. It was a great adventure. It helped me grow in ways I would've never imagined and lead me to meet my incredible spouse.
 
