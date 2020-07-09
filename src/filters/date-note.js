@@ -1,5 +1,7 @@
-const moment = require('moment');
+const moment = require('moment-timezone');
 
 module.exports = (value) => {
-  return moment(value).format('dddd, MMMM Do, YYYY [at] h:mm a');
+  const dt = moment(value).tz('America/Los_Angeles');
+  format = 'dddd, MMMM Do, YYYY [at] h:mm a';
+  return dt.format(format);
 };
