@@ -4,7 +4,7 @@ module.exports = (value, format) => {
   const dt = moment(value).tz('America/Los_Angeles');
 
   if (!format) {
-    format = 'dddd, MMMM Do, YYYY';
+    format = 'ddd, MMM Do, YYYY';
   }
 
   return dt.format(format);

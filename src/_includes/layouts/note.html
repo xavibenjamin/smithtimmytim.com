@@ -1,12 +1,12 @@
 {% extends "layouts/base.html" %}
 {% set pageCriticalStyles = ['css/note.css'] %}
 
-{% set metaTitle = 'Note: ' + page.date | dateNote + ' - ' + site.name %}
+{% set metaTitle = 'Note: ' + page.date | dateReadable('ddd, MMM Do, YYYY [at] h:mm a') + ' - ' + site.name %}
 
 {% set pageHeaderSummary %}
   <p>Subscribe to the <a href="/blog/feed.xml">RSS Feed</a>.</p>
 
-  <h1 class="note__title"><a href="{{ page.url }}" class="[ note__url ] [ u-url ]">{{ page.date | dateNote | widont }}</a></h1>
+  <h1 class="note__title"><a href="{{ page.url }}" class="[ note__url ] [ u-url ]">{{ page.date | dateReadable('ddd, MMM Do, YYYY [at] h:mm a') | widont }}</a></h1>
 {% endset %}
 
 

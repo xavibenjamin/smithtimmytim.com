@@ -12,7 +12,7 @@
     </div>
     <div class="subfooter">
       <small>Proudly built with <a href="https://www.11ty.dev/" class="site-footer__link">Eleventy</a>. Hosted on <a href="https://www.netlify.com/" class="site-footer__link">Netlify</a>. Made with {% include "partials/icons/icon-heart.svg" %} in Oceanside, CA.</small>
-      <small>&copy;&thinsp;{{ page.date | dateYear }} Timothy B. Smith.</small>
+      <small>&copy;&thinsp;{{ page.date | dateReadable('YYYY') }} Timothy B. Smith.</small>
     </div>
   </div>
 
