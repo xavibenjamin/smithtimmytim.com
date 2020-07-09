@@ -26,7 +26,6 @@ body {
 
 a:not([class]) {
   color: get-color('secondary');
-  font-weight: 700;
   text-decoration-color: get-color('secondary-glare');
 
   &:visited {
