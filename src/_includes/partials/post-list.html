@@ -1,6 +1,6 @@
 <article id="post-list" class="[ posts ] [ gap-top-800 md:gap-top-900 gap-bottom-800 md:gap-top-900 ]">
   <div class="[ wrapper ] [ flow flow-space-900 ]">
-    {% for item in postListItems %}
+    {% for item in postListItems | reverse %}
       {% if item.data.type == 'article' %}
         {% include "partials/feed/article.html" %}
       {% else %}

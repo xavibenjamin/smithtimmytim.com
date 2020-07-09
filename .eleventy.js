@@ -35,7 +35,7 @@ module.exports = (config) => {
   });
 
   config.addCollection('posts', (collection) => {
-    return collection.getFilteredByGlob('./src/posts/**/*.md');
+    return collection.getFilteredByGlob('./src/content/**/*.md');
   });
 
   //Add Filters
