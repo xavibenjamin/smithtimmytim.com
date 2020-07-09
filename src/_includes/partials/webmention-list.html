@@ -8,10 +8,14 @@
     <div class="webmentions__inner">
       <h2 class="webmentions__headline">
         Webmentions
+        <span class="webmentions__stat " aria-label="Mentions: {{ mentions | length }}">
+          {% include "partials/icons/icon-chat-bubble.svg" %}
+          <span class="webmentions-stat__number">{{ mentions | length }}</span>
+        </span>
         {% if likeCount %}
-          <span class="webmention__likes">
+          <span class="webmentions__stat" aria-label="Likes: {{ likeCount }}">
             {% include "partials/icons/icon-heart.svg" %}
-            <span class="likes__count">{{ likeCount }}</span>
+            <span class="webmentions-stat__number">{{ likeCount }}</span>
           </span>
         {% endif %}
       </h2>

@@ -7,7 +7,7 @@
   @include apply-utility('font', 'display');
 }
 
-.webmention__likes {
+.webmentions__stat {
   display: inline-flex;
   margin-left: get-size('300');
   svg {
@@ -16,10 +16,13 @@
     height: get-size('500');
   }
 
-  .likes__count {
+  .webmentions-stat__number {
+    color: get-color('dark-glare');
     font-size: get-size('400');
-    font-weight: bold;
+    // font-weight: normal;
     margin-left: 0.5rem;
+
+    @include apply-utility('font', 'base');
   }
 }
 
