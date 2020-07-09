@@ -1,1 +1,4 @@
-Boy I'm feeling absolutely dead today. I feel like I haven't slept the best since the pandemic started, but last night was especially bad. Needing that coffee extra today.
+---
+date: 2020-07-09T15:13-07:00
+---
+Feeling absolutely dead today. I haven't gotten great sleep since the beginning of the pandemic, but last night was on another level. 

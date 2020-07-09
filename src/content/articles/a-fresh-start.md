@@ -2,6 +2,7 @@
 title: 'A Fresh Start'
 tags: 'Announcements'
 featuredImage: '/images/uploads/2020/07/first-post-thumb.jpg'
+date: 2020-07-07T22:11-07:00
 ---
 
 Welcome to the new place! Take a look around! I hope you like what you see. For the past few weeks, I've been working diligently on a new personal website. I'm pretty excited about what I came up with.
