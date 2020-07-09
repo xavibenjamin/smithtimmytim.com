@@ -5,10 +5,14 @@
 
 {% set pageHeaderSummary %}
 
+  {% if subhead %}
   <h2 class="article__subhead subhead">{{ subhead }}</h2>
+  {% endif %}
 
   <div class="article__meta">
-    <a href="{{ page.url }}" class="article__date u-url">{{ page.date | dateReadable }}</a>
+    <a href="{{ page.url }}" class="article__date u-url">
+      <time datetime="{{ page.date | dateIso }}" class="dt-published">{{ page.date | dateReadable }}</time>
+    </a>
     <span class="article__reading-time">{{ content | readingTime }}</span>
   </div>
 
