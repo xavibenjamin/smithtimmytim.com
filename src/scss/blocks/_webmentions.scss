@@ -1,5 +1,5 @@
 .webmentions__inner {
-  @include apply-utility('measure', 'long');
+  @include apply-utility('measure', 'medium');
 }
 
 .webmentions__headline {
@@ -66,4 +66,5 @@
 
 .webmention__content {
   margin-top: get-size('300');
+  font-size: get-size('400');
 }

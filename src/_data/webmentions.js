@@ -6,14 +6,18 @@ const API_ORIGIN = 'https://webmention.io/api/mentions.jf2';
 module.exports = async () => {
   const domain = 'smithtimmytim.com';
   const token = process.env.WEBMENTION_IO_TOKEN;
-  url = `${API_ORIGIN}?domain=${domain}&token=${token}`;
+  const url = `${API_ORIGIN}?domain=${domain}&token=${token}&per-page=10000`;
+
   try {
-    let json = await Cache(url, {
-      duration: '2hr',
+    let webmentions = await Cache(url, {
+      duration: '1d',
       type: 'json',
     });
-    return json;
-  } catch (ex) {
-    console.log(ex);
+    return webmentions;
+  } catch (error) {
+    console.warn(error.message);
+    return {
+      children: [],
+    };
   }
 };
