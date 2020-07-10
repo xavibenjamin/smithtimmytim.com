@@ -1,10 +1,11 @@
-{% if lastfm.recenttracks.track.length %}
+{% set recentlyPlayed = lastfm.recenttracks.track %}
+{% if recentlyPlayed.length %}
 <div class="recently-played bg-light-glare panel">
   <div class="[ recently-played__inner ] [ wrapper flow flow-space-300 ]">
     <h2 class="headline">Listening To</h2>
     <p class="measure-medium">I do some of my best work listening to music. Here's a list of tracks I've got playing. Follow me on <a href="{{ site.appleMusic }}" target="_blank">Apple Music</a>.</p>
     <ul class="recently-played__list">
-      {% for item in lastfm.recenttracks.track %}
+      {% for item in recentlyPlayed %}
         <li class="track">
           <a href="{{ item.url }}" class="track__url">
             <div class="track__media">
