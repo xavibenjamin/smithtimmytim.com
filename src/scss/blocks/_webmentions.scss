@@ -3,8 +3,12 @@
 }
 
 .webmentions__headline {
-  font-size: get-size('800');
+  font-size: get-size('700');
   @include apply-utility('font', 'display');
+
+  @include media-query('lg') {
+    font-size: get-size('800');
+  }
 }
 
 .webmentions__stat {
