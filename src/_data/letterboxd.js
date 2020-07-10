@@ -5,8 +5,6 @@ module.exports = async () => {
     if (error) {
       return console.log(error);
     }
-
-    // console.log(items);
   });
 
   return items;
