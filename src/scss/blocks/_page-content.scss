@@ -1,5 +1,5 @@
 .page-content {
-  > :not([class*='-bleed']) {
+  > :not([class*='-bleed']):not([class*='language-']) {
     max-width: 48rem;
   }
 
@@ -15,6 +15,18 @@
     color: get-color('dark-glare');
     border-left: 0.4rem solid get-color('primary');
     padding-left: get-size('400');
+  }
+
+  pre[class*='language-'] {
+    width: 100vw;
+    margin-left: 50%;
+    transform: translateX(-50%);
+
+    @include media-query('lg') {
+      width: 55rem;
+      margin-left: 0;
+      transform: none;
+    }
   }
 
   .case-study__body & {
