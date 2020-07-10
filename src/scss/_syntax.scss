@@ -45,19 +45,19 @@ pre[class*='language-'] {
 $ocean: #171c28;
 $ocean-alt: #1d2433;
 $ocean-alt2: #2f3b54;
-$grey: #6679a4;
+$grey: get-color('dark-glare');
 $red: #ef6b73;
 $orange: #ffae57;
 $yellow: #ffd580;
 $green: #bae67e;
 $aqua: #5ccfe6;
-$blue: #4387cc;
+$blue: #5ccfe6;
 $purple: #c3a6ff;
 
 // Code Blocks
 code[class*='language-'],
 pre[class*='language-'] {
-  color: $grey;
+  color: get-color('light-shade');
   background: none;
   text-align: left;
   white-space: pre;
@@ -71,10 +71,7 @@ pre[class*='language-'] {
 
 :not(pre) > code[class*='language-'],
 pre[class*='language-'] {
-  background: darken(get-color('dark-shade'), 5%);
-}
-code[class*='language-'] {
-  color: #ccc;
+  background: darken(get-color('dark-shade'), 10%);
 }
 
 // Inline Code
@@ -95,7 +92,7 @@ code[class*='language-'] {
   &.prolog,
   &.doctype,
   &.cdata {
-    color: $grey;
+    color: lighten($grey, 20%);
   }
   .punctuation {
     color: $aqua;
@@ -121,7 +118,6 @@ code[class*='language-'] {
   &.entity,
   &.url {
     color: $green;
-    background: hsla(0, 0%, 100%, 0.5);
   }
   &.atrule,
   &.attr-value,
