@@ -6,7 +6,7 @@
 {% set pageHeaderSummary %}
 
   {% if subhead %}
-  <h2 class="article__subhead subhead">{{ subhead }}</h2>
+  <h2 class="article__subhead subhead">{{ subhead | widont }}</h2>
   {% endif %}
 
   <div class="article__meta">
