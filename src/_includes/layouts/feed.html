@@ -11,6 +11,7 @@
   {% set pageHeaderTitle %}
     <span class="visually-hidden">Blog posts filed under: </span>{{ tag }}
   {% endset %}
+  {% set metaTitle = 'Tag: ' + tag + ' - ' + site.name %}
 {% endif %}
 
 {% block content %}
