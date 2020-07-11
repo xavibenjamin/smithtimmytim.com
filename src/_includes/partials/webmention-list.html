@@ -12,7 +12,7 @@
           {% include "partials/icons/icon-chat-bubble.svg" %}
           <span class="webmentions-stat__number">{{ mentions | length }}</span>
         </span>
-        {% if likeCount %}
+        {% if likeCount > 0 %}
           <span class="webmentions__stat" aria-label="Likes: {{ likeCount }}">
             {% include "partials/icons/icon-heart.svg" %}
             <span class="webmentions-stat__number">{{ likeCount }}</span>

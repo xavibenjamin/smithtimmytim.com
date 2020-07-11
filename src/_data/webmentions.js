@@ -10,7 +10,7 @@ module.exports = async () => {
 
   try {
     let webmentions = await Cache(url, {
-      duration: '1d',
+      duration: '2h',
       type: 'json',
     });
     return webmentions;
