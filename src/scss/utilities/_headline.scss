@@ -5,7 +5,7 @@
 
   @include apply-utility('font', 'display');
 
-  @include media-query('lg') {
+  @include media-query('md') {
     font-size: get-size('900');
   }
 }
