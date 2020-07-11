@@ -18,7 +18,15 @@ const htmlMinTransform = require('./src/transforms/html-min-transform.js');
 // Create a helpful production flag
 const isProduction = process.env.NODE_ENV === 'production';
 
+// Collection Globs
+const globs = {
+  posts: './src/content/articles/*.md',
+  drafts: './src/content/drafts/*.md',
+  notes: './src/content/notes/*.md',
+};
+
 module.exports = (config) => {
+  // Pass through files
   config.addPassthroughCopy('./src/images/');
   config.addPassthroughCopy('./src/files/');
   config.addPassthroughCopy('./src/fonts/');
@@ -34,7 +42,14 @@ module.exports = (config) => {
   });
 
   config.addCollection('posts', (collection) => {
-    return collection.getFilteredByGlob('./src/content/**/*.md');
+    const drafts = (item) => !(item.data.draft && isProduction);
+    const now = new Date();
+    const published = (item) => item.date <= now;
+
+    return collection
+      .getFilteredByGlob([globs.posts, globs.notes, globs.drafts])
+      .filter(drafts)
+      .filter(published);
   });
 
   //Add Filters
