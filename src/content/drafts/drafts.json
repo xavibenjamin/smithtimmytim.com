@@ -1,0 +1,5 @@
+{
+  "type": "article",
+  "layout": "layouts/article.html",
+  "permalink": "/blog/{{ page.date | dateReadable('YYYY') }}/{{ page.fileSlug }}/"
+}
