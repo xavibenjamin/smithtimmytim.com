@@ -21,6 +21,7 @@ const isProduction = process.env.NODE_ENV === 'production';
 module.exports = (config) => {
   config.addPassthroughCopy('./src/images/');
   config.addPassthroughCopy('./src/files/');
+  config.addPassthroughCopy('./src/fonts/');
 
   // Only minify HTML if we are in production
   if (isProduction) {
