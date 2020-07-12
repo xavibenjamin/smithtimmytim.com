@@ -39,7 +39,7 @@ Wireframes are _essential_. It allows the team to have controlled discussions an
 
 These types of design decisions are important, and need time away from the distractions of discussing visual language. Don't get me wrong, deciding on the right colors is also crucial, but wireframing allowed us to have the right conversations at the right time.
 
-{% screenshot "/images/work/drupalize-me/screenshot-video-view.jpg", "Drupalize.md video view", "top" %}
+{% screenshot "/images/work/drupalize-me/screenshot-video-view.jpg", "Drupalize.me video view", "top" %}
 The video page was designed to show you what other videos are next in the collection and link to newer content if available.
 {% endscreenshot %}
 
