@@ -12,6 +12,9 @@ const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 const pluginRss = require('@11ty/eleventy-plugin-rss');
 const readingTime = require('eleventy-plugin-reading-time');
 
+// Shortcodes
+const screenshot = require('./src/shortcodes/screenshot.js');
+
 // Transforms
 const htmlMinTransform = require('./src/transforms/html-min-transform.js');
 
@@ -57,8 +60,6 @@ module.exports = (config) => {
   config.addFilter('dateReadable', dateReadable);
   config.addFilter('dateIso', dateIso);
   config.addFilter('dateNotePermalink', dateNotePermalink);
-
-  // WEBMENTIONS FILTER
   config.addFilter('webmentionsForUrl', webmentionsForUrl);
   config.addFilter('webmentionCountByType', webmentionCountByType);
 
@@ -66,6 +67,9 @@ module.exports = (config) => {
   config.addPlugin(syntaxHighlight);
   config.addPlugin(readingTime);
   config.addPlugin(pluginRss);
+
+  // Shortcodes
+  config.addPairedShortcode('screenshot', screenshot);
 
   // Tell 11ty to use the .eleventyignore and ignore our .gitignore file
   config.setUseGitIgnore(false);
