@@ -6,7 +6,7 @@ module.exports = (content, path, alt, direction) => {
   directionLabel = `&uarr; Above`;
 
   if (isProduction) {
-    let img = `<img src="https://res.cloudinary.com/smithtimmytim/image/fetch/w_480,f_auto,q_auto/https://smithtimmytim.com${path}" srcset="https://res.cloudinary.com/smithtimmytim/image/fetch/w_480,f_auto,q_auto/https://smithtimmytim.com${path} 480w, https://res.cloudinary.com/smithtimmytim/image/fetch/w_1000,f_auto,q_auto/https://smithtimmytim.com${path} 1000w, https://res.cloudinary.com/smithtimmytim/image/fetch/w_1800,f_auto,q_auto/https://smithtimmytim.com${path} 1800w" alt="${alt}" loading="lazy"/>`;
+    img = `<img src="https://res.cloudinary.com/smithtimmytim/image/fetch/w_480,f_auto,q_auto/https://smithtimmytim.com${path}" srcset="https://res.cloudinary.com/smithtimmytim/image/fetch/w_480,f_auto,q_auto/https://smithtimmytim.com${path} 480w, https://res.cloudinary.com/smithtimmytim/image/fetch/w_1000,f_auto,q_auto/https://smithtimmytim.com${path} 1000w, https://res.cloudinary.com/smithtimmytim/image/fetch/w_1800,f_auto,q_auto/https://smithtimmytim.com${path} 1800w" alt="${alt}" loading="lazy"/>`;
   }
 
   if (direction === 'top') {
