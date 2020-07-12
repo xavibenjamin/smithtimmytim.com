@@ -27,7 +27,15 @@
     {% if featuredImage %}
     <figure class="featured-image">
       <div class="wrapper">
-        <img src="{{ featuredImage }}" alt="Featured Image for {{ title }}" loading="lazy">
+        {% if build.env == 'production' %}
+          <img 
+            src="https://res.cloudinary.com/smithtimmytim/image/fetch/w_400,f_auto,q_auto/{{ site.url }}{{ featuredImage }}"
+            alt="Image of Timothy Smith"
+            srcset="https://res.cloudinary.com/smithtimmytim/image/fetch/w_480,f_auto,q_auto/{{ site.url }}{{ featuredImage }} 480w, https://res.cloudinary.com/smithtimmytim/image/fetch/w_1000,f_auto,q_auto/{{ site.url }}{{ featuredImage }} 1000w, https://res.cloudinary.com/smithtimmytim/image/fetch/w_2400,f_auto,q_auto/{{ site.url }}{{ featuredImage }} 2400w"
+            loading="lazy" />
+        {% else %}
+          <img src="{{ featuredImage }}" alt="Featured Image for {{ title }}" loading="lazy">
+        {% endif %}
       </div>
     </figure>
     {% endif %}
