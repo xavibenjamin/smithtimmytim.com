@@ -1,0 +1,22 @@
+{% extends "layouts/base.html" %}
+
+{% set pageHeaderTitle = title %}
+{% set pageHeaderSummary = content %}
+
+{% block content %}
+
+  {% include "partials/page-header.html" %}
+
+  <ul class="photo-landing" style="display:grid; grid-template-columns: repeat(5, 1fr);grid-gap:1rem">
+  {% for item in collections.photos | reverse %}
+    <li>
+      <img src="{{ item.data.photo[0].url }}" alt="{{ item.data.photo[0].alt }}">
+      <p>{{ item.date | dateReadable }}</p>
+      <p>{{ item.templateContent | safe }}</p>
+    </li>
+
+  {% endfor %}
+  
+  </ul>
+
+{% endblock %}

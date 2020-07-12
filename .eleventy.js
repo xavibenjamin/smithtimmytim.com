@@ -26,6 +26,7 @@ const globs = {
   posts: './src/content/articles/*.md',
   drafts: './src/content/drafts/*.md',
   notes: './src/content/notes/*.md',
+  photos: './src/content/photos/*.md',
 };
 
 module.exports = (config) => {
@@ -53,6 +54,10 @@ module.exports = (config) => {
       .getFilteredByGlob([globs.posts, globs.notes, globs.drafts])
       .filter(drafts)
       .filter(published);
+  });
+
+  config.addCollection('photos', (collection) => {
+    return collection.getFilteredByGlob(globs.photos);
   });
 
   //Add Filters
