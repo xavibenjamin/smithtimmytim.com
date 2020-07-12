@@ -20,14 +20,9 @@ Nate had already established a brand and wanted design work that could build upo
 
 My first task was to re-design the login and sign-up pages. Although the pages did an ok job, as Nate put it, they felt too "Drupal." He wanted something custom, something that would make this process easier and fun.
 
-<figure class="[ screenshot ] [ image-bleed ]">
-  <div class="screenshot__container">
-    <img src="/images/work/webform/screenshot-sign-up.jpg" alt="Webform sign up screen">
-  </div>
-  <figcaption class="image__caption">
-    <p><span class="color-tertiary">↑ Above:</span> The login page was a great place to get people familiar with the Webform brand's sunny aesthetic.</p>
-  </figcaption>
-</figure>
+{% screenshot "/images/work/webform/screenshot-sign-up.jpg", "Webform sign up" %}
+The login page was a great place to get people familiar with the Webform brand's sunny aesthetic.
+{% endscreenshot %}
 
 I solved this problem by playing on the illustrations in other parts of the site and bringing them to the login screen. I brought over elements like the sunny sky and clouds to give the pages a happy feeling and made the forms small and straightforward.
 
@@ -42,27 +37,17 @@ Nate also wanted a better-looking blog. As with any product, there's a lot to an
 
 After thinking and sketching out several layouts, we arrived at the one currently on the site. It's simple, allows for large images, and sports its very own WYSIWYG theme for commenting.
 
-<figure class="[ screenshot ] [ image-bleed ]">
-  <div class="screenshot__container">
-    <img src="/images/work/webform/screenshot-blog-layout.jpg" alt="Webform blog layout">
-  </div>
-  <figcaption class="image__caption">
-    <p><span class="color-tertiary">↑ Above:</span> The blog was one of the funnest parts to design for me.</p>
-  </figcaption>
-</figure>
+{% screenshot "/images/work/webform/screenshot-blog-layout.jpg", "Webform blog layout" %}
+The blog was one of the funnest parts to design for me.
+{% endscreenshot %}
 
 ## Dashboard
 
 For me, the dashboard was my favorite to design. Data can be beautiful, and this page proves it. Nate had recently thought of new information to bring to the dashboard. We talked over the phone, and I got to work on a design for this new and handy information. With the paid plans, the dashboard became even more essential. It was a place to alert users of their plan limits and the possibility to upgrade.
 
-<figure class="[ screenshot ] [ image-bleed ]">
-  <figcaption class="image__caption" data-variant="top">
-    <p><span class="color-tertiary">↓ Below:</span> I designed the dashboard to help users quickly access their form controls, review recent submissions, and see their plan limit.</p>
-  </figcaption>
-  <div class="screenshot__container">
-    <img src="/images/work/webform/screenshot-dashboard.jpg" alt="Webform dashboard">
-  </div>
-</figure>
+{% screenshot "/images/work/webform/screenshot-dashboard.jpg", "Webform dashboard", "top" %}
+I designed the dashboard to help users quickly access their form controls, review recent submissions, and see their plan limit.
+{% endscreenshot %}
 
 I solved the problem by presenting data in an easy to consume way. The dashboard would display the numbers in a large font-size, and an accompanying graph would let them know their remaining space before hitting the limit. It also made it simple to access forms and view recent submissions.
 

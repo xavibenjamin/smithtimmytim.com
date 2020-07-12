@@ -23,14 +23,9 @@ Responsive design was a relatively new thing at the time and I was looking for a
 
 I'd also read the documentation Apple had for creating an iTunes-compatible RSS feed and was pretty confused. I felt the only way to understand this better was to try it for myself.
 
-<figure class="[ screenshot ] [ image-bleed ]">
-  <div class="screenshot__container">
-    <img src="/images/work/eastwing/screenshot-homepage.jpg" alt="The East Wing homepage">
-  </div>
-  <figcaption class="image__caption">
-    <p><span class="color-tertiary">↑ Above:</span> Episode titles had to be truncated at the time because it would break the layout otherwise. Ah yes… the good ole days with float layouts.</p>
-  </figcaption>
-</figure>
+{% screenshot "/images/work/eastwing/screenshot-homepage.jpg", "The East Wing homepage" %}
+Episode titles had to be truncated at the time because it would break the layout otherwise. Ah yes… the good ole days with float layouts.
+{% endscreenshot %}
 
 ## Responsive Design
 

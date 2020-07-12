@@ -29,14 +29,9 @@ Under the direction of [Jared Ponchot](http://www.lullabot.com/about/team/jared-
 
 The survey revealed that there were parts of the site that users didn't know existed. People needed a better way of knowing content was outdated, suggesting topics and voting on them, and quickly seeing new educational content.
 
-<figure class="[ screenshot ] [ image-bleed ]">
-  <div class="screenshot__container">
-    <img src="/images/work/drupalize-me/screenshot-dashboard.jpg" alt="Drupalize.me dashboard">
-  </div>
-  <figcaption class="image__caption">
-    <p><span class="color-tertiary">↑ Above:</span> The dashboard was designed to be the main hub; showing what videos were recently added, videos in your queue, a history of recently watched videos, and announcements.</p>
-  </figcaption>
-</figure>
+{% screenshot "/images/work/drupalize-me/screenshot-dashboard.jpg", "Drupalize.me dashboard" %}
+The dashboard was designed to be the main hub; showing what videos were recently added, videos in your queue, a history of recently watched videos, and announcements.
+{% endscreenshot %}
 
 ## Wireframing is One of My Favorite Things
 
@@ -44,15 +39,9 @@ Wireframes are _essential_. It allows the team to have controlled discussions an
 
 These types of design decisions are important, and need time away from the distractions of discussing visual language. Don't get me wrong, deciding on the right colors is also crucial, but wireframing allowed us to have the right conversations at the right time.
 
-<figure class="[ screenshot ] [ image-bleed ]">
-  <figcaption class="image__caption" data-variant="top">
-    <p><span class="color-tertiary">↓ Below:</span> The video page was designed to show you what other videos are next in the collection and link to newer content if available.</p>
-  </figcaption>
-  <div class="screenshot__container">
-    <img src="/images/work/drupalize-me/screenshot-video-view.jpg" alt="Drupalize.me video view">
-  </div>
-  
-</figure>
+{% screenshot "/images/work/drupalize-me/screenshot-video-view.jpg", "Drupalize.md video view", "top" %}
+The video page was designed to show you what other videos are next in the collection and link to newer content if available.
+{% endscreenshot %}
 
 ## Using InVision for Feedback
 
