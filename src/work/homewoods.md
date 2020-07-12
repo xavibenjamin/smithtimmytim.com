@@ -21,10 +21,8 @@ While working at Rocket Lift, I had the chance to work on a redesign for Homewoo
 
 When preparing for this project, I did extensive research on the competition. I saw that many retirement homes were using stock photography and keyword-injected copy, which to me, missed the mark of what people want to see when choosing where to retire. Thankfully, Laura Engle, the Executive Director at Homewoods, felt the same. She wanted something real, something that told the Homewoods story, and conveyed the warm community that exists.
 
-<figure class="screenshot image-bleed">
-  <div class="screenshot__container">
-    <img src="/images/work/homewoods/screenshot-homepage.jpg" alt="Homewoods website homepage">
-  </div>
-</figure>
+{% screenshot "/images/work/homewoods/screenshot-homepage.jpg", "Homewoods website homepage", "top" %}
+The Homewoods homepage.
+{% endscreenshot %}
 
 All in all, I'm pleased with the result, and it brings me joy to see the Homewoods residents have welcomed the new site.

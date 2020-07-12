@@ -18,14 +18,9 @@ I loved the idea, but there were a few major problems:
 
 I made this all with WordPress and I learned several things along the way.
 
-<figure class="[ screenshot ] [ image-bleed ]">
-  <figcaption class="image__caption" data-variant="top">
-    <p><span class="color-tertiary">↓ Below:</span> My goal with the homepage was to introduce myself and the courses in a friendly manner.</p>
-  </figcaption>
-  <div class="screenshot__container">
-    <img src="/images/work/timlikestoteach/screenshot-homepage.jpg" alt="Tim Likes to Teach Homepage">
-  </div>
-</figure>
+{% screenshot "/images/work/timlikestoteach/screenshot-homepage.jpg", "Tim Likes to Teach Homepage", "top" %}
+My goal with the homepage was to introduce myself and the courses in a friendly manner.
+{% endscreenshot %}
 
 ## Publishing Courses
 
@@ -40,11 +35,9 @@ In practice, I created a custom post type for courses and course videos. Then, u
 
 I used the [Advanced Custom Fields](https://www.advancedcustomfields.com/) plugin to add other important information to both courses and videos. Information like the difficulty level, course length, and price were all easy to add and helped potential customers decide whether the course was right for them.
 
-<figure class="[ screenshot ] [ image-bleed ]">
-  <div class="screenshot__container">
-    <img src="/images/work/timlikestoteach/screenshot-course.jpg" alt="Tim Likes to Teach Course View">
-  </div>
-</figure>
+{% screenshot "/images/work/timlikestoteach/screenshot-course.jpg", "Tim Likes to Teach Course View" %}
+The course page.
+{% endscreenshot %}
 
 ## Membership
 

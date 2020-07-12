@@ -20,7 +20,18 @@
 
   {% if item.data.featuredImage %}
     <figure class="feed-post__featured-image gap-top-700">
-      <img src="{{ item.data.featuredImage }}" alt="Featured Image for {{ item.data.title }}" loading="lazy" />
+      {% if build.env == 'production' %}
+        <img 
+          src="https://res.cloudinary.com/smithtimmytim/image/fetch/w_400,f_auto,q_auto/{{ site.url }}{{ item.data.featuredImage }}"
+          alt="Image of Timothy Smith"
+          srcset="https://res.cloudinary.com/smithtimmytim/image/fetch/w_480,f_auto,q_auto/{{ site.url }}{{ item.data.featuredImage }} 480w, https://res.cloudinary.com/smithtimmytim/image/fetch/w_1000,f_auto,q_auto/{{ site.url }}{{ item.data.featuredImage }} 1000w, https://res.cloudinary.com/smithtimmytim/image/fetch/w_2400,f_auto,q_auto/{{ site.url }}{{ item.data.featuredImage }} 2400w"
+          loading="lazy" />
+        {% else %}
+          <img 
+            src="{{ item.data.featuredImage }}"
+            alt="Featured Image for {{ item.data.title }}"
+            loading="lazy" />
+        {% endif %}
     </figure>
   {% endif %}
 
