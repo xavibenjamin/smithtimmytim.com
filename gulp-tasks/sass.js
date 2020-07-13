@@ -18,6 +18,7 @@ const criticalStyles = [
   'blog.scss',
   'article.scss',
   'note.scss',
+  'photo.scss',
 ];
 
 // Takes the arguments passed by `dest` and determines where the output file goes
