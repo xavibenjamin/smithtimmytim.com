@@ -7,16 +7,27 @@
 
   {% include "partials/page-header.html" %}
 
-  <ul class="photo-landing" style="display:grid; grid-template-columns: repeat(5, 1fr);grid-gap:1rem">
-  {% for item in collections.photos | reverse %}
-    <li>
-      <img src="{{ item.data.photo[0].url }}" alt="{{ item.data.photo[0].alt }}">
-      <p>{{ item.date | dateReadable }}</p>
-      <p>{{ item.templateContent | safe }}</p>
-    </li>
-
-  {% endfor %}
-  
-  </ul>
+<div class="panel">
+  <div class="wrapper">
+    <ul class="photo-landing" style="display:grid; grid-template-columns: repeat(4, 1fr);grid-gap:.2rem">
+    {% for item in collections.photos | reverse %}
+      <li class="photo">
+        <a href="{{ item.url }}" class="[ photo__url ] [ u-url ]">
+          {% if build.environment === 'production' %}
+            <img
+              src="https://res.cloudinary.com/smithtimmytim/image/fetch/ar_1,c_fill,w_400,f_auto,q_auto/{{ site.url }}{{ item.data.photo[0].url }}"
+              alt="{{ item.data.photo[0].alt }}"
+              srcset="https://res.cloudinary.com/smithtimmytim/image/fetch/ar_1,c_fill,w_320,f_auto,q_auto/{{ site.url }}{{ item.data.photo[0].url }} 320w, https://res.cloudinary.com/smithtimmytim/image/fetch/ar_1,c_fill,w_480,f_auto,q_auto/{{ site.url }}{{ item.data.photo[0].url }} 480w, https://res.cloudinary.com/smithtimmytim/image/fetch/ar_1,c_fill,w_720,f_auto,q_auto/{{ site.url }}{{ item.data.photo[0].url }} 720w"
+              loading="lazy"
+              class="[ photo__media ] [ u-photo ]"/>
+          {% else %}
+            <img class="[ photo__media ] [ u-photo ]" src="{{ item.data.photo[0].url }}" alt="{{ item.data.photo[0].alt }}">
+          {% endif %}
+        </a>
+      </li>
+    {% endfor %}
+    </ul>
+  </div>
+</div>
 
 {% endblock %}
