@@ -1,0 +1,5 @@
+{
+  "type": "photo",
+  "layout": "layouts/photo.html",
+  "permalink": "/photos/{{ page.date | dateNotePermalink }}/"
+}
