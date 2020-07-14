@@ -14,7 +14,7 @@
     {% for item in collections.photos | reverse %}
       <li class="photo">
         <a href="{{ item.url }}" class="[ photo__url ] [ u-url ]">
-          {% if build.environment === 'production' %}
+          {% if build.env === 'production' %}
             <img
               src="https://res.cloudinary.com/smithtimmytim/image/fetch/ar_1,c_fill,w_400,f_auto,q_auto/{{ site.url }}{{ item.data.photo[0].url }}"
               alt="{{ item.data.photo[0].alt }}"
