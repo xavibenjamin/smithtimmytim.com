@@ -53,7 +53,20 @@ module.exports = (config) => {
     return collection
       .getFilteredByGlob([globs.posts, globs.notes, globs.drafts])
       .filter(drafts)
-      .filter(published);
+      .filter(published)
+      .reverse();
+  });
+
+  config.addCollection('feed', (collection) => {
+    const drafts = (item) => !(item.data.draft && isProduction);
+    const now = new Date();
+    const published = (item) => item.date <= now;
+
+    return collection
+      .getFilteredByGlob([globs.posts, globs.notes, globs.drafts, globs.photos])
+      .filter(drafts)
+      .filter(published)
+      .reverse();
   });
 
   config.addCollection('photos', (collection) => {

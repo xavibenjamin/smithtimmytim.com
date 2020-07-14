@@ -16,7 +16,7 @@ permalink: '/blog/feed.xml'
     <email>{{ site.email }}</email>
   </author>
 
-  {% set blogItems = collections.posts %}
+  {% set blogItems = collections.feed %}
   {% for post in blogItems.slice(0,20) %}
     {% set absolutePostUrl %}{{ site.url }}{{ post.url | url }}{% endset %}
     <entry>
@@ -27,7 +27,16 @@ permalink: '/blog/feed.xml'
       <updated>{{ post.date | rssDate }}</updated>
       <id>{{ absolutePostUrl }}</id>
       <content type="html"><![CDATA[
-        {{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) | safe }}]]></content>
+        
+        {{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) | safe }}
+
+        {% if post.data.photo %}
+          {% for item in post.data.photo %}
+            <p><img src="{{ site.url }}{{ item.url }}" {% if item.alt %}alt="{{ item.alt }}"{% endif %} /></p>
+          {% endfor %}
+        {% endif %}
+        
+        ]]></content>
     </entry>
   {% endfor %}
 </feed>
