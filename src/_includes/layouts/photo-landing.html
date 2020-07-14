@@ -1,4 +1,5 @@
 {% extends "layouts/base.html" %}
+{% set pageCriticalStyles = ['css/photo-landing.css'] %}
 
 {% set pageHeaderTitle = title %}
 {% set pageHeaderSummary = content %}
@@ -9,7 +10,7 @@
 
 <div class="panel">
   <div class="wrapper">
-    <ul class="photo-landing" style="display:grid; grid-template-columns: repeat(4, 1fr);grid-gap:.2rem">
+    <ul class="photo-landing">
     {% for item in collections.photos | reverse %}
       <li class="photo">
         <a href="{{ item.url }}" class="[ photo__url ] [ u-url ]">
@@ -22,6 +23,9 @@
               class="[ photo__media ] [ u-photo ]"/>
           {% else %}
             <img class="[ photo__media ] [ u-photo ]" src="{{ item.data.photo[0].url }}" alt="{{ item.data.photo[0].alt }}">
+          {% endif %}
+          {% if item.data.photo.length > 1 %}
+            {% include "partials/icons/icon-images.svg" %}
           {% endif %}
         </a>
       </li>

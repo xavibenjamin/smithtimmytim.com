@@ -18,6 +18,7 @@ const criticalStyles = [
   'blog.scss',
   'article.scss',
   'note.scss',
+  'photo-landing.scss',
   'photo.scss',
 ];
 
