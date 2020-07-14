@@ -30,11 +30,6 @@ $outputTokenCSS: false;
 
 .photo-list {
   margin-top: get-size('700');
-
-  img {
-    border: get-size('300') solid get-color('light-glare');
-    border-radius: 0.25rem;
-  }
 }
 
 // Pull in blocks

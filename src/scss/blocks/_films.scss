@@ -3,7 +3,6 @@
 
   @include media-query('md') {
     padding: get-size('700');
-    // max-width: 28rem;
   }
 
   &:after {
@@ -54,7 +53,7 @@
 
 .film__media {
   img {
-    border: 1px solid get-color('light-shade');
+    border: 1px solid get-color('dark');
     border-radius: 0.25rem;
   }
 }

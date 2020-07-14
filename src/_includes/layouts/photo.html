@@ -1,13 +1,7 @@
 {% extends "layouts/base.html" %}
 {% set pageCriticalStyles = ['css/photo.css'] %}
 
-{% set metaTitle = 'Note: ' + page.date | dateReadable('ddd, MMM Do, YYYY [at] h:mm a') + ' - ' + site.name %}
-
-{% set pageHeaderSummary %}
-  <p>Subscribe to the <a href="/blog/feed.xml">RSS Feed</a>.</p>
-
-  <h1 class="note__title"><a href="{{ page.url }}" class="[ note__url ] [ u-url ]">{{ page.date | dateReadable | widont }}</a></h1>
-{% endset %}
+{% set metaTitle = 'Photo: ' + page.date | dateReadable + ' - ' + site.name %}
 
 
 {% block content %}
