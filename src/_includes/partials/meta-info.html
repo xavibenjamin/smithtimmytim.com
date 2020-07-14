@@ -9,7 +9,7 @@
 {% set currentUrl = site.url + page.url %}
 
 {% if not socialImage %} 
-  {% set socialImage = '/images/meta/social-image.jpg' %} 
+  {% set socialImage = '/images/meta/social-image.jpg' %}
 {% endif %}
 
 {# If the page’s Front Matter has specific metaTitle and/or metaDesc items, switch 
@@ -33,7 +33,7 @@
 <link rel="webmention" href="https://webmention.io/smithtimmytim.com/webmention" />
 <link rel="pingback" href="https://webmention.io/smithtimmytim.com/xmlrpc" />
 
-{% if socialImage %}
+{% if not socialExclude %}
   <meta name="twitter:card" content="summary_large_image" />
   <meta property="og:image" content="{{ site.url }}{{ socialImage }}" />
   <meta name="twitter:image" content="{{ site.url }}{{ socialImage }}" />

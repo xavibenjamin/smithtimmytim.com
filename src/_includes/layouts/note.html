@@ -1,5 +1,6 @@
 {% extends "layouts/base.html" %}
 {% set pageCriticalStyles = ['css/note.css'] %}
+{% set socialExclude = true %}
 
 {% set metaTitle = 'Note: ' + page.date | dateReadable('ddd, MMM Do, YYYY [at] h:mm a') + ' - ' + site.name %}
 
