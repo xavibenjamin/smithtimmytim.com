@@ -1,7 +1,7 @@
 ---
 title: 'A Fresh Start'
 tags: 'Announcements'
-featuredImage: '/images/uploads/2020/07/first-post-thumb.jpg'
+featuredImage: '/images/uploads/2020/first-post-thumb.jpg'
 date: 2020-07-07T22:11-07:00
 ---
 

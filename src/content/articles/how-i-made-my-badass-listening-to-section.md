@@ -1,8 +1,8 @@
 ---
 title: 'How I Made My Badass ‘Listening To’ Section'
 subhead: 'We’ll use the Last.fm API and Eleventy to make it happen'
-featuredImage: '/images/uploads/2020/07/listening-to-thumb.jpg'
-socialImage: '/images/uploads/2020/07/listening-to-social.jpg'
+featuredImage: '/images/uploads/2020/listening-to-thumb.jpg'
+socialImage: '/images/uploads/2020/listening-to-social.jpg'
 tags: 'Code'
 date: 2020-07-10T09:26-07:00
 ---

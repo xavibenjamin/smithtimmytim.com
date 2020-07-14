@@ -12,8 +12,17 @@ $outputTokenCSS: false;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 0.2rem;
 
+  width: 100vw;
+  margin-left: 50% !important;
+  transform: translateX(-50%);
+
   @include media-query('md') {
-    grid-template-columns: repeat(4, 1fr);
+    grid-gap: get-size('600');
+    margin-left: 0 !important;
+    padding-bottom: get-size('900') !important;
+    padding-top: get-size('900') !important;
+    transform: none;
+    width: auto;
   }
 }
 
