@@ -1,6 +1,7 @@
 .cover {
   @include media-query('md') {
     height: 75vh;
+    max-height: 55rem;
   }
 }
 
@@ -38,6 +39,7 @@
       width: 100%;
       object-fit: cover;
       height: 75vh;
+      max-height: 55rem;
     }
   }
 }

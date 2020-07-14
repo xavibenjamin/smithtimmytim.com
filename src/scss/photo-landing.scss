@@ -32,12 +32,12 @@ $outputTokenCSS: false;
   overflow: hidden;
 
   svg {
-    width: 1rem;
-    height: 1rem;
+    width: get-size('500');
+    height: get-size('500');
     fill: white;
     position: absolute;
-    bottom: 1rem;
-    left: 1rem;
+    bottom: get-size('400');
+    left: get-size('400');
   }
 
   img {
