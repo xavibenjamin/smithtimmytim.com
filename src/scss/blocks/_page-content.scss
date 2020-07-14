@@ -1,6 +1,6 @@
 .page-content {
   > :not([class*='-bleed']):not([class*='language-']) {
-    max-width: 48rem;
+    @include apply-utility('measure', 'long');
   }
 
   h2 {

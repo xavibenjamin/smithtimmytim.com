@@ -26,6 +26,7 @@ const globs = {
   posts: './src/content/articles/*.md',
   drafts: './src/content/drafts/*.md',
   notes: './src/content/notes/*.md',
+  photos: './src/content/photos/*.md',
 };
 
 module.exports = (config) => {
@@ -52,7 +53,24 @@ module.exports = (config) => {
     return collection
       .getFilteredByGlob([globs.posts, globs.notes, globs.drafts])
       .filter(drafts)
-      .filter(published);
+      .filter(published)
+      .reverse();
+  });
+
+  config.addCollection('feed', (collection) => {
+    const drafts = (item) => !(item.data.draft && isProduction);
+    const now = new Date();
+    const published = (item) => item.date <= now;
+
+    return collection
+      .getFilteredByGlob([globs.posts, globs.notes, globs.drafts, globs.photos])
+      .filter(drafts)
+      .filter(published)
+      .reverse();
+  });
+
+  config.addCollection('photos', (collection) => {
+    return collection.getFilteredByGlob(globs.photos);
   });
 
   //Add Filters
@@ -81,6 +99,8 @@ module.exports = (config) => {
   let markdownItTOC = require('markdown-it-table-of-contents');
   let markdownItAbbr = require('markdown-it-abbr');
   let markdownItMentions = require('markdown-it-mentions');
+  let markdownItEmoji = require('markdown-it-emoji');
+  let twemoji = require('twemoji');
 
   let markdownItOpts = {
     html: true,
@@ -103,6 +123,14 @@ module.exports = (config) => {
   markdownEngine.use(markdownItMentions, {
     external: true,
   });
+  markdownEngine.use(markdownItEmoji);
+
+  markdownEngine.renderer.rules.emoji = function (token, idx) {
+    return twemoji.parse(token[idx].content, {
+      folder: 'svg',
+      ext: '.svg',
+    });
+  };
 
   config.setLibrary('md', markdownEngine);
 

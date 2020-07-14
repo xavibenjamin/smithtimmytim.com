@@ -1,0 +1,51 @@
+{% extends "layouts/base.html" %}
+{% set pageCriticalStyles = ['css/photo.css'] %}
+
+{% set metaTitle = 'Photo: ' + page.date | dateReadable + ' - ' + site.name %}
+
+
+{% block content %}
+  <article class="h-entry">
+
+    {% if content %}
+    <div class="wrapper">
+      <article class="[ photo__body ] [ page-content ] [ flow flow-space-700 gap-bottom-700 md:gap-bottom-900 ] [ e-content p-name ]">
+        {{ content | safe }}
+      </article>
+    </div>
+    {% endif %}
+
+    <div class="bg-light-glare panel">
+      <div class="wrapper">
+        <figure class="photo-list flow flow-space-600 e-content">
+          {% for item in photo %}
+            {% if build.environment === 'production' %}
+            <img 
+              src="https://res.cloudinary.com/smithtimmytim/image/fetch/w_480,f_auto,q_auto/{{ site.url }}{{ item.url }}" srcset="https://res.cloudinary.com/smithtimmytim/image/fetch/w_480,f_auto,q_auto/{{ site.url }}{{ item.url }} 480w, https://res.cloudinary.com/smithtimmytim/image/fetch/w_1000,f_auto,q_auto/{{ site.url }}{{ item.url }} 1000w, https://res.cloudinary.com/smithtimmytim/image/fetch/w_1800,f_auto,q_auto/{{ site.url }}{{ item.url }} 1800w"
+              {% if item.alt %}alt="{{ item.alt }}"{% endif %}
+              loading="lazy"
+              class="u-photo"/>
+            {% else %}
+              <img 
+              src="{{ item.url }}" 
+              {% if item.alt %}alt="{{ item.alt }}"{% endif %}
+              class="u-photo">
+            {% endif %}
+          {% endfor %}
+        </figure>
+      </div>
+    </div>
+
+    <div class="wrapper">
+      <footer class="[ photo__footer ] [ gap-top-700 md:gap-top-900 ]">
+        <p><a href="{{ page.url }}" class="[ photo__url ] [ u-url ]">{{ page.date | dateReadable | widont }}</a> <span class="color-tertiary">&infin;</span></p>
+      </footer>
+    </div>
+
+    
+
+    {% include "partials/webmention-list.html" %}
+    
+  </article>
+
+{% endblock %}

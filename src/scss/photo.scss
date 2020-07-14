@@ -1,0 +1,36 @@
+// First up: config and functions
+@import 'config';
+
+// Set Gorko to output no CSS for this file
+$outputTokenCSS: false;
+
+// Next: pull in gorko for design tokens
+@import '../../node_modules/gorko/gorko.scss';
+
+.photo__body {
+  margin-top: get-size('800');
+
+  @include media-query('md') {
+    margin-top: 8rem;
+  }
+}
+
+.photo__footer {
+  margin-bottom: get-size('700');
+
+  @include media-query('md') {
+    margin-bottom: get-size('900');
+  }
+}
+
+.photo__url {
+  font-size: get-size('400');
+  color: get-color('dark-glare');
+}
+
+.photo-list {
+  @include apply-utility('measure', 'long');
+}
+
+// Pull in blocks
+@import 'blocks/page-content';

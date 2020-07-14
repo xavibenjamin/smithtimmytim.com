@@ -34,12 +34,18 @@
       }
     }
   }
+
+  margin-top: get-size('600');
+
+  @include media-query('md') {
+    margin-top: 0;
+  }
 }
 
 .nav__list {
   display: flex;
 
-  > * {
+  > * + * {
     margin-inline-start: get-size('500');
   }
 }
