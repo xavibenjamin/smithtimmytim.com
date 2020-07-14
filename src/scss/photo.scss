@@ -29,7 +29,7 @@ $outputTokenCSS: false;
 }
 
 .photo-list {
-  margin-top: get-size('700');
+  @include apply-utility('measure', 'long');
 }
 
 // Pull in blocks

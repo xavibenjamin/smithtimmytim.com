@@ -7,13 +7,17 @@
 {% block content %}
   <article class="h-entry">
 
+    {% if content %}
     <div class="wrapper">
-      
-
-      <article class="[ photo__body ] [ page-content ] [ flow flow-space-700 ] [ e-content p-name ]">
+      <article class="[ photo__body ] [ page-content ] [ flow flow-space-700 gap-bottom-700 md:gap-bottom-900 ] [ e-content p-name ]">
         {{ content | safe }}
-        
-        <figure class="photo-list flow flow-space-600">
+      </article>
+    </div>
+    {% endif %}
+
+    <div class="bg-light-glare panel">
+      <div class="wrapper">
+        <figure class="photo-list flow flow-space-600 e-content">
           {% for item in photo %}
             <img 
               src="{{ item.url }}" 
@@ -21,9 +25,11 @@
               class="u-photo">
           {% endfor %}
         </figure>
-      </article>
+      </div>
+    </div>
 
-      <footer class="[ photo__footer ] [ gap-top-700 ]">
+    <div class="wrapper">
+      <footer class="[ photo__footer ] [ gap-top-700 md:gap-top-900 ]">
         <p><a href="{{ page.url }}" class="[ photo__url ] [ u-url ]">{{ page.date | dateReadable | widont }}</a> <span class="color-tertiary">&infin;</span></p>
       </footer>
     </div>
