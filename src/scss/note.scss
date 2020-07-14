@@ -7,7 +7,28 @@ $outputTokenCSS: false;
 // Next: pull in gorko for design tokens
 @import '../../node_modules/gorko/gorko.scss';
 
+.note__body {
+  margin-top: get-size('800');
+
+  @include media-query('md') {
+    margin-top: 7rem;
+  }
+}
+
+.note__footer {
+  margin-bottom: get-size('700');
+
+  @include media-query('md') {
+    margin-bottom: get-size('900');
+  }
+}
+
+.note__url {
+  font-size: get-size('400');
+  color: get-color('dark-glare');
+  // text-decoration-color: get-color('light-shade');
+}
+
 // Pull in blocks
 @import 'blocks/page-content';
-@import 'blocks/note-header';
 @import 'blocks/webmentions';
