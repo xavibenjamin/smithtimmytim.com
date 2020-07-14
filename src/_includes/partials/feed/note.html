@@ -1,10 +1,10 @@
-<article class="feed-post feed-entry h-entry">
+<article class="[ feed-post ] [ feed-entry h-entry ]">
 
   <div class="[ page-content ] [ flow  flow-space-500 ] [ e-content ]">
     {{ item.templateContent | safe }}
   </div>
 
-  <header class="feed-post__header gap-top-600">
+  <header class="[ feed-post__header ] [ gap-top-700 ]">
     <div class="feed-post__meta">
       <a href="{{ item.url }}" class="[ feed-post__date ] [ u-url ]">
         <time datetime="{{ item.date | dateIso }}" class="dt-published">{{ item.date | dateReadable('ddd, MMM Do, YYYY [at] h:mm a') }}</time>
