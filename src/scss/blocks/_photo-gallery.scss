@@ -6,10 +6,13 @@
 }
 
 .photo-gallery__photo {
-  //   max-width: 46rem;
-  height: 40rem;
+  height: 40vh;
   flex-shrink: 0;
   padding-bottom: get-size('700');
+
+  @include media-query('md') {
+    height: 60vh;
+  }
 
   img {
     // width: 100%;
