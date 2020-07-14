@@ -11,7 +11,7 @@ $outputTokenCSS: false;
   margin-top: get-size('800');
 
   @include media-query('md') {
-    margin-top: 7rem;
+    margin-top: 8rem;
   }
 }
 
