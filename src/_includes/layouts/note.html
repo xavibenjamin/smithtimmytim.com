@@ -3,22 +3,17 @@
 
 {% set metaTitle = 'Note: ' + page.date | dateReadable('ddd, MMM Do, YYYY [at] h:mm a') + ' - ' + site.name %}
 
-{% set pageHeaderSummary %}
-  <p>Subscribe to the <a href="/blog/feed.xml">RSS Feed</a>.</p>
-
-  <h1 class="note__title"><a href="{{ page.url }}" class="[ note__url ] [ u-url ]">{{ page.date | dateReadable('ddd, MMM Do, YYYY [at] h:mm a') | widont }}</a></h1>
-{% endset %}
-
-
 {% block content %}
   <article class="h-entry">
 
-    {% include "partials/page-header.html" %}
-
-    <div class="[ wrapper ] [ gap-top-700 md:gap-top-900 gap-bottom-700 md:gap-bottom-900 ]">
-      <article class="page-content flow flow-space-500 e-content">
+    <div class="wrapper ">
+      <article class="[ note__body ] [ page-content ] [ flow flow-space-500 ] [ e-content ]">
         {{ content | safe }}
       </article>
+
+      <footer class="[ note__footer ] [ gap-top-700 ]">
+        <p><a href="{{ page.url }}" class="[ note__url ] [ u-url ]">{{ page.date | dateReadable('ddd, MMM Do, YYYY [at] h:mm a') | widont }}</a> <span class="color-tertiary">&infin;</span></p>
+      </footer>
     </div>
 
     {% include "partials/webmention-list.html" %}

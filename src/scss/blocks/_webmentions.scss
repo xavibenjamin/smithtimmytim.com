@@ -14,16 +14,20 @@
 .webmentions__stat {
   display: inline-flex;
   margin-left: get-size('300');
+  font-size: get-size('400');
+  position: relative;
+  top: -0.1em;
+
   svg {
     fill: get-color('light-shade');
-    width: get-size('500');
-    height: get-size('500');
+    height: 1em;
+    width: 1em;
+    margin: 0 0.05em 0 0.1em;
   }
 
   .webmentions-stat__number {
     color: get-color('dark-glare');
     font-size: get-size('400');
-    // font-weight: normal;
     margin-left: 0.5rem;
 
     @include apply-utility('font', 'base');
