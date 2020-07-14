@@ -1,17 +1,26 @@
 {% set absoluteUrl %}{{ site.url }}{{ page.url }}{% endset %}
 {% set mentions = webmentions.children | webmentionsForUrl(absoluteUrl) %}
 {% set likeCount = webmentions.children | webmentionCountByType(absoluteUrl, "like-of") %}
+{% set repostCount = webmentions.children | webmentionCountByType(absoluteUrl, "repost-of") %}
 
-{% if mentions.length %}
+{% if mentions.length > 0 or likeCount > 0 or repostCount > 0 %}
 <div class="webmentions panel bg-light-glare">
   <div class="wrapper">
     <div class="webmentions__inner">
       <h2 class="webmentions__headline">
         Webmentions
+        {% if mentions.length > 0 %}
         <span class="webmentions__stat " aria-label="Mentions: {{ mentions | length }}">
           {% include "partials/icons/icon-chat-bubble.svg" %}
           <span class="webmentions-stat__number">{{ mentions | length }}</span>
         </span>
+        {% endif %}
+        {% if repostCount > 0 %} 
+        <span class="webmentions__stat " aria-label="Reposts: {{ repostCount }}">
+          {% include "partials/icons/icon-repost.svg" %}
+          <span class="webmentions-stat__number">{{ repostCount }}</span>
+        </span>
+        {% endif %}
         {% if likeCount > 0 %}
           <span class="webmentions__stat" aria-label="Likes: {{ likeCount }}">
             {% include "partials/icons/icon-heart.svg" %}
@@ -19,6 +28,7 @@
           </span>
         {% endif %}
       </h2>
+      {% if mentions.length %}
       <ol class="webmentions__list">
         {% for webmention in mentions | reverse %}
           <li class="webmentions__item">
@@ -26,6 +36,7 @@
           </li>
         {% endfor %}
       </ol>
+      {% endif %}
     </div>
   </div>
 </div>
