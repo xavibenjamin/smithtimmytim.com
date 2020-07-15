@@ -14,10 +14,11 @@
       <li class="photo">
         <a href="{{ item.url }}" class="[ photo__url ] [ u-url ]">
           {% if build.env === 'production' %}
+            {% set photoUrl = item.data.photo[0].url | replace("https://smithtimmytim.com", "") %}
             <img
-              src="https://res.cloudinary.com/smithtimmytim/image/fetch/ar_1,c_fill,w_400,f_auto,q_auto/{{ site.url }}{{ item.data.photo[0].url }}"
+              src="https://res.cloudinary.com/smithtimmytim/image/fetch/ar_1,c_fill,w_400,f_auto,q_auto/{{ site.url }}{{ photoUrl }}"
               alt="{{ item.data.photo[0].alt }}"
-              srcset="https://res.cloudinary.com/smithtimmytim/image/fetch/ar_1,c_fill,w_320,f_auto,q_auto/{{ site.url }}{{ item.data.photo[0].url }} 320w, https://res.cloudinary.com/smithtimmytim/image/fetch/ar_1,c_fill,w_480,f_auto,q_auto/{{ site.url }}{{ item.data.photo[0].url }} 480w, https://res.cloudinary.com/smithtimmytim/image/fetch/ar_1,c_fill,w_720,f_auto,q_auto/{{ site.url }}{{ item.data.photo[0].url }} 720w"
+              srcset="https://res.cloudinary.com/smithtimmytim/image/fetch/ar_1,c_fill,w_320,f_auto,q_auto/{{ site.url }}{{ photoUrl }} 320w, https://res.cloudinary.com/smithtimmytim/image/fetch/ar_1,c_fill,w_480,f_auto,q_auto/{{ site.url }}{{ photoUrl }} 480w, https://res.cloudinary.com/smithtimmytim/image/fetch/ar_1,c_fill,w_720,f_auto,q_auto/{{ site.url }}{{ photoUrl }} 720w"
               loading="lazy"
               class="[ photo__media ] [ u-photo ]"/>
           {% else %}
