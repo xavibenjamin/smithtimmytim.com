@@ -1,0 +1,37 @@
+{
+  "syndicate-to": [
+    {
+      "uid": "https://twitter.com/smithtimmytim",
+      "name": "Timothy B. Smith on Twitter"
+    },
+    {
+      "uid": "https://mastodon.social/@sassybbq",
+      "name": "Timothy B. Smith on Mastodon"
+    },
+    {
+      "uid": "https://micro.blog/smith",
+      "name": "Timothy B. Smith on Micro.blog"
+    }
+  ],
+  "post-types": {
+    "note": {
+      "name": "Micro note",
+      "icon": ":memo:",
+      "post": {
+        "path": "src/content/notes/{{ published | date('X') }}.md",
+        "url": "notes/{{ published | date('MMddyyyyHHmmss') }}"
+      }
+    },
+    "photo": {
+      "post": {
+        "path": "src/content/photos/{{ published | date('X') }}.md",
+        "url": "photos/{{ published | date('MMddyyyyHHmmss') }}"
+      },
+      "media": {
+        "path": "src/images/uploads/{{ filedate | date('yyyy') }}/{{ filedate | date('X') }}.{{ fileext }}",
+        "url": "images/uploads/{{ filedate | date('yyyy') }}/{{ filedate | date('') }}.{{ fileext }}"
+      }
+    }
+  },
+  "slug-separator": "_"
+}
