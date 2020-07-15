@@ -23,6 +23,7 @@
             <img 
               src="https://res.cloudinary.com/smithtimmytim/image/fetch/w_480,f_auto,q_auto/{{ site.url }}{{ item.url }}" srcset="https://res.cloudinary.com/smithtimmytim/image/fetch/w_480,f_auto,q_auto/{{ site.url }}{{ item.url }} 480w, https://res.cloudinary.com/smithtimmytim/image/fetch/w_1000,f_auto,q_auto/{{ site.url }}{{ item.url }} 1000w, https://res.cloudinary.com/smithtimmytim/image/fetch/w_1800,f_auto,q_auto/{{ site.url }}{{ item.url }} 1800w"
               {% if item.alt %}alt="{{ item.alt }}"{% endif %}
+              width="1000"
               loading="lazy"
               class="u-photo"/>
             {% else %}
