@@ -32,7 +32,8 @@ permalink: '/blog/feed.xml'
 
         {% if post.data.photo %}
           {% for item in post.data.photo %}
-            <p><img src="{{ site.url }}{{ item.url }}" {% if item.alt %}alt="{{ item.alt }}"{% endif %} /></p>
+            {% set photoUrl = item.url | replace("https://smithtimmytim.com", "") %}
+            <p><img src="{{ site.url }}{{ photoUrl }}" {% if item.alt %}alt="{{ item.alt }}"{% endif %} /></p>
           {% endfor %}
         {% endif %}
         
