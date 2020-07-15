@@ -100,7 +100,6 @@ module.exports = (config) => {
   let markdownItAbbr = require('markdown-it-abbr');
   let markdownItMentions = require('markdown-it-mentions');
   let markdownItEmoji = require('markdown-it-emoji');
-  let twemoji = require('twemoji');
 
   let markdownItOpts = {
     html: true,
@@ -124,13 +123,6 @@ module.exports = (config) => {
     external: true,
   });
   markdownEngine.use(markdownItEmoji);
-
-  markdownEngine.renderer.rules.emoji = function (token, idx) {
-    return twemoji.parse(token[idx].content, {
-      folder: 'svg',
-      ext: '.svg',
-    });
-  };
 
   config.setLibrary('md', markdownEngine);
 

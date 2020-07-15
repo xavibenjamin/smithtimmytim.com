@@ -1,15 +1,19 @@
 {
   "name": "smithtimmytim.com",
   "version": "1.0.0",
-  "description": "",
+  "description": "The personal site, portfolio, and blog of Timothy B. Smith",
+  "keywords": [
+    "eleventy",
+    "personal-website",
+    "indieweb"
+  ],
+  "author": "Timothy B. Smith",
+  "license": "ISC",
   "main": ".eleventy.js",
   "scripts": {
     "start": "npx gulp && concurrently \"npx gulp watch\" \"npx eleventy --serve\"",
     "production": "NODE_ENV=production npx gulp && NODE_ENV=production npx eleventy"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "@11ty/eleventy": "^0.11.0",
     "@11ty/eleventy-cache-assets": "^2.0.3",
@@ -35,7 +39,6 @@
     "moment": "^2.27.0",
     "moment-timezone": "^0.5.31",
     "sanitize-html": "^1.27.0",
-    "sass": "^1.26.9",
-    "twemoji": "^13.0.0"
+    "sass": "^1.26.9"
   }
 }
