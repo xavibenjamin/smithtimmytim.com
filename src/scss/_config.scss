@@ -61,6 +61,11 @@ $gorko-config: (
     'output': 'standard',
     'property': 'color',
   ),
+  'fill': (
+    'items': $gorko-colors,
+    'output': 'standard',
+    'property': 'fill',
+  ),
   'flow-space': (
     'items': $gorko-size-scale,
     'output': 'responsive',
