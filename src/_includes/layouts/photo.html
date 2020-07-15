@@ -19,16 +19,17 @@
       <div class="wrapper">
         <figure class="photo-list flow flow-space-600 e-content">
           {% for item in photo %}
+            {% set photoUrl = item.url | replace("https://smithtimmytim.com", "") %}
             {% if build.env === 'production' %}
             <img 
-              src="https://res.cloudinary.com/smithtimmytim/image/fetch/w_480,f_auto,q_auto/{{ site.url }}{{ item.url }}" srcset="https://res.cloudinary.com/smithtimmytim/image/fetch/w_480,f_auto,q_auto/{{ site.url }}{{ item.url }} 480w, https://res.cloudinary.com/smithtimmytim/image/fetch/w_1000,f_auto,q_auto/{{ site.url }}{{ item.url }} 1000w, https://res.cloudinary.com/smithtimmytim/image/fetch/w_1800,f_auto,q_auto/{{ site.url }}{{ item.url }} 1800w"
+              src="https://res.cloudinary.com/smithtimmytim/image/fetch/w_480,f_auto,q_auto/{{ site.url }}{{ photoUrl }}" srcset="https://res.cloudinary.com/smithtimmytim/image/fetch/w_480,f_auto,q_auto/{{ site.url }}{{ photoUrl }} 480w, https://res.cloudinary.com/smithtimmytim/image/fetch/w_1000,f_auto,q_auto/{{ site.url }}{{ photoUrl }} 1000w, https://res.cloudinary.com/smithtimmytim/image/fetch/w_1800,f_auto,q_auto/{{ site.url }}{{ photoUrl }} 1800w"
               {% if item.alt %}alt="{{ item.alt }}"{% endif %}
               width="1000"
               loading="lazy"
               class="u-photo"/>
             {% else %}
               <img 
-              src="{{ item.url }}" 
+              src="{{ photoUrl }}" 
               {% if item.alt %}alt="{{ item.alt }}"{% endif %}
               class="u-photo">
             {% endif %}
