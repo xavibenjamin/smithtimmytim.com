@@ -1,5 +1,5 @@
 .page-content {
-  > :not([class*='-bleed']):not([class*='language-']) {
+  > :not([class*='-bleed']) {
     @include apply-utility('measure', 'long');
   }
 
@@ -19,13 +19,15 @@
 
   pre[class*='language-'] {
     width: 100vw;
+    max-width: none;
     margin-left: 50%;
     transform: translateX(-50%);
 
     @include media-query('lg') {
-      width: 55rem;
       margin-left: 0;
       transform: none;
+
+      @include apply-utility('measure', 'long');
     }
   }
 

@@ -29,8 +29,11 @@ code {
 }
 
 pre[class*='language-'] {
-  border-radius: 0.25rem;
   padding: get-size('700') !important;
+
+  @include media-query('lg') {
+    border-radius: 0.25rem;
+  }
 }
 
 /*!

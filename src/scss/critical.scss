@@ -12,7 +12,7 @@
 }
 
 html {
-  font-size: clamp(13.5px, 1.15vw, 18.5px);
+  font-size: clamp(13.5px, 1.25vw, 18.5px);
 }
 
 body {
@@ -27,6 +27,7 @@ body {
 a:not([class]) {
   color: get-color('secondary');
   text-decoration-color: get-color('secondary-glare');
+  hyphens: none;
 
   &:visited {
     color: get-color('dark-glare');

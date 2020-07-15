@@ -1,3 +1,11 @@
 .page-header {
-  padding: get-size('900') 0;
+  padding: get-size('700') 0;
+
+  @include media-query('md') {
+    padding: get-size('900') 0;
+  }
+
+  p:not([class]) {
+    @include apply-utility('measure', 'medium');
+  }
 }
