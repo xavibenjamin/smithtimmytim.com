@@ -29,7 +29,7 @@
       },
       "media": {
         "path": "src/images/uploads/{{ filedate | date('yyyy') }}/{{ filedate | date('X') }}.{{ fileext }}",
-        "url": "images/uploads/{{ filedate | date('yyyy') }}/{{ filedate | date('') }}.{{ fileext }}"
+        "url": "images/uploads/{{ filedate | date('yyyy') }}/{{ filedate | date('X') }}.{{ fileext }}"
       }
     }
   },
