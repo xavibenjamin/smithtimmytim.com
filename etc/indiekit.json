@@ -28,8 +28,8 @@
         "url": "photos/{{ published | date('MMddyyyyHHmmss') }}"
       },
       "media": {
-        "path": "src/images/uploads/{{ filedate | date('yyyy') }}/{{ filedate | date('X') }}.{{ fileext }}",
-        "url": "images/uploads/{{ filedate | date('yyyy') }}/{{ filedate | date('X') }}.{{ fileext }}"
+        "path": "src/images/photos/{{ filedate | date('X') }}.{{ fileext }}",
+        "url": "images/photos/{{ filedate | date('X') }}.{{ fileext }}"
       }
     }
   },
