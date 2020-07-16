@@ -1,5 +1,6 @@
 ---
 title: 'Blog'
+summary: 'My place to write about development, Star Wars, comic books, technology and other geekery.'
 layout: 'layouts/feed.html'
 pagination:
   data: collections.posts
