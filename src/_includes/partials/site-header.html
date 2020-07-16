@@ -2,9 +2,16 @@
 <header class="site-header" role="banner"{% if isCaseStudy %} style="background-color: #{{ color }}" data-variant="light"{% endif %}>
   <div class="wrapper">
     <div class="site-header__inner">
-      <a href="/" aria-label="{{ site.name }} - home" class="site-name">
-        {% include "partials/icons/icon-smith-logo.svg" %}
-      </a>
+      <div class="site-name__wrapper">
+        <a href="/" aria-label="{{ site.name }} - home" class="site-name">
+          {% include "partials/icons/icon-smith-logo.svg" %}
+        </a>
+        <ul class="site-pronouns">
+          <li>he</li>
+          <li>him</li>
+          <li>his</li>
+        </ul>
+      </div>
       <nav class="[ nav ] [ site-header__nav ]" aria-label="Primary">
         <ul class="nav__list">
           {% for item in navigation.items %}

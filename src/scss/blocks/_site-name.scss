@@ -1,14 +1,50 @@
+.site-name__wrapper {
+  @include media-query('md') {
+    display: flex;
+    align-items: center;
+  }
+}
+
 .site-name {
   display: inline-grid;
+  margin-right: get-size('500');
 
   .site-header[data-variant='light'] & {
     svg {
-      fill: get-color('light');
+      fill: get-color('light-glare');
     }
   }
 
   svg {
     width: 5rem;
     fill: get-color('primary');
+  }
+}
+
+.site-pronouns {
+  color: get-color('dark-glare');
+  display: flex;
+  font-size: get-size('400');
+  font-weight: bold;
+  margin-top: 0.5rem !important;
+
+  @include media-query('md') {
+    font-size: get-size('300');
+  }
+
+  .site-header[data-variant='light'] & {
+    color: get-color('light-glare');
+  }
+
+  li + li {
+    &:before {
+      content: '//';
+      color: get-color('light-shade');
+      margin: 0 0.3rem;
+
+      .site-header[data-variant='light'] & {
+        color: rgba(get-color('light-glare'), 0.5);
+      }
+    }
   }
 }

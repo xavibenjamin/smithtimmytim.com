@@ -40,6 +40,6 @@
   display: flex;
 
   > * + * {
-    margin-inline-start: get-size('500');
+    margin-left: get-size('300');
   }
 }

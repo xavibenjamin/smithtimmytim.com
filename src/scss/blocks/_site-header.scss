@@ -7,8 +7,12 @@
 }
 
 .site-header__inner {
-  align-items: center;
+  align-items: flex-end;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+
+  @include media-query('md') {
+    align-items: center;
+  }
 }
