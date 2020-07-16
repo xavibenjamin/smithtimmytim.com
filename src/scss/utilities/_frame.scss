@@ -1,13 +1,9 @@
-$frame-colors: ('primary', 'secondary');
+$frame-colors: ('primary', 'light-shade', 'secondary');
 
 .frame {
   position: relative;
 
   &::before {
-    // I don't like @extends, but I'll create an exception
-    // for consistency
-    // @extend .radius;
-
     content: '';
     pointer-events: none;
     width: 100%;
@@ -17,6 +13,7 @@ $frame-colors: ('primary', 'secondary');
     left: 0.3rem;
     border: 0.1rem solid get-color('dark');
     z-index: 1;
+    mix-blend-mode: multiply;
 
     @include media-query('md') {
       top: -0.5rem;
