@@ -1,8 +1,6 @@
 .site-name__wrapper {
-  @include media-query('md') {
-    display: flex;
-    align-items: center;
-  }
+  display: flex;
+  align-items: center;
 }
 
 .site-name {
@@ -26,9 +24,8 @@
   display: flex;
   font-size: get-size('400');
   font-weight: bold;
-  margin-top: 0.5rem !important;
 
-  @include media-query('md') {
+  @include media-query('xl') {
     font-size: get-size('300');
   }
 
@@ -41,6 +38,7 @@
       content: '//';
       color: get-color('light-shade');
       margin: 0 0.3rem;
+      letter-spacing: -1.5px;
 
       .site-header[data-variant='light'] & {
         color: rgba(get-color('light-glare'), 0.5);

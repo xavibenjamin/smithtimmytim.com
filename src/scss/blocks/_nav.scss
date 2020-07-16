@@ -1,8 +1,13 @@
 .nav {
   font-size: get-size('400');
+  margin-top: get-size('300');
+
+  @include media-query('md') {
+    margin-top: 0;
+  }
 
   a {
-    color: get-color('dark');
+    color: get-color('dark-shade');
     line-height: 1;
     font-weight: bold;
     text-decoration: none;
