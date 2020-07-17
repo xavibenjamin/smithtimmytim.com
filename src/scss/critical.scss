@@ -78,7 +78,7 @@ h3 {
 
 // Scrollbar styles
 ::-webkit-scrollbar {
-  height: 1rem;
+  width: 10px;
 }
 
 ::-webkit-scrollbar-track {
@@ -87,6 +87,7 @@ h3 {
 
 ::-webkit-scrollbar-thumb {
   background-color: get-color('primary');
+  border-radius: 25rem;
 }
 
 // Import blocks
