@@ -8,7 +8,7 @@ $outputTokenCSS: false;
 @import '../../node_modules/gorko/gorko.scss';
 
 .note__body {
-  margin-top: get-size('800');
+  margin-top: get-size('900');
 
   @include media-query('md') {
     margin-top: 8rem;
