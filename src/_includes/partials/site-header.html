@@ -16,7 +16,7 @@
         <ul class="nav__list">
           {% for item in navigation.items %}
             <li>
-              <a class="nav__url" href="{{ item.url }}" {{ helpers.getLinkActiveState(item.url, page.url) | safe }}>{{ item.text }}</a>
+              <a class="nav__url"{% if layout === 'layouts/note.html' and item.url === '/blog/' %} data-state="active"{% endif %} href="{{ item.url }}" {{ helpers.getLinkActiveState(item.url, page.url) | safe }}>{{ item.text }}</a>
             </li>
           {% endfor %}
         </ul>
