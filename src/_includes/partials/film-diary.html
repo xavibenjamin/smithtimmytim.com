@@ -9,7 +9,10 @@
     <article class="film__entry">
       <a href="{{ item.uri }}" class="film__url">
         <div class="film__media">
-          <img src="{{ item.film.image.tiny }}" alt="Poster for {{ item.film.title }}">
+          <img 
+            src="https://res.cloudinary.com/smithtimmytim/image/fetch/f_auto,q_auto/{{ item.film.image.tiny }}"
+            alt="Poster for {{ item.film.title }}"
+            loading="lazy">
         </div>
         <div class="film__info">
           <span class="film__title">{{ item.film.title }}<span class="film__rating">{{ item.rating.text }}</span></span>
