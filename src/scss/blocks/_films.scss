@@ -6,8 +6,8 @@
   }
 
   &:after {
-    background-color: get-color('dark');
-    background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0'%3F%3E%3Csvg xmlns='http://www.w3.org/2000/svg' enable-background='new 0 0 24 24' viewBox='0 0 24 24' fill='%23fff'%3E%3Cpath d='m16.007 12.007h-12.014c-1.101 0-1.993.892-1.993 1.993v8.007c0 1.101.892 1.993 1.993 1.993h12.015c1.1 0 1.992-.892 1.992-1.993v-8.007c0-1.101-.892-1.993-1.993-1.993zm-1.007-12.007c-2.761 0-5 2.239-5 5 0-2.761-2.239-5-5-5s-5 2.239-5 5 2.239 5 5 5h10c2.761 0 5-2.239 5-5s-2.239-5-5-5zm-10 7c-1.103 0-2-.897-2-2s.897-2 2-2 2 .897 2 2-.897 2-2 2zm10 0c-1.103 0-2-.897-2-2s.897-2 2-2 2 .897 2 2-.897 2-2 2zm5 8v6l4 2v-10z'%3E%3C/path%3E%3C/svg%3E");
+    background-color: get-color('primary');
+    background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0'%3F%3E%3Csvg xmlns='http://www.w3.org/2000/svg' enable-background='new 0 0 24 24' viewBox='0 0 24 24' fill='%23fff'%3E%3Cpath d='m22 0h-20c-1.104 0-2 .896-2 2v20c0 1.104.896 2 2 2h20c1.105 0 2-.896 2-2v-20c0-1.104-.895-2-2-2zm-18 21h-2v-2h2zm0-5h-2v-2h2zm0-6h-2v-2h2zm0-5h-2v-2h2zm14 15h-12v-7h12zm0-9h-12v-7h12zm4 10h-2v-2h2zm0-5h-2v-2h2zm0-6h-2v-2h2zm0-5h-2v-2h2z'%3E%3C/path%3E%3C/svg%3E");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: 45%;
@@ -18,11 +18,19 @@
     font-size: get-size('900');
 
     position: absolute;
-    top: -2.6rem;
-    left: -1.4rem;
+    top: -1.5rem;
+    left: 80%;
 
-    width: 4rem;
-    height: 4rem;
+    width: 5rem;
+    height: 5rem;
+
+    @include media-query('md') {
+      top: -3rem;
+      left: -1.8rem;
+
+      width: 5rem;
+      height: 5rem;
+    }
 
     z-index: 2;
   }
@@ -37,17 +45,19 @@
     display: grid;
     grid-template-columns: 5rem 1fr;
     grid-gap: get-size('500');
+    transition: background-color 0.3s;
 
     &:focus,
     &:hover {
-      background-color: rgba(get-color('light'), 0.6);
+      background-color: rgba(get-color('light'), 0.5);
+      border-radius: 0.25rem;
     }
   }
 
   + .film__entry {
     margin-top: get-size('500');
     padding-top: get-size('500');
-    border-top: 2px solid get-color('light-shade');
+    border-top: 1px solid get-color('light');
   }
 }
 
@@ -88,5 +98,7 @@
 .film__rating {
   color: get-color('primary');
   font-size: get-size('400');
-  margin-top: get-size('300');
+  margin-left: 0.4rem;
+  position: relative;
+  top: -0.1em;
 }
