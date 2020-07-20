@@ -1,5 +1,5 @@
 .page-content {
-  > :not([class*='-bleed']) {
+  > :not([class*='-bleed']):not(hr):not(table) {
     @include apply-utility('measure', 'long');
   }
 
@@ -8,7 +8,12 @@
   }
 
   h3 {
-    margin-top: get-size('700');
+    margin-top: get-size('800');
+  }
+
+  mark {
+    color: get-color('dark');
+    background-color: get-color('highlight');
   }
 
   blockquote:not([class]) {
@@ -31,10 +36,71 @@
     }
   }
 
+  .footnotes {
+    @include apply-utility('measure', 'medium');
+    font-size: get-size('400');
+  }
+
+  .footnotes-list {
+    @include apply-utility('measure', 'medium');
+  }
+
+  hr {
+    border: 0;
+    border-bottom: 3px solid get-color('light-shade');
+    margin: get-size('700') 0;
+
+    @include apply-utility('measure', 'short');
+  }
+
+  .footnote-ref {
+    font-size: 0.65em;
+    font-weight: bold;
+    a {
+      color: get-color('dark-glare');
+    }
+  }
+
+  .footnote-backref {
+    background-color: get-color('light-shade');
+    border-radius: 50%;
+    color: get-color('dark-glare');
+    text-decoration: none;
+    font-size: 0.65em;
+    padding: 0.2em 0.3em;
+    line-height: 1;
+    position: relative;
+    top: -0.1em;
+  }
+
   .case-study__body & {
     > p:first-of-type {
       font-size: get-size('600');
       line-height: 1.5;
     }
+  }
+
+  table {
+    border-collapse: collapse;
+    font-size: get-size('400');
+    margin: get-size('600') 0;
+    width: 100%;
+
+    tbody td {
+      border-top: 1px solid get-color('light-shade');
+    }
+  }
+
+  thead th {
+    color: get-color('dark-shade');
+    font-weight: bold;
+    text-align: left;
+
+    @include apply-utility('font', 'heading');
+  }
+
+  th,
+  td {
+    padding: 0.45rem 0 get-size('300');
   }
 }

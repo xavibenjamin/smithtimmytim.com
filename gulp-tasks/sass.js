@@ -20,6 +20,7 @@ const criticalStyles = [
   'note.scss',
   'photo-landing.scss',
   'photo.scss',
+  'page.scss',
 ];
 
 // Takes the arguments passed by `dest` and determines where the output file goes
