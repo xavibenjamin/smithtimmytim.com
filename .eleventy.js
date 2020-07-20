@@ -100,6 +100,7 @@ module.exports = (config) => {
   let markdownItAbbr = require('markdown-it-abbr');
   let markdownItMentions = require('markdown-it-mentions');
   let markdownItEmoji = require('markdown-it-emoji');
+  let markdownItMark = require('markdown-it-mark');
 
   let markdownItOpts = {
     html: true,
@@ -133,6 +134,7 @@ module.exports = (config) => {
 
     return '0' + n;
   };
+  markdownEngine.use(markdownItMark);
 
   config.setLibrary('md', markdownEngine);
 
