@@ -30,7 +30,7 @@
         {% if build.env == 'production' %}
           <img 
             src="https://res.cloudinary.com/smithtimmytim/image/fetch/w_400,f_auto,q_auto/{{ site.url }}{{ featuredImage }}"
-            alt="Image of Timothy Smith"
+            alt="Featured Image for {{ title }}"
             srcset="https://res.cloudinary.com/smithtimmytim/image/fetch/w_480,f_auto,q_auto/{{ site.url }}{{ featuredImage }} 480w, https://res.cloudinary.com/smithtimmytim/image/fetch/w_1000,f_auto,q_auto/{{ site.url }}{{ featuredImage }} 1000w, https://res.cloudinary.com/smithtimmytim/image/fetch/w_2400,f_auto,q_auto/{{ site.url }}{{ featuredImage }} 2400w"
             loading="lazy" />
         {% else %}
