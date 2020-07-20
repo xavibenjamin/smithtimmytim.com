@@ -3,13 +3,13 @@ title: 'Style Guide'
 layout: 'layouts/page.html'
 ---
 
-This page exists to show the different components of my site. More than anything, I maintain it because I think style guides are interesting. There's also a [writing style guide](/styleguide/writing/) if you enjoy that type of stuff.
+This page exists to show the different components of my site. More than anything, I maintain it because I think style guides are interesting. There's also a [writing style guide](/style-guide/writing/) if you enjoy that type of stuff.
 
 This website is currently set in Whitney for primary and secondary text, and Whitney Narrow for headings.
 
 ## Heading Two
 
-Secondary headings are used to separate portions of text. I don't ever use links in headings unless it's a link post. Primary headings are only used once in the page title or post title. Links in regular text look like [this](/styleguide).
+Secondary headings are used to separate portions of text. I don't ever use links in headings unless it's a link post. Primary headings are only used once in the page title or post title. Links in regular text look like [this](/style-guide/).
 
 As normal, you've got styles for `inline code`, _italics_, and **bold text**. Inline code is used when the code isn't multi-line. Italics are used for emphasis, and bold is hardly used but when it is, it's used for the necessary visual contrast. ==This is highlighted text.==
 
