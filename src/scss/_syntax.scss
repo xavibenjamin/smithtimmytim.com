@@ -2,7 +2,6 @@
 
 pre {
   font-family: JetBrains Mono, Operator Mono, monospace;
-  line-height: 1.5;
   overflow-x: auto;
   white-space: pre;
   code {
@@ -12,13 +11,11 @@ pre {
 }
 
 code {
-  background: get-color('dark');
+  background: get-color('light-shade');
   border-radius: 0.25rem;
-  color: get-color('primary-glare');
   font-family: JetBrains Mono, Operator Mono, monospace;
-  font-size: 0.9em;
-  line-height: 1.5;
-  padding: 1px 4px;
+  font-size: 0.85em;
+  padding: 0.1em 0.2em;
   white-space: pre;
   pre & {
     color: inherit;
@@ -65,7 +62,7 @@ pre[class*='language-'] {
   word-spacing: normal;
   word-break: normal;
   word-wrap: normal;
-  line-height: 1.5;
+  line-height: 1.3;
   tab-size: 2;
   hyphens: none;
 }
