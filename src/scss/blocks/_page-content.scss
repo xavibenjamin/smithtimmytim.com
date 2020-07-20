@@ -24,15 +24,12 @@
 
   pre[class*='language-'] {
     width: 100vw;
-    max-width: none;
     margin-left: 50%;
     transform: translateX(-50%);
 
-    @include media-query('lg') {
+    @include media-query('md') {
       margin-left: 0;
       transform: none;
-
-      @include apply-utility('measure', 'long');
     }
   }
 
