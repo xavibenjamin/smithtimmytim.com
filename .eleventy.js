@@ -124,6 +124,16 @@ module.exports = (config) => {
   });
   markdownEngine.use(markdownItEmoji);
 
+  markdownEngine.renderer.rules.footnote_caption = (tokens, idx) => {
+    const n = Number(tokens[idx].meta.id + 1).toString();
+
+    if (tokens[idx].meta.subId > 0) {
+      n += ':' + tokens[idx].meta.subId;
+    }
+
+    return '0' + n;
+  };
+
   config.setLibrary('md', markdownEngine);
 
   return {
