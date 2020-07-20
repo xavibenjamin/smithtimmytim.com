@@ -1,0 +1,32 @@
+{% extends "layouts/base.html" %}
+{% set pageCriticalStyles = ['css/page.css'] %}
+
+{% set pageHeaderTitle = title %}
+{% set pageHeaderSummary = summary | safe %}
+
+{% block content %}
+  {% include "partials/page-header.html" %}
+
+  {% if featuredImage %}
+    <figure class="featured-image">
+      <div class="wrapper">
+        {% if build.env == 'production' %}
+          <img 
+            src="https://res.cloudinary.com/smithtimmytim/image/fetch/w_400,f_auto,q_auto/{{ site.url }}{{ featuredImage }}"
+            alt="Featured Image for {{ title }}"
+            srcset="https://res.cloudinary.com/smithtimmytim/image/fetch/w_480,f_auto,q_auto/{{ site.url }}{{ featuredImage }} 480w, https://res.cloudinary.com/smithtimmytim/image/fetch/w_1000,f_auto,q_auto/{{ site.url }}{{ featuredImage }} 1000w, https://res.cloudinary.com/smithtimmytim/image/fetch/w_2400,f_auto,q_auto/{{ site.url }}{{ featuredImage }} 2400w"
+            loading="lazy" />
+        {% else %}
+          <img src="{{ featuredImage }}" alt="Featured Image for {{ title }}" loading="lazy">
+        {% endif %}
+      </div>
+    </figure>
+    {% endif %}
+
+  <div class="[ wrapper ] [ gap-top-700 md:gap-top-900 gap-bottom-700 md:gap-bottom-900 ]">
+    <article class="[ page-content ] [ flow flow-space-500 hyphens ]">
+      {{ content | safe }}
+    </article>
+  </div>
+
+{% endblock %}
