@@ -68,6 +68,58 @@ h3 {
   color: get-color('dark');
 }
 
+ul:not([class]) {
+  list-style: none;
+  padding-left: get-size('700');
+  li {
+    position: relative;
+
+    &:before {
+      color: get-color('primary');
+      content: '';
+      background: get-color('primary');
+      display: inline-block;
+      width: 0.3em;
+      height: 0.3em;
+      position: absolute;
+      left: -#{get-size('500')};
+      top: 0.85rem;
+      border-radius: 50%;
+    }
+  }
+}
+
+ol:not([class]),
+.footnotes-list {
+  counter-reset: section;
+  list-style: none;
+  padding-left: get-size('700') !important;
+
+  li {
+    position: relative;
+
+    &:before {
+      color: get-color('primary');
+      text-align: right;
+      position: absolute;
+      counter-increment: section;
+      content: counter(section);
+      font-size: 0.75em;
+      left: -#{get-size('600')};
+      top: 0.55em;
+      line-height: 1;
+    }
+
+    &:nth-child(-n + 9):before {
+      content: '0' counter(section);
+    }
+
+    ol {
+      counter-reset: section;
+    }
+  }
+}
+
 // High contrast selection because it can help visually-impaired
 // folks read the text easier
 ::selection {
