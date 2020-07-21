@@ -99,7 +99,7 @@ ol:not([class]),
     position: relative;
 
     &:before {
-      color: get-color('tertiary-shade');
+      color: get-color('primary-shade');
       text-align: right;
       position: absolute;
       counter-increment: section;
