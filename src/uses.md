@@ -29,14 +29,14 @@ featuredImage: '/images/uploads/2019/ea567f536e.jpg'
 
 ## Development
 
-- **Editor**: [VS Code](https://code.visualstudio.com/).
+- **Editor**: [VS Code](https://code.visualstudio.com/)
   - with the [Rainier theme](https://marketplace.visualstudio.com/items?itemName=joytrekker.rainier) in the retro setting
-  - with the[JetBrains Mono](https://www.jetbrains.com/lp/mono/) typeface
+  - with the [JetBrains Mono](https://www.jetbrains.com/lp/mono/) typeface
 - **Terminal**: [iTerm2](https://www.iterm2.com/)
 - **Browser:** Chrome and Safari
 - **Static Site Generator:** [Eleventy](https://www.11ty.dev/)
 - **CMS**: [WordPress](https://wordpress.org/) when needed
-- My [dotfiles](https://github.com/smithtimmytim/dotfiles).
+- My [dotfiles](https://github.com/smithtimmytim/dotfiles)
 
 ## Design
 
