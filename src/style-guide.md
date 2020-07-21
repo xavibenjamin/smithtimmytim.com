@@ -1,6 +1,7 @@
 ---
 title: 'Style Guide'
 layout: 'layouts/page.html'
+summary: 'Text and components used through out this site'
 ---
 
 This page exists to show the different components of my site. More than anything, I maintain it because I think style guides are interesting. There's also a [writing style guide](/style-guide/writing/) if you enjoy that type of stuff.
