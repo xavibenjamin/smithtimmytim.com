@@ -70,7 +70,7 @@ h3 {
 
 ul:not([class]) {
   list-style: none;
-  padding-left: get-size('700');
+  padding-left: get-size('600');
   li {
     position: relative;
 
@@ -79,12 +79,11 @@ ul:not([class]) {
       content: '';
       background: get-color('primary');
       display: inline-block;
-      width: 0.3em;
-      height: 0.3em;
+      width: 7px;
+      height: 7px;
       position: absolute;
-      left: -#{get-size('500')};
+      left: -#{get-size('400')};
       top: 0.85rem;
-      border-radius: 50%;
     }
   }
 }
