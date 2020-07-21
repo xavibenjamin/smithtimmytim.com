@@ -4,6 +4,7 @@ const widont = require('./src/filters/widont.js');
 const dateReadable = require('./src/filters/date-readable.js');
 const dateIso = require('./src/filters/date-iso.js');
 const dateNotePermalink = require('./src/filters/date-note-permalink.js');
+const dateLetterboxd = require('./src/filters/date-letterboxd.js');
 const webmentionsForUrl = require('./src/filters/webmentions-for-url.js');
 const webmentionCountByType = require('./src/filters/webmention-count-by-type.js');
 
@@ -78,6 +79,7 @@ module.exports = (config) => {
   config.addFilter('dateReadable', dateReadable);
   config.addFilter('dateIso', dateIso);
   config.addFilter('dateNotePermalink', dateNotePermalink);
+  config.addFilter('dateLetterboxd', dateLetterboxd);
   config.addFilter('webmentionsForUrl', webmentionsForUrl);
   config.addFilter('webmentionCountByType', webmentionCountByType);
 
