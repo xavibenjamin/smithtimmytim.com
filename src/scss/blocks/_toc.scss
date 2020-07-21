@@ -1,13 +1,13 @@
 .table-of-contents {
   background-color: get-color('light-glare');
   border-left: 3px solid get-color('light-shade');
-  margin-inline-start: get-size('500');
   padding: get-size('600');
-  float: right;
-  position: sticky;
-
   font-size: get-size('400');
-  top: get-size('400');
+
+  @include media-query('md') {
+    float: right;
+    margin-inline-start: get-size('500');
+  }
 
   &:before {
     content: 'Table of Contents';
