@@ -75,9 +75,10 @@ ul:not([class]) {
     position: relative;
 
     &:before {
+      background: get-color('primary');
+      border-radius: 50%;
       color: get-color('primary');
       content: '';
-      background: get-color('primary');
       display: inline-block;
       width: 7px;
       height: 7px;
