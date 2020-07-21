@@ -27,6 +27,8 @@ code {
 
 pre[class*='language-'] {
   padding: get-size('700') !important;
+  margin-top: get-size('700');
+  margin-bottom: get-size('700');
 
   @include media-query('lg') {
     border-radius: 0.25rem;
