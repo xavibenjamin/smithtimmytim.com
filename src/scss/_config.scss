@@ -35,6 +35,7 @@ $gorko-colors: (
   'dark-glare': #685375,
   'light': #feeadc,
   'light-shade': #f9b98b,
+  'light-shade-text': #ce5c0c,
   'light-glare': #fff9f5,
   'primary': #ea4a87,
   'primary-shade': #e7236e,
@@ -80,6 +81,7 @@ $gorko-config: (
         '"Whitney A", "Whitney B",system,-apple-system,BlinkMacSystemFont,Avenir,sans-serif',
       'display':
         '"Whitney Narrow A", "Whitney Narrow B",system,-apple-system,BlinkMacSystemFont,Avenir,sans-serif',
+      'mono': '"JetBrains Mono", monospace',
     ),
     'output': 'standard',
     'property': 'font-family',
