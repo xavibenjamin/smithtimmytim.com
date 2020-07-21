@@ -134,7 +134,7 @@ module.exports = (config) => {
       n += ':' + tokens[idx].meta.subId;
     }
 
-    return '0' + n;
+    return n;
   };
   markdownEngine.use(markdownItMark);
 
