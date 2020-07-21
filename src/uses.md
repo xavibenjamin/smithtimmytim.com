@@ -5,6 +5,8 @@ summary: 'The stuff I use to make stuff.'
 featuredImage: '/images/uploads/2019/ea567f536e.jpg'
 ---
 
+[[toc]]
+
 ## Base Hardware
 
 - **Laptop:** MacBook Pro 15-inch 2018 in Space Gray. 2.9 GHz 6-Core Intel Core i9 with 32 GB of RAM and 1 TB SSD
