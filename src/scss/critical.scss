@@ -5,6 +5,7 @@
 @import '../../node_modules/gorko/gorko.scss';
 
 @import 'reset';
+@import 'mono-fonts';
 
 // Global styles start
 :root {
@@ -75,17 +76,23 @@ ul:not([class]) {
     position: relative;
 
     &:before {
-      background: get-color('primary');
       border-radius: 50%;
-      color: get-color('primary');
-      content: '';
+      color: get-color('light-shade-text');
+      content: '•';
       display: inline-block;
-      width: 7px;
-      height: 7px;
       position: absolute;
-      left: -#{get-size('400')};
-      top: 0.85rem;
+      left: -1em;
+      top: -0.1em;
+      font-family: system, -apple-system, BlinkMacSystemFont, Avenir, sans-serif;
     }
+    + li {
+      margin-top: 0.3rem;
+    }
+  }
+  ul,
+  ol {
+    margin-top: get-size('300');
+    margin-bottom: get-size('300');
   }
 }
 
@@ -93,30 +100,42 @@ ol:not([class]),
 .footnotes-list {
   counter-reset: section;
   list-style: none;
-  padding-left: get-size('700') !important;
+  padding-left: get-size('600') !important;
 
   li {
     position: relative;
 
     &:before {
-      color: get-color('primary-shade');
-      text-align: right;
-      position: absolute;
-      counter-increment: section;
+      color: get-color('light-shade-text');
       content: counter(section);
-      font-size: 0.75em;
-      left: -#{get-size('600')};
-      top: 0.55em;
-      line-height: 1;
+      counter-increment: section;
+      font-size: 0.85em;
+      font-weight: bold;
+      left: -3em;
+      padding-right: 0.55em;
+      position: absolute;
+      text-align: right;
+      top: 0.15em;
+      width: 3em;
+      @include apply-utility('font', 'mono');
     }
 
     &:nth-child(-n + 9):before {
-      content: '0' counter(section);
+      content: counter(section);
+    }
+
+    + li {
+      margin-top: 0.3rem;
     }
 
     ol {
       counter-reset: section;
     }
+  }
+  ul,
+  ol {
+    margin-top: get-size('300');
+    margin-bottom: get-size('300');
   }
 }
 
@@ -154,6 +173,7 @@ ol:not([class]),
 @import 'blocks/social-links';
 @import 'blocks/blogroll';
 @import 'blocks/subfooter';
+@import 'blocks/subnav';
 
 // Import utilities
 @import 'utilities/flow';
