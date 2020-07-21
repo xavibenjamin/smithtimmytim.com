@@ -51,24 +51,22 @@
   }
 
   .footnote-ref {
-    font-size: 0.65em;
+    font-size: 0.7em;
     font-weight: bold;
+    @include apply-utility('font', 'mono');
+
     a {
-      color: get-color('dark-glare');
-      text-decoration-color: get-color('dark-glare');
+      color: get-color('light-shade-text');
+      text-decoration-color: get-color('light-shade-text');
     }
   }
 
   .footnote-backref {
-    background-color: get-color('light-shade');
     border-radius: 50%;
-    color: get-color('dark-glare');
+    color: get-color('secondary');
     text-decoration: none;
-    font-size: 0.65em;
-    padding: 0.2em 0.3em;
-    line-height: 1;
     position: relative;
-    top: -0.1em;
+    top: 0.15em;
   }
 
   .case-study__body & {
