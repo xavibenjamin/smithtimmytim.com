@@ -46,7 +46,7 @@ Poems, songs, and TV episodes take quotation marks.
 Quotation marks should:
 
 - Follow periods and commas (“x.” and “x,”)
-- Precede colons and semicolons (“x”: and “x”;)
+- Precede colons and semicolons (“x”: and `“x”:`)
 - Precede question marks and exclamation marks, unless those marks are part of the quoted material
 
 I believe in the serial comma (e.g. bread, peanut butter, and jelly). The comma always goes before the conjunction in a series.
