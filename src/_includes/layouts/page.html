@@ -24,9 +24,11 @@
     {% endif %}
 
   <div class="[ wrapper ] [ gap-top-700 md:gap-top-900 gap-bottom-700 md:gap-bottom-900 ]">
-    <article class="[ page-content ] [ flow flow-space-500 hyphens ]">
-      {{ content | safe }}
-    </article>
+    <div class="inner-wrapper">
+      <article class="[ page-content ] [ flow flow-space-500 hyphens ]">
+        {{ content | safe }}
+      </article>
+    </div>
   </div>
 
 {% endblock %}
