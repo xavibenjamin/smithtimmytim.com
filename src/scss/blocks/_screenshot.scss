@@ -10,8 +10,8 @@
   img {
     box-shadow: 1.5vw 2vw 4vw 1vw rgba(black, 0.1);
     border-radius: 0.25rem;
-    max-width: 55rem;
     width: 100%;
+    @include apply-utility('measure', 'xxl');
   }
 }
 
