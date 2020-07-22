@@ -27,7 +27,7 @@ The login page was a great place to get people familiar with the Webform brand's
 I solved this problem by playing on the illustrations in other parts of the site and bringing them to the login screen. I brought over elements like the sunny sky and clouds to give the pages a happy feeling and made the forms small and straightforward.
 
 <blockquote class="pullquote">
-  <p>Tim's designs integrated perfectly with Webform.com, taking into consideration our existing styles but elaborating in an "outside the box" approach. Tim helped take our site in a new direction to improve not only the look but also the usability. It was a pleasure to work with Tim.</p>
+  <p>Tim's designs integrated perfectly with Webform.com, taking into consideration our existing styles but elaborating in an "outside the box" approach. It was a pleasure to work with Tim.</p>
   <small><strong>Nathan Haug</strong> Founder, Webform.com</small>
 </blockquote>
 
