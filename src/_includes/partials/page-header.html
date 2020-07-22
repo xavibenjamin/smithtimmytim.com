@@ -1,5 +1,6 @@
 <header class="[ page-header ] [ bg-light-glare ]">
   <div class="[ wrapper ] [ flow flow-space-300 ]">
+    {% if layout === 'layouts/article.html' or layout === 'layouts/feed.html' %}<div class="inner-wrapper">{% endif %}
     {% if tags %}
       <a href="/tag/{{ tags[0] | slug }}" class="article__category"><span class="visually-hidden">Post filed under:</span>{{ tags[0] }}</a>
     {% endif %}
@@ -9,5 +10,6 @@
         {{ pageHeaderSummary | safe }}
       </div>
     {% endif %}
+    {% if layout === 'layouts/article.html' or layout === 'layouts/feed.html' %}</div>{% endif %}
   </div>
 </header>

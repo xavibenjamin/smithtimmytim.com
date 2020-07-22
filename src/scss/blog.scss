@@ -11,6 +11,10 @@ $outputTokenCSS: false;
 @import 'blocks/page-content';
 @import 'blocks/feed-post';
 @import 'blocks/header-anchor';
+@import 'blocks/post-image';
 @import 'blocks/pagination';
+
+// Utilities
+@import 'utilities/inner-wrapper';
 
 @import 'syntax';
