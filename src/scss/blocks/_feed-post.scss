@@ -8,6 +8,19 @@
   @include apply-utility('measure', 'long');
 }
 
+.feed-post__featured-image {
+  @include media-query('md') {
+    width: 100vw;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    max-width: 55rem;
+  }
+
+  img {
+    border-radius: 0.25rem;
+  }
+}
+
 .feed-post__category {
   font-size: get-size('400');
   font-weight: bold;

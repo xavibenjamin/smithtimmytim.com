@@ -71,7 +71,7 @@ h3 {
 
 ul:not([class]) {
   list-style: none;
-  padding-left: get-size('600');
+  padding-left: get-size('700');
   li {
     position: relative;
 
@@ -100,7 +100,7 @@ ol:not([class]),
 .footnotes-list {
   counter-reset: section;
   list-style: none;
-  padding-left: get-size('600') !important;
+  padding-left: get-size('700') !important;
 
   li {
     position: relative;
