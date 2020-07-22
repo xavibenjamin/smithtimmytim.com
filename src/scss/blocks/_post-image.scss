@@ -68,5 +68,12 @@
       transform: translateX(-50%);
       @include apply-utility('measure', 'xl');
     }
+
+    .image__caption {
+      margin-left: auto;
+      margin-right: auto;
+
+      @include apply-utility('measure', 'long');
+    }
   }
 }
