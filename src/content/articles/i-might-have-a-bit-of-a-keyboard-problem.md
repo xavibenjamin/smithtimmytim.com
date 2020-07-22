@@ -4,7 +4,7 @@ subhead: 'My new keyboard from Keychron is badass'
 summary: 'My new keyboard from Keychron is badass'
 featuredImage: '/images/uploads/2020/0d7a806e-60ab-4cc0-951c-80cc9dd19fe7.jpeg'
 date: 2020-01-15T15:04-07:00
-tags: 'Tech'
+tags: 'Technology'
 ---
 Kelly says I have a bit of a keyboard problem. You see, I have four keyboards in this office, counting the one I’m currently typing on.
 
