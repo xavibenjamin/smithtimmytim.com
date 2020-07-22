@@ -15,6 +15,7 @@ const readingTime = require('eleventy-plugin-reading-time');
 
 // Shortcodes
 const screenshot = require('./src/shortcodes/screenshot.js');
+const image = require('./src/shortcodes/image.js');
 
 // Transforms
 const htmlMinTransform = require('./src/transforms/html-min-transform.js');
@@ -90,6 +91,7 @@ module.exports = (config) => {
 
   // Shortcodes
   config.addPairedShortcode('screenshot', screenshot);
+  config.addShortcode('image', image);
 
   // Tell 11ty to use the .eleventyignore and ignore our .gitignore file
   config.setUseGitIgnore(false);
