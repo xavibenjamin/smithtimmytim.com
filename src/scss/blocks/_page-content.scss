@@ -15,10 +15,13 @@
   blockquote:not([class]) {
     color: get-color('dark-glare');
     border-left: 0.3rem solid get-color('light-shade');
-    padding-left: get-size('400');
+    padding-left: get-size('600');
     > ul,
     > ol {
       margin-left: -1rem;
+    }
+    p + p {
+      margin-top: get-size('500');
     }
   }
 
