@@ -1,13 +1,23 @@
 .meta-box {
-  border-left: 2px solid get-color('primary');
-  margin-inline-start: get-size('500');
-  padding: get-size('400') get-size('600');
-  float: right;
+  background-color: get-color('light-glare');
+  border-left: 3px solid get-color('light-shade');
+  font-size: get-size('400');
+  padding: get-size('600');
+
+  @include media-query('md') {
+    float: right;
+    margin-left: get-size('600');
+  }
+
+  @include media-query('lg') {
+    margin-right: -#{get-size('major')};
+  }
 
   h4 {
     font-size: get-size('300');
-    font-weight: 900;
+    font-weight: bold;
     text-transform: uppercase;
+    letter-spacing: 1.2px;
   }
 
   p {
@@ -15,9 +25,8 @@
   }
 
   ul {
-    padding: 0;
+    padding-left: get-size('400');
     margin: 0;
-    list-style: none;
   }
 
   p,

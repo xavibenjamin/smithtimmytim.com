@@ -2,20 +2,20 @@
   background-color: get-color('light-glare');
 
   hyphens: auto;
-  max-width: 50ch !important;
   margin: get-size('800') 0;
   position: relative;
-  padding: get-size('500') get-size('600');
+  padding: get-size('400') get-size('500');
 
   @include media-query('md') {
     float: right;
     margin: get-size('800') get-size('400');
+    @include apply-utility('measure', 'short');
   }
 
   @include media-query('lg') {
     margin: get-size('800');
-    padding: get-size('600') get-size('700');
-    margin-right: get-size('300');
+    padding: get-size('500') get-size('600');
+    margin-right: -8rem;
   }
 
   &:before {

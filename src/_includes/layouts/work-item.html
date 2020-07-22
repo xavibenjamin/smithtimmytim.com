@@ -8,39 +8,42 @@
 
 <header class="portfolio-hero" style="background-color: #{{ color }}">
   <div class="[ wrapper ] [ flow flow-space-300 ]">
-    <h1 class="[ portfolio-hero__headline ] [ headline ] [ color-light-glare ]">{{ title | widont }}</h1>
-    <h2 class="[ portfolio-hero__subhead ] [ subhead ] [ gap-bottom-900 ]">{{ subhead }}</h2>
+    <div class="inner-wrapper flow-space-300">
+      <h1 class="[ portfolio-hero__headline ] [ headline ] [ color-light-glare ]">{{ title | widont }}</h1>
+      <h2 class="[ portfolio-hero__subhead ] [ subhead ] [ gap-bottom-900 ]">{{ subhead }}</h2>
 
-    {% if hero %}
-    <img
-      class="portfolio-hero__image"
-      src="{{ hero }}" 
-      alt="Hero image for {{ title }}"
-    />
-    {% endif %}
+      {% if hero %}
+      <img
+        class="portfolio-hero__image"
+        src="{{ hero }}" 
+        alt="Hero image for {{ title }}"
+      />
+      {% endif %}
+    </div>
   </div>
 </header>
 
-<article class="[ case-study__body ] [ wrapper ] [ gap-top-900 ]">
-  <div class="[ meta-box ] [ case-study__meta ]">
-    {% if meta.position %}
-    <h4>Position</h4>
-    <p>{{ meta.position }}</p>
-    {% endif %}
-    {% if meta.company %}
-    <h4>Company</h4>
-    <p>{{ meta.company }}</p>
-    {% endif %}
-    <h4>Responsibilities</h4>
-    <ul>
-      {% for role in meta.roles %}
-        <li>{{ role }}</li>
-      {% endfor %}
-    </ul>
-  </div>
-
-  <div class="[ page-content ] [ flow hyphens ]">
-    {{ content | safe }}
+<article class="[ case-study__body ] [ wrapper ] [ gap-top-700 md:gap-top-900 ]">
+  <div class="inner-wrapper">
+    <div class="[ page-content ] [ flow hyphens ]">
+      <div class="[ meta-box ] [ case-study__meta ]">
+        {% if meta.position %}
+        <h4>Position</h4>
+        <p>{{ meta.position }}</p>
+        {% endif %}
+        {% if meta.company %}
+        <h4>Company</h4>
+        <p>{{ meta.company }}</p>
+        {% endif %}
+        <h4>Responsibilities</h4>
+        <ul>
+          {% for role in meta.roles %}
+            <li>{{ role }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+      {{ content | safe }}
+    </div>
   </div>
 </article>
 
@@ -51,19 +54,23 @@
 {% if nextPost %}
   <div class="[ next ] [ gap-top-900 ]" style="background-color: #{{ nextPost.data.color }};">
     <div class="wrapper">
-      <span class="next__title">Next Project</span>
-      <h3 class="next__project-title">{{ nextPost.data.title }}</h3>
-      <p class="[ next__project-subhead ] [ measure-long ]">{{ nextPost.data.subhead }}</p>
-      <a class="[ next__button ] [ button ]" data-variant="light" href="{{ nextPost.url }}">Read the Case Study</a>
+      <div class="inner-wrapper">
+        <span class="next__title">Next Project</span>
+        <h3 class="next__project-title">{{ nextPost.data.title }}</h3>
+        <p class="[ next__project-subhead ] [ measure-long ]">{{ nextPost.data.subhead }}</p>
+        <a class="[ next__button ] [ button ]" data-variant="light" href="{{ nextPost.url }}">Read the Case Study</a>
+      </div>
     </div>
   </div>
 {% else %}
   <div class="[ next ] [ gap-top-900 ]" style="background-color: #{{ previousPost.data.color }};">
     <div class="wrapper">
-      <span class="next__title">Next Project</span>
-      <h3 class="next__project-title">{{ previousPost.data.title }}</h3>
-      <p class="[ next__project-subhead ] [ measure-long ]">{{ previousPost.data.subhead }}</p>
-      <a class="[ next__button ] [ button ]" data-variant="light" href="{{ previousPost.url }}">Read the Case Study</a>
+      <div class="inner-wrapper">
+        <span class="next__title">Next Project</span>
+        <h3 class="next__project-title">{{ previousPost.data.title }}</h3>
+        <p class="[ next__project-subhead ] [ measure-long ]">{{ previousPost.data.subhead }}</p>
+        <a class="[ next__button ] [ button ]" data-variant="light" href="{{ previousPost.url }}">Read the Case Study</a>
+      </div>
     </div>
   </div>
 {% endif %}
