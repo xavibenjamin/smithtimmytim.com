@@ -6,7 +6,11 @@
 
   @include media-query('md') {
     float: right;
-    margin-inline-start: get-size('500');
+    margin-left: get-size('600');
+  }
+
+  @include media-query('lg') {
+    margin-right: -#{get-size('major')};
   }
 
   &:before {
