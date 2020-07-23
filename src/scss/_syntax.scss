@@ -29,9 +29,13 @@ pre[class*='language-'] {
   padding: get-size('600') !important;
   margin-top: get-size('700');
   margin-bottom: get-size('700');
+  width: 100vw;
+  margin-left: 50%;
+  transform: translateX(-50%);
 
   @include media-query('lg') {
     border-radius: 0.25rem;
+    @include apply-utility('measure', 'xl');
   }
 }
 

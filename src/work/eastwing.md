@@ -38,9 +38,6 @@ At the time, I built responsive sites desktop to mobile instead of mobile first.
     <img src="/images/work/eastwing/screenshot-episode-view.jpg" alt="The East Wing Episode View">
     <img src="/images/work/eastwing/screenshot-sponsor-page.jpg" alt="The East Wing Episode View">
   </div>
-  <figcaption class="image__caption">
-    <p><span class="color-tertiary">↑ Above:</span> Single episode and sponsorship pages.</p>
-  </figcaption>
 </figure>
 
 ## Creating a Podcast RSS Feed

@@ -12,9 +12,13 @@ module.exports = (content, path, alt, direction) => {
   if (direction === 'top') {
     let directionLabel = `&darr; Below`;
     return `<figure class="[ screenshot ] [ image-bleed ]">
-  <figcaption class="image__caption" data-variant="top">
-    <p><span class="color-tertiary">${directionLabel}: </span>${content}</p>
-  </figcaption>
+  <div class="wrapper">
+    <div class="inner-wrapper">
+      <figcaption class="image__caption" data-variant="top">
+        <p><span class="color-tertiary">${directionLabel}: </span>${content}</p>
+      </figcaption>
+    </div>
+  </div>
   <div class="screenshot__container">
     ${img}
   </div>
@@ -24,9 +28,13 @@ module.exports = (content, path, alt, direction) => {
   <div class="screenshot__container">
     ${img}
   </div>
-  <figcaption class="image__caption">
-    <p><span class="color-tertiary">${directionLabel}: </span>${content}</p>
-  </figcaption>
+  <div class="wrapper">
+    <div class="inner-wrapper">
+      <figcaption class="image__caption">
+        <p><span class="color-tertiary">${directionLabel}: </span>${content}</p>
+      </figcaption>
+    </div>
+  </div>
 </figure>`;
   }
 };

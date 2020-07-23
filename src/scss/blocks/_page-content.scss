@@ -1,8 +1,4 @@
 .page-content {
-  > :not([class*='-bleed']):not(hr):not(table) {
-    @include apply-utility('measure', 'long');
-  }
-
   h2 {
     margin-top: get-size('900');
   }
@@ -18,18 +14,14 @@
 
   blockquote:not([class]) {
     color: get-color('dark-glare');
-    border-left: 0.4rem solid get-color('primary');
-    padding-left: get-size('400');
-  }
-
-  pre[class*='language-'] {
-    width: 100vw;
-    margin-left: 50%;
-    transform: translateX(-50%);
-
-    @include media-query('md') {
-      margin-left: 0;
-      transform: none;
+    border-left: 0.3rem solid get-color('light-shade');
+    padding-left: get-size('600');
+    > ul,
+    > ol {
+      margin-left: -1rem;
+    }
+    p + p {
+      margin-top: get-size('500');
     }
   }
 
@@ -72,7 +64,8 @@
   .case-study__body & {
     > p:first-of-type {
       font-size: get-size('600');
-      line-height: 1.5;
+      line-height: 1.3;
+      @include apply-utility('font', 'heading');
     }
   }
 
@@ -81,6 +74,13 @@
     font-size: get-size('400');
     margin: get-size('600') 0;
     width: 100%;
+
+    @include media-query('lg') {
+      width: 100vw;
+      margin-left: 50%;
+      transform: translateX(-50%);
+      @include apply-utility('measure', 'xl');
+    }
 
     tbody td {
       border-top: 1px solid get-color('light-shade');

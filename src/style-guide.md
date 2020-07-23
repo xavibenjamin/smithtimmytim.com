@@ -8,9 +8,21 @@ This page exists to show the different components of my site. More than anything
 
 This website is currently set in Whitney for primary and secondary text, and Whitney Narrow for headings.
 
+{% image
+  '/images/uploads/2020/e2dccbf7-edcf-4429-8f35-7643292b9319.jpeg',
+  'Keyboard from the left angle',
+  'full-bleed',
+  'This is what a caption looks like.' %}
+
 ## Heading Two
 
 Secondary headings are used to separate portions of text. I don't ever use links in headings unless it's a link post. Primary headings are only used once in the page title or post title. Links in regular text look like [this](/style-guide/).
+
+{% image
+  '/images/uploads/2020/e2dccbf7-edcf-4429-8f35-7643292b9319.jpeg',
+  'Keyboard from the left angle',
+  'left',
+  'This is what a caption looks like' %}
 
 As normal, you've got styles for `inline code`, _italics_, and **bold text**. Inline code is used when the code isn't multi-line. Italics are used for emphasis, and bold is hardly used but when it is, it's used for the necessary visual contrast. ==This is highlighted text.==
 
@@ -32,9 +44,21 @@ I use horizontal rules for separating ideas in an article.
 
 Here's a `blockquote` for you. These are mostly used in link posts to quote writing from elsewhere. They're usually preceded by the person who said or wrote the quote.
 
+{% image
+  '/images/uploads/2020/e2dccbf7-edcf-4429-8f35-7643292b9319.jpeg',
+  'Keyboard from the left angle',
+  'right',
+  'This is what a caption looks like' %}
+
 Ben Brooks on _The Brooks Review_:
 
 > There’s a lot of good looking options out there, but I wanted to be able to test something affordable for a change. So I reached out to Tom Bihn and asked if I could stop by to test out a few different bags, and possibly swipe one for a while to test out.
+
+{% image
+  '/images/uploads/2020/e2dccbf7-edcf-4429-8f35-7643292b9319.jpeg',
+  'Keyboard from the left angle',
+  'extend-out',
+  'This is what a caption looks like' %}
 
 I use Github Flavored Markdown for code blocks. In other words, I use three back ticks. I always declare the language that's being used in the code block.
 

@@ -1,13 +1,25 @@
+{% set pageHeaderMarkup %}
+  {% if tags %}
+    <a href="/tag/{{ tags[0] | slug }}" class="article__category"><span class="visually-hidden">Post filed under:</span>{{ tags[0] }}</a>
+  {% endif %}
+  <h1 class="[ page-header__heading ] [ headline ]{% if type == 'article'%}[ p-name ]{% endif %}">{{ pageHeaderTitle | safe }}</h1>
+  {% if pageHeaderSummary %}
+    <div class="[ page-header__description ] [ flow ] [ measure-long ]">
+      {{ pageHeaderSummary | safe }}
+    </div>
+  {% endif %}
+{% endset %}
+
 <header class="[ page-header ] [ bg-light-glare ]">
+  {% if layout == 'layouts/work-landing.html' or layout == 'layouts/photo-landing.html' %}
   <div class="[ wrapper ] [ flow flow-space-300 ]">
-    {% if tags %}
-      <a href="/tag/{{ tags[0] | slug }}" class="article__category"><span class="visually-hidden">Post filed under:</span>{{ tags[0] }}</a>
-    {% endif %}
-    <h1 class="[ page-header__heading ] [ headline ]{% if type == 'article'%}[ p-name ]{% endif %}">{{ pageHeaderTitle | safe }}</h1>
-    {% if pageHeaderSummary %}
-      <div class="[ page-header__description ] [ flow ] [ measure-long ]">
-        {{ pageHeaderSummary | safe }}
-      </div>
-    {% endif %}
+    {{ pageHeaderMarkup | safe }}
   </div>
+  {% else %}
+  <div class="wrapper">
+    <div class="[ inner-wrapper ] [ flow flow-space-300 ]">
+      {{ pageHeaderMarkup | safe }}
+    </div>
+  </div>
+  {% endif %}
 </header>

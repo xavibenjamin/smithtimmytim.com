@@ -1,6 +1,10 @@
 .portfolio-hero {
-  padding-top: get-size('900');
+  padding-top: get-size('700');
   overflow: hidden;
+
+  @include media-query('md') {
+    padding-top: get-size('900');
+  }
 }
 
 .portfolio-hero__subhead {
