@@ -8,6 +8,7 @@
     "indieweb"
   ],
   "author": "Timothy B. Smith",
+  "repository": "github:smithtimmytim/smithtimmytim.com",
   "license": "ISC",
   "main": ".eleventy.js",
   "scripts": {
