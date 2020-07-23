@@ -1,5 +1,5 @@
 ---
-title: 'Goodstuff Broadcasting'
+title: 'Goodstuff.FM'
 thumb: '/images/work/goodstuff/thumb.jpg'
 meta:
   year: '2014'
