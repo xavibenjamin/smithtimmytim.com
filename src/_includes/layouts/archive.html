@@ -1,0 +1,25 @@
+{% extends "layouts/base.html" %}
+{% set pageCriticalStyles = ['css/archive.css'] %}
+
+{% set pageHeaderTitle = title %}
+{% set pageHeaderSummary = content %}}
+
+{% block content %}
+
+  {% include "partials/page-header.html" %}
+
+  <div class="[ archive ] [ panel ]">
+    <div class="wrapper">
+      <div class="inner-wrapper">
+        <ul class="archive__list">
+          {%- for item in collections.articles -%}
+          <li class="archive__item">
+            <h2 class="archive__title"><a class="archive__url" href="{{ item.url }}">{{ item.data.title }}</a></h2>
+            <time class="archive__date" datetime="{{ page.date | dateIso }}">{{ item.date | dateReadable }}</time>
+          </li>
+          {%- endfor -%}
+        </ul>
+      </div>
+    </div>
+  </div>
+{% endblock %}
