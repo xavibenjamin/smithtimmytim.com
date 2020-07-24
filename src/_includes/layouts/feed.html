@@ -6,15 +6,6 @@
 {% set pageHeaderSummary = content %}
 {% set postListItems = blogItems %}
 
-{# If this is a tag, grab those items instead as one large collection #}
-{% if tag %}
-  {% set postListItems = collections[tag] %}
-  {% set pageHeaderTitle %}
-    <span class="visually-hidden">Blog posts filed under: </span>{{ tag }}
-  {% endset %}
-  {% set metaTitle = 'Tag: ' + tag + ' - ' + site.name %}
-{% endif %}
-
 {% block content %}
   {% include "partials/page-header.html" %}
 
@@ -27,5 +18,4 @@
       </div>
     </div>
   </div>
-
 {% endblock %}
