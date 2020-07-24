@@ -1,0 +1,12 @@
+<ul class="archive__list">
+  {%- for item in archiveListItems -%}
+    <li class="archive__item">
+    {% if item.data.type === 'article' %}
+      <h2 class="archive__title"><a class="archive__url" href="{{ item.url }}" data-variant="article">{{ item.data.title }}</a></h2>
+      <time class="archive__date" datetime="{{ page.date | dateIso }}" data-variant="article">{{ item.date | dateReadable }}</time>
+    {% else %}
+      <a class="archive__url" href="{{ item.url }}"><time class="archive__date" datetime="{{ page.date | dateIso }}">{{ item.date | dateReadable('L') }}</time></a>: <span class="hyphens">{{ item.templateContent | striptags(true) | truncate(90) }}</span>
+    {% endif %}
+      </li>
+  {%- endfor -%}
+</ul>
