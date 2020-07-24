@@ -1,9 +1,10 @@
 {% extends "layouts/base.html" %}
 {% set pageCriticalStyles = ['css/blog.css'] %}
+{% set blogItems = collections.posts.slice(0,20) %}
 
 {% set pageHeaderTitle = title %}
 {% set pageHeaderSummary = content %}
-{% set postListItems = pagination.items %}
+{% set postListItems = blogItems %}
 
 {# If this is a tag, grab those items instead as one large collection #}
 {% if tag %}
@@ -19,8 +20,12 @@
 
   {% include "partials/post-list.html" %}
 
-  {% if not tag %}
-    {% include "partials/pagination.html" %}
-  {% endif %}
+  <div class="[ panel ] [ bg-light-glare ]">
+    <div class="wrapper">
+      <div class="inner-wrapper">
+        <a class="button" href="/archive/">Visit the Archive</a>
+      </div>
+    </div>
+  </div>
 
 {% endblock %}
