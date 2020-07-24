@@ -1,0 +1,43 @@
+// First up: config and functions
+@import 'config';
+
+// Set Gorko to output no CSS for this file
+$outputTokenCSS: false;
+
+// Next: pull in gorko for design tokens
+@import '../../node_modules/gorko/gorko.scss';
+
+// Pull in Utilities
+@import 'utilities/inner-wrapper';
+
+.archive__item {
+  + .archive__item {
+    margin-top: get-size('600');
+  }
+}
+
+.archive__url {
+  color: get-color('light-shade-text');
+  @include apply-utility('font', 'mono');
+
+  &[data-variant='article'] {
+    color: get-color('dark-shade');
+    @include apply-utility('font', 'display');
+    text-decoration-color: get-color('primary');
+  }
+}
+
+.archive__title {
+  @include apply-utility('font', 'display');
+}
+
+.archive__date {
+  font-size: 0.85em;
+  font-weight: bold;
+
+  &[data-variant='article'] {
+    color: get-color('dark-glare');
+    font-size: get-size('400');
+    font-weight: normal;
+  }
+}

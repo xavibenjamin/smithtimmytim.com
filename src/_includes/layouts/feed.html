@@ -1,26 +1,21 @@
 {% extends "layouts/base.html" %}
 {% set pageCriticalStyles = ['css/blog.css'] %}
+{% set blogItems = collections.posts.slice(0,20) %}
 
 {% set pageHeaderTitle = title %}
 {% set pageHeaderSummary = content %}
-{% set postListItems = pagination.items %}
-
-{# If this is a tag, grab those items instead as one large collection #}
-{% if tag %}
-  {% set postListItems = collections[tag] %}
-  {% set pageHeaderTitle %}
-    <span class="visually-hidden">Blog posts filed under: </span>{{ tag }}
-  {% endset %}
-  {% set metaTitle = 'Tag: ' + tag + ' - ' + site.name %}
-{% endif %}
+{% set postListItems = blogItems %}
 
 {% block content %}
   {% include "partials/page-header.html" %}
 
   {% include "partials/post-list.html" %}
 
-  {% if not tag %}
-    {% include "partials/pagination.html" %}
-  {% endif %}
-
+  <div class="[ panel ] [ bg-light-glare ]">
+    <div class="wrapper">
+      <div class="inner-wrapper">
+        <a class="button" href="/archive/">Visit the Archive</a>
+      </div>
+    </div>
+  </div>
 {% endblock %}
