@@ -16,16 +16,28 @@ $outputTokenCSS: false;
   }
 }
 
+.archive__url {
+  color: get-color('light-shade-text');
+  @include apply-utility('font', 'mono');
+
+  &[data-variant='article'] {
+    color: get-color('dark-shade');
+    @include apply-utility('font', 'display');
+    text-decoration-color: get-color('primary');
+  }
+}
+
 .archive__title {
   @include apply-utility('font', 'display');
 }
 
-.archive__url {
-  color: get-color('dark-shade');
-  text-decoration-color: get-color('primary');
-}
-
 .archive__date {
-  color: get-color('dark-glare');
-  font-size: get-size('400');
+  font-size: 0.85em;
+  font-weight: bold;
+
+  &[data-variant='article'] {
+    color: get-color('dark-glare');
+    font-size: get-size('400');
+    font-weight: normal;
+  }
 }
