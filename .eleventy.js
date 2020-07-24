@@ -75,6 +75,10 @@ module.exports = (config) => {
     return collection.getFilteredByGlob(globs.photos);
   });
 
+  config.addCollection('articles', (collection) => {
+    return collection.getFilteredByGlob(globs.posts).reverse();
+  });
+
   //Add Filters
   config.addFilter('widont', widont);
   config.addFilter('dateReadable', dateReadable);
