@@ -1,4 +1,4 @@
-var letterboxd = require('letterboxd');
+const letterboxd = require('letterboxd');
 
 module.exports = async () => {
   const items = await letterboxd('ttimsmith', (error, items) => {
