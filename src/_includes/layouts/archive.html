@@ -1,8 +1,33 @@
 {% extends "layouts/base.html" %}
 {% set pageCriticalStyles = ['css/archive.css'] %}
+{% set archiveListItems = pagination.items %}
 
 {% set pageHeaderTitle = title %}
-{% set pageHeaderSummary = content %}}
+{% set pageHeaderSummary = content %}
+
+{# If this is a tag, grab those items instead as one large collection #}
+{% if tag %}
+  {% set archiveListItems = collections[tag] | reverse %}
+  {% set pageHeaderTitle %}
+    <span class="visually-hidden">Blog posts filed under: </span>{{ tag }}
+  {% endset %}
+  {% set metaTitle = 'Tag: ' + tag + ' - ' + site.name %}
+
+  {% if tag === 'Business' %}
+    {% set pageHeaderSummary = '<p>It’s business time</p>' %}
+  {% elif tag === 'Code' %}
+    {% set pageHeaderSummary = '<p>I do this for work; I <em>may</em> have some opinions</p>' %}
+  {% elif tag === 'Comics' %}
+    {% set pageHeaderSummary = '<p>What I’m reading and other comics-related news</p>' %}
+  {% elif tag === 'Film' %}
+    {% set pageHeaderSummary = '<p>I love watching movies; sometimes I write about them</p>' %}
+  {% elif tag === 'Star Wars' %}
+    {% set pageHeaderSummary = '<p>These <em>are</em> the words you’re looking for</p>' %}
+  {% elif tag === 'Technology' %}
+    {% set pageHeaderSummary = '<p>One of my favorite things to write about</p>' %}
+  {% endif %}
+  
+{% endif %}
 
 {% block content %}
 
@@ -11,14 +36,7 @@
   <div class="[ archive ] [ panel ]">
     <div class="wrapper">
       <div class="inner-wrapper">
-        <ul class="archive__list">
-          {%- for item in collections.articles -%}
-          <li class="archive__item">
-            <h2 class="archive__title"><a class="archive__url" href="{{ item.url }}">{{ item.data.title }}</a></h2>
-            <time class="archive__date" datetime="{{ page.date | dateIso }}">{{ item.date | dateReadable }}</time>
-          </li>
-          {%- endfor -%}
-        </ul>
+        {% include 'partials/archive-list.html' %}
       </div>
     </div>
   </div>
