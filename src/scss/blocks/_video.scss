@@ -1,0 +1,34 @@
+.video {
+  position: relative;
+  margin-bottom: get-size('700');
+  width: 100%;
+}
+
+.video-container {
+  width: 100%;
+  position: relative;
+  &:before {
+    content: '';
+    display: block;
+    padding-bottom: calc(100% / (16 / 9));
+  }
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+  }
+
+  @include media-query('md') {
+    margin-left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    @include apply-utility('measure', 'xxl');
+
+    iframe {
+      border-radius: 0.25rem;
+    }
+  }
+}

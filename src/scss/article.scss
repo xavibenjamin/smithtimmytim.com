@@ -14,9 +14,33 @@ $outputTokenCSS: false;
 @import 'blocks/article-header';
 @import 'blocks/post-image';
 @import 'blocks/webmentions';
+@import 'blocks/video';
+@import 'blocks/toc';
 
 // Pull in utilities
 @import 'utilities/subhead';
 @import 'utilities/inner-wrapper';
 
 @import 'syntax';
+
+.video {
+  margin-top: -#{get-size('700')};
+  padding: 0 get-size('600');
+  margin-left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  &:before {
+    background-color: get-color('light-glare');
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 50%;
+    left: 0;
+    right: 0;
+    top: 0;
+  }
+
+  @include media-query('md') {
+    margin-top: -#{get-size('900')};
+  }
+}
