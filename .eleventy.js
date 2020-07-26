@@ -7,6 +7,7 @@ const dateNotePermalink = require('./src/filters/date-note-permalink.js');
 const dateLetterboxd = require('./src/filters/date-letterboxd.js');
 const webmentionsForUrl = require('./src/filters/webmentions-for-url.js');
 const webmentionCountByType = require('./src/filters/webmention-count-by-type.js');
+const getSeries = require('./src/filters/get-series.js');
 
 // Plugins
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
@@ -92,6 +93,7 @@ module.exports = (config) => {
   config.addFilter('dateLetterboxd', dateLetterboxd);
   config.addFilter('webmentionsForUrl', webmentionsForUrl);
   config.addFilter('webmentionCountByType', webmentionCountByType);
+  config.addFilter('getSeries', getSeries);
 
   // Plugins
   config.addPlugin(syntaxHighlight);

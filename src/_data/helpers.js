@@ -21,4 +21,11 @@ module.exports = {
 
     return response;
   },
+
+  filterCollectionBySeries(collection, key, url) {
+    const postSeries = (item) => key == item.data.series;
+    const currentArticle = (item) => item.url != url;
+
+    return collection.filter(postSeries).filter(currentArticle).slice(0, 6);
+  },
 };

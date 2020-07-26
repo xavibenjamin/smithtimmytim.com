@@ -5,6 +5,7 @@ featuredImage: '/images/uploads/2020/listening-to-thumb.jpg'
 socialImage: '/images/uploads/2020/listening-to-social.jpg'
 tags: 'Code'
 date: 2020-07-10T09:26-07:00
+series: 'learn-eleventy'
 ---
 I listen to music most of the day while I work. It helps me focus, and it makes me happy. When thinking of ideas for my new site, I wanted to show off my recently played tracks to give visitors a sense of my musical taste. After spending some time looking into the Apple Music API, I decided it would be easier to use the Last\.fm API instead.
 

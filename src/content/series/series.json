@@ -1,0 +1,4 @@
+{
+  "permalink": "/series/{{ page.fileSlug }}/",
+  "tags": "series"
+}
