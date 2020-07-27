@@ -1,3 +1,4 @@
+{% if series %}
 {% set postSeries = collections.series | getSeries(series) | first %}
 
 <div class="[ post-series ] [ frame bg-light-glare gap-top-700 md:gap-top-800 ]" data-frame="primary">
@@ -21,3 +22,4 @@
     </ul>
   </div>
 </div>
+{% endif %}
