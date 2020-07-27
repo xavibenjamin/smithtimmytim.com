@@ -16,11 +16,15 @@ const readingTime = require('eleventy-plugin-reading-time');
 
 // Shortcodes
 const screenshot = require('./src/shortcodes/screenshot.js');
+const alert = require('./src/shortcodes/alert.js');
 const image = require('./src/shortcodes/image.js');
 const youtube = require('./src/shortcodes/youtube.js');
 
 // Transforms
 const htmlMinTransform = require('./src/transforms/html-min-transform.js');
+
+// Utilities
+const markdown = require('./src/utils/markdown.js');
 
 // Create a helpful production flag
 const isProduction = process.env.NODE_ENV === 'production';
@@ -102,57 +106,15 @@ module.exports = (config) => {
 
   // Shortcodes
   config.addPairedShortcode('screenshot', screenshot);
+  config.addPairedShortcode('alert', alert);
   config.addShortcode('image', image);
   config.addShortcode('youtube', youtube);
 
   // Tell 11ty to use the .eleventyignore and ignore our .gitignore file
   config.setUseGitIgnore(false);
 
-  // Markdown stuff
-  let markdownIt = require('markdown-it');
-  let markdownItFootnote = require('markdown-it-footnote');
-  let markdownItAnchor = require('markdown-it-anchor');
-  let markdownItTOC = require('markdown-it-table-of-contents');
-  let markdownItAbbr = require('markdown-it-abbr');
-  let markdownItMentions = require('markdown-it-mentions');
-  let markdownItEmoji = require('markdown-it-emoji');
-  let markdownItMark = require('markdown-it-mark');
-
-  let markdownItOpts = {
-    html: true,
-    breaks: true,
-    linkify: true,
-    typographer: true,
-  };
-
-  const markdownEngine = markdownIt(markdownItOpts);
-  markdownEngine.use(markdownItFootnote);
-  markdownEngine.use(markdownItAnchor, {
-    level: 2,
-    permalink: true,
-    permalinkSymbol: '#',
-  });
-  markdownEngine.use(markdownItTOC, {
-    listType: 'ol',
-  });
-  markdownEngine.use(markdownItAbbr);
-  markdownEngine.use(markdownItMentions, {
-    external: true,
-  });
-  markdownEngine.use(markdownItEmoji);
-
-  markdownEngine.renderer.rules.footnote_caption = (tokens, idx) => {
-    const n = Number(tokens[idx].meta.id + 1).toString();
-
-    if (tokens[idx].meta.subId > 0) {
-      n += ':' + tokens[idx].meta.subId;
-    }
-
-    return n;
-  };
-  markdownEngine.use(markdownItMark);
-
-  config.setLibrary('md', markdownEngine);
+  // Markdown
+  config.setLibrary('md', markdown);
 
   return {
     markdownTemplateEngine: 'njk',
