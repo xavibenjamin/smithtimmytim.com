@@ -4,7 +4,7 @@ date: '2017-12-15T21:50-07:00'
 subhead: 'The latest of the Star Wars saga films is a fresh, new, and exciting chapter of my favorite franchise'
 tags: 'Star Wars'
 review:
-  rating: 1
+  rating: 5
 letterboxdLink: https://letterboxd.com/ttimsmith/film/star-wars-the-last-jedi/
 featuredImage: '/images/uploads/2017/luke-skywalker.jpg'
 socialImage: '/images/uploads/2017/luke-skywalker.jpg'
@@ -12,9 +12,9 @@ socialImage: '/images/uploads/2017/luke-skywalker.jpg'
 
 As what's become tradition with films we're really looking forward to, Kelly and I with some friends and my cousin went to watch _Star Wars: The Last Jedi_ on opening night. Here are some thoughts on the movie, careful for **spoilers**.
 
-**Spoilers people**, you've been warned.
-
----
+{% alert { label: 'Spoilers Ahead!', variant: 'danger' } %}
+If you haven't watched the movie, this is a good time to turn back. You've been warned.
+{% endalert %}
 
 - I can't remember the last time that I was so genuinely surprised by a film, much less this many times. _The Last Jedi_ is filled with—what were to me—jaw-dropping moments.
 - I'm really pleased with the character arches for most of the characters. I'd say that Finn's arch wasn't all that entertaining and Phasma still didn't get enough in this movie. And it doesn't look like Phasma will be back.

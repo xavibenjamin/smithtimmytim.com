@@ -14,7 +14,15 @@
       <time datetime="{{ page.date | dateIso }}" class="dt-published">{{ page.date | dateReadable }}</time>
     </a>
     <span class="article__reading-time">{{ content | readingTime }}</span>
+    {% if letterboxdLink %}
+      <span class="article__syndicated">Syndicated to <a class="article__letterboxd-link" href="{{ letterboxdLink }}" target="_blank" rel="noopener">Letterboxd<?xml version="1.0"?><svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 24 24"><g style="fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10"><path d="m15 3h6v6"></path><path d="m21 3-10 10"></path><path d="m19 18v1c0 1.105-.895 2-2 2h-12c-1.105 0-2-.895-2-2v-12c0-1.105.895-2 2-2h1"></path></g></svg></a></span>
+    {% endif %}
   </div>
+
+  {%- if review.rating -%}
+    {% set reviewRating = review.rating %}
+    {% include 'partials/rating/svg.html' %}
+  {%- endif -%}
 
 {% endset %}
 
