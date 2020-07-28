@@ -12,14 +12,20 @@
   {% set socialImage = '/images/meta/social-image.jpg' %}
 {% endif %}
 
-{# If the page’s Front Matter has specific metaTitle and/or metaDesc items, switch 
-  them into the mix. #}
+{# If the page’s Front Matter has specific metaTitle and/or metaDesc items, switch them into the mix. #}
 {% if metaTitle %}
   {% set pageTitle = metaTitle %}
 {% endif %}
 
 {% if not metaDesc %}
   {% set metaDesc = summary %}
+{% endif %}
+
+{% if review.rating %}
+
+{% set textRating = review.rating | rating %}
+
+{% set pageTitle =  title + ' ' + textRating + ' - ' + site.name %}
 {% endif %}
 
 <title>{{ pageTitle }}</title>
