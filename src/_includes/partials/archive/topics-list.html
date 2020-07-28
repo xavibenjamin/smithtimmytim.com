@@ -1,0 +1,13 @@
+<div class="taxonomy">
+  <h3 class="taxonomy__title mini-headline">Browse by Topic</h3>
+  <ul class="taxonomy-list">
+    {% set topicsList = helpers.sortByAlpha(collections.topics) %}
+    {% for item in topicsList %}
+
+      <li class="taxonomy-list__item">
+        <a class="taxonomy-list__url" href="{{ item.url }}">{{ item.data.title }}</a>
+      </li>
+      
+    {% endfor %}
+  </ul>
+</div>
