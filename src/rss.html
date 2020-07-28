@@ -21,7 +21,9 @@ permalink: '/blog/feed.xml'
     {% set absolutePostUrl %}{{ site.url }}{{ post.url | url }}{% endset %}
     <entry>
       {% if post.data.type == 'article' %}
-      <title>{{ post.data.title }}</title>
+
+      {% set textRating = post.data.review.rating | rating %}
+      <title>{{ post.data.title }}{{ ' ' + textRating if post.data.review.rating }}</title>
       {% endif %}
       <link href="{{ absolutePostUrl }}"/>
       <updated>{{ post.date | rssDate }}</updated>
