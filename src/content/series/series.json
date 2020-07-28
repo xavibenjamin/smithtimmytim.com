@@ -1,4 +1,5 @@
 {
-  "permalink": "/series/{{ page.fileSlug }}/",
-  "tags": "series"
+  "layout": "layouts/archive.html",
+  "type": "series",
+  "permalink": "/series/{{ page.fileSlug }}/"
 }
