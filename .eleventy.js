@@ -8,6 +8,7 @@ const dateLetterboxd = require('./src/filters/date-letterboxd.js');
 const webmentionsForUrl = require('./src/filters/webmentions-for-url.js');
 const webmentionCountByType = require('./src/filters/webmention-count-by-type.js');
 const getSeries = require('./src/filters/get-series.js');
+const rating = require('./src/filters/rating.js');
 
 // Plugins
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
@@ -35,6 +36,7 @@ const globs = {
   drafts: './src/content/drafts/*.md',
   notes: './src/content/notes/*.md',
   photos: './src/content/photos/*.md',
+  series: './src/content/series/*.md',
 };
 
 module.exports = (config) => {
@@ -89,6 +91,10 @@ module.exports = (config) => {
     return collection.getFilteredByGlob(globs.notes).reverse();
   });
 
+  config.addCollection('series', (collection) => {
+    return collection.getFilteredByGlob(globs.series);
+  });
+
   //Add Filters
   config.addFilter('widont', widont);
   config.addFilter('dateReadable', dateReadable);
@@ -98,6 +104,7 @@ module.exports = (config) => {
   config.addFilter('webmentionsForUrl', webmentionsForUrl);
   config.addFilter('webmentionCountByType', webmentionCountByType);
   config.addFilter('getSeries', getSeries);
+  config.addFilter('rating', rating);
 
   // Plugins
   config.addPlugin(syntaxHighlight);
