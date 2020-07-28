@@ -9,11 +9,13 @@
     </h3>
     <div class="series__description">
       {{ postSeries.templateContent | safe }}
+
+      <a class="series__url" href="/series/{{ postSeries.fileSlug }}">View Series &rarr;</a>
     </div>
   </div>
 
   <div class="series__items">
-    {% set seriesItems = helpers.filterCollectionBySeries(collections.articles,series, page.url) %}
+    {% set seriesItems = helpers.filterCollectionByTaxonomy(collections.articles,series, 'series',page.url, 6) %}
 
     <ul class="series__list">
       {% for item in seriesItems %}
