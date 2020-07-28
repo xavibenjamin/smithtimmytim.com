@@ -1,5 +1,6 @@
 .article__category {
-  color: get-color('primary');
+  color: get-color('secondary');
+  text-decoration: none;
   font-size: get-size('400');
   font-weight: bold;
 
@@ -22,9 +23,9 @@
 }
 
 .article__reading-time {
-  font-weight: bold;
   margin-left: get-size('400');
   font-size: get-size('400');
+  color: get-color('light-shade-text');
 }
 
 .article__syndicated {

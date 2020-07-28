@@ -30,6 +30,17 @@
     @include apply-utility('leading', 'tight');
   }
 
+  .series__url {
+    color: get-color('primary-shade');
+    display: inline-block;
+    font-size: get-size('300');
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-top: get-size('500');
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
   .series-item {
     font-size: get-size('300');
     font-weight: 700;
