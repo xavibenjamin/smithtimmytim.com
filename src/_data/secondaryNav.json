@@ -1,16 +1,16 @@
 {
   "items": [
     {
+      "url": "/archive/",
+      "text": "Archive"
+    },
+    {
       "url": "/uses/",
       "text": "Uses"
     },
     {
       "url": "/style-guide/",
       "text": "Style Guide"
-    },
-    {
-      "url": "/style-guide/writing/",
-      "text": "Writing Style Guide"
     }
   ]
 }
