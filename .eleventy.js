@@ -37,6 +37,7 @@ const globs = {
   notes: './src/content/notes/*.md',
   photos: './src/content/photos/*.md',
   series: './src/content/series/*.md',
+  topics: './src/content/topics/*.md',
 };
 
 module.exports = (config) => {
@@ -93,6 +94,10 @@ module.exports = (config) => {
 
   config.addCollection('series', (collection) => {
     return collection.getFilteredByGlob(globs.series);
+  });
+
+  config.addCollection('topics', (collection) => {
+    return collection.getFilteredByGlob(globs.topics);
   });
 
   //Add Filters

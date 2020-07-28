@@ -1,0 +1,5 @@
+{
+  "layout": "layouts/archive.html",
+  "type": "topic",
+  "permalink": "/topics/{{ page.fileSlug }}/"
+}
