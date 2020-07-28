@@ -1,0 +1,22 @@
+<div class="archive-meta">
+  <time class="archive__date" datetime="{{ page.date | dateIso }}" data-variant="article">{{ item.date | dateReadable }}</time>
+  <span class="archive__reading">{{ item | readingTime }} Read</span>
+</div>
+
+<div class="archive__text">
+  <h2 class="archive__title">
+    <a class="archive__url" href="{{ item.url }}" data-variant="article">
+      {{ item.data.title | widont }}&thinsp;
+      {% if item.data.review.rating %}
+      {% set reviewRating = item.data.review.rating %}
+        {% include 'partials/rating/svg.html' %}
+      {% endif %}
+    </a>
+  </h2>
+  {%- if item.data.subhead -%}
+    <p>{{ item.data.subhead | widont | safe }}</p>
+  {%- endif -%}
+</div>
+
+<span class="archive__category"><a href="#" class="category__url">{{ item.data.tags[0] }}</a></span>
+ 
