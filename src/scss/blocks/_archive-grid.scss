@@ -1,0 +1,20 @@
+.archive-grid {
+  display: grid;
+  grid-template-areas:
+    'sidebar'
+    'main';
+  grid-gap: get-size('800');
+
+  @include media-query('lg') {
+    grid-template-areas: 'main sidebar';
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+.grid__main {
+  grid-area: main;
+}
+
+.grid__sidebar {
+  grid-area: sidebar;
+}
