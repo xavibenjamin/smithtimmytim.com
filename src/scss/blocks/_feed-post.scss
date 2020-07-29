@@ -57,7 +57,7 @@
 }
 
 .feed-post__reading-time {
-  font-size: get-size('300');
-  font-weight: bold;
-  margin-inline-start: 0.5rem;
+  margin-left: get-size('400');
+  font-size: get-size('300') !important;
+  color: get-color('light-shade-text');
 }

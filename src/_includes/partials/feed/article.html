@@ -15,7 +15,7 @@
       <a href="{{ item.url }}" class="[ feed-post__date ] [ u-url ]">
         <time datetime="{{ item.date | dateIso }}" class="dt-published">{{ item.date | dateReadable }}</time>
       </a>
-      <span class="feed-post__reading-time">{{ item | readingTime }}</span>
+      <span class="[ feed-post__reading-time ] [ mini-headline ]">{{ item | readingTime }}</span>
     </div>
   </header>
 
