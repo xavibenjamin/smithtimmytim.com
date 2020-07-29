@@ -1,7 +1,14 @@
 const isProduction = process.env.NODE_ENV === 'production';
 
 module.exports = (path, alt, variant, caption) => {
-  const VARIANTS = ['reg', 'full-bleed', 'left', 'right', 'extend-out'];
+  const VARIANTS = [
+    'reg',
+    'full-bleed',
+    'left',
+    'right',
+    'extend-out',
+    'small-right',
+  ];
 
   if (!VARIANTS.includes(variant)) {
     throw new Error(

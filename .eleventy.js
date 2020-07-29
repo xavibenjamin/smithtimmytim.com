@@ -7,6 +7,8 @@ const dateNotePermalink = require('./src/filters/date-note-permalink.js');
 const dateLetterboxd = require('./src/filters/date-letterboxd.js');
 const webmentionsForUrl = require('./src/filters/webmentions-for-url.js');
 const webmentionCountByType = require('./src/filters/webmention-count-by-type.js');
+const getTaxonomy = require('./src/filters/get-taxonomy.js');
+const rating = require('./src/filters/rating.js');
 
 // Plugins
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
@@ -15,11 +17,15 @@ const readingTime = require('eleventy-plugin-reading-time');
 
 // Shortcodes
 const screenshot = require('./src/shortcodes/screenshot.js');
+const alert = require('./src/shortcodes/alert.js');
 const image = require('./src/shortcodes/image.js');
 const youtube = require('./src/shortcodes/youtube.js');
 
 // Transforms
 const htmlMinTransform = require('./src/transforms/html-min-transform.js');
+
+// Utilities
+const markdown = require('./src/utils/markdown.js');
 
 // Create a helpful production flag
 const isProduction = process.env.NODE_ENV === 'production';
@@ -30,6 +36,8 @@ const globs = {
   drafts: './src/content/drafts/*.md',
   notes: './src/content/notes/*.md',
   photos: './src/content/photos/*.md',
+  series: './src/content/series/*.md',
+  topics: './src/content/topics/*.md',
 };
 
 module.exports = (config) => {
@@ -77,11 +85,21 @@ module.exports = (config) => {
   });
 
   config.addCollection('articles', (collection) => {
-    return collection.getFilteredByGlob(globs.posts).reverse();
+    const drafts = (item) => !(item.data.draft && isProduction);
+
+    return collection.getFilteredByGlob(globs.posts).reverse().filter(drafts);
   });
 
   config.addCollection('notes', (collection) => {
     return collection.getFilteredByGlob(globs.notes).reverse();
+  });
+
+  config.addCollection('series', (collection) => {
+    return collection.getFilteredByGlob(globs.series);
+  });
+
+  config.addCollection('topics', (collection) => {
+    return collection.getFilteredByGlob(globs.topics);
   });
 
   //Add Filters
@@ -92,6 +110,8 @@ module.exports = (config) => {
   config.addFilter('dateLetterboxd', dateLetterboxd);
   config.addFilter('webmentionsForUrl', webmentionsForUrl);
   config.addFilter('webmentionCountByType', webmentionCountByType);
+  config.addFilter('getTaxonomy', getTaxonomy);
+  config.addFilter('rating', rating);
 
   // Plugins
   config.addPlugin(syntaxHighlight);
@@ -100,57 +120,15 @@ module.exports = (config) => {
 
   // Shortcodes
   config.addPairedShortcode('screenshot', screenshot);
+  config.addPairedShortcode('alert', alert);
   config.addShortcode('image', image);
   config.addShortcode('youtube', youtube);
 
   // Tell 11ty to use the .eleventyignore and ignore our .gitignore file
   config.setUseGitIgnore(false);
 
-  // Markdown stuff
-  let markdownIt = require('markdown-it');
-  let markdownItFootnote = require('markdown-it-footnote');
-  let markdownItAnchor = require('markdown-it-anchor');
-  let markdownItTOC = require('markdown-it-table-of-contents');
-  let markdownItAbbr = require('markdown-it-abbr');
-  let markdownItMentions = require('markdown-it-mentions');
-  let markdownItEmoji = require('markdown-it-emoji');
-  let markdownItMark = require('markdown-it-mark');
-
-  let markdownItOpts = {
-    html: true,
-    breaks: true,
-    linkify: true,
-    typographer: true,
-  };
-
-  const markdownEngine = markdownIt(markdownItOpts);
-  markdownEngine.use(markdownItFootnote);
-  markdownEngine.use(markdownItAnchor, {
-    level: 2,
-    permalink: true,
-    permalinkSymbol: '#',
-  });
-  markdownEngine.use(markdownItTOC, {
-    listType: 'ol',
-  });
-  markdownEngine.use(markdownItAbbr);
-  markdownEngine.use(markdownItMentions, {
-    external: true,
-  });
-  markdownEngine.use(markdownItEmoji);
-
-  markdownEngine.renderer.rules.footnote_caption = (tokens, idx) => {
-    const n = Number(tokens[idx].meta.id + 1).toString();
-
-    if (tokens[idx].meta.subId > 0) {
-      n += ':' + tokens[idx].meta.subId;
-    }
-
-    return n;
-  };
-  markdownEngine.use(markdownItMark);
-
-  config.setLibrary('md', markdownEngine);
+  // Markdown
+  config.setLibrary('md', markdown);
 
   return {
     markdownTemplateEngine: 'njk',

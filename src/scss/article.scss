@@ -16,10 +16,14 @@ $outputTokenCSS: false;
 @import 'blocks/webmentions';
 @import 'blocks/video';
 @import 'blocks/toc';
+@import 'blocks/post-series';
+@import 'blocks/star-rating';
 
 // Pull in utilities
 @import 'utilities/subhead';
 @import 'utilities/inner-wrapper';
+@import 'utilities/alert';
+@import 'utilities/mini-headline';
 
 @import 'syntax';
 

@@ -1,7 +1,7 @@
 ---
 title: 'A Year with the Sony a7 III'
 date: '2019-04-12T14:40-07:00'
-tags: 'Photography'
+topics: 'geekery'
 featuredImage: '/images/uploads/2020/9ac52-img_3219.jpg'
 ---
 

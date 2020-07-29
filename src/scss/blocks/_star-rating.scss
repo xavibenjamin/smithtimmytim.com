@@ -1,0 +1,12 @@
+.star-rating {
+  width: 8rem;
+  margin-top: get-size('700');
+}
+
+.star-filled {
+  fill: get-color('primary');
+}
+
+.star-empty {
+  fill: get-color('light-shade');
+}

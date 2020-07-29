@@ -1,0 +1,29 @@
+.archive-grid {
+  display: grid;
+  grid-template-areas:
+    'sidebar'
+    'main';
+  grid-gap: get-size('800');
+
+  @include media-query('lg') {
+    grid-template-areas: 'main sidebar';
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+.grid__main {
+  grid-area: main;
+}
+
+.grid__sidebar {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: get-size('600');
+  grid-area: sidebar;
+
+  @include media-query('lg') {
+    display: block;
+    // grid-template-columns: none;
+    // grid-gap: 0;
+  }
+}

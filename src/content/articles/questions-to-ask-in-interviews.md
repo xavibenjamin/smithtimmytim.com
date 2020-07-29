@@ -1,7 +1,7 @@
 ---
 title: 'Questions to Ask in Interviews'
 date: 2016-12-13T14:23-07:00
-tags: 'Business'
+topics: 'work'
 ---
 
 As you might’ve heard, I’m looking for a job. Julia Evans wrote [a great post](https://jvns.ca/blog/2013/12/30/questions-im-asking-in-interviews/) on questions she asks during interviews. It’s helped me so much, prompting me to ask questions I’d never thought of before, or never had the guts to ask. Julia’s post reminded me that when you’re interviewing somewhere, you should be interviewing them as much as they’re interviewing you.

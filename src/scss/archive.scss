@@ -7,12 +7,77 @@ $outputTokenCSS: false;
 // Next: pull in gorko for design tokens
 @import '../../node_modules/gorko/gorko.scss';
 
+// Pull in Blocks
+@import 'blocks/star-rating';
+@import 'blocks/archive-grid';
+@import 'blocks/taxonomy-list';
+
 // Pull in Utilities
 @import 'utilities/inner-wrapper';
+@import 'utilities/mini-headline';
+
+.archive__breadcrumb {
+  color: get-color('secondary');
+  display: inline-block;
+  font-size: get-size('300');
+  font-weight: bold;
+  margin-bottom: get-size('500');
+  text-decoration: none;
+}
 
 .archive__item {
   + .archive__item {
     margin-top: get-size('600');
+  }
+
+  &[data-variant='article'] {
+    display: grid;
+    grid-template-areas:
+      'meta'
+      'text'
+      'category';
+
+    @include media-query('md') {
+      grid-template-columns: 2fr 1fr;
+      grid-template-areas:
+        'category category'
+        'text meta';
+    }
+
+    + li {
+      border-top: 0.15rem solid get-color('light-shade');
+      padding-top: get-size('600');
+    }
+  }
+}
+
+.archive-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: get-size('500');
+  grid-area: meta;
+
+  @include media-query('md') {
+    align-items: flex-end;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-bottom: 0;
+  }
+}
+
+.archive__reading {
+  @extend .mini-headline;
+
+  font-size: get-size('300');
+  color: get-color('light-shade-text');
+}
+
+.archive__text {
+  grid-area: text;
+
+  p {
+    color: get-color('dark-glare');
   }
 }
 
@@ -23,12 +88,39 @@ $outputTokenCSS: false;
   &[data-variant='article'] {
     color: get-color('dark-shade');
     @include apply-utility('font', 'display');
-    text-decoration-color: get-color('primary');
+    text-decoration: none;
+
+    .star-rating {
+      margin-top: 0;
+      width: 3.4em;
+    }
+  }
+}
+
+.archive__category {
+  font-size: get-size('300');
+  margin-top: get-size('400');
+  grid-area: category;
+  text-transform: uppercase;
+  font-weight: 700;
+
+  @include media-query('md') {
+    margin-bottom: get-size('300');
+    margin-top: 0;
+  }
+
+  .category__url {
+    color: get-color('secondary');
+    text-decoration: none;
   }
 }
 
 .archive__title {
-  @include apply-utility('font', 'display');
+  margin-bottom: 0.5rem;
+  @include apply-utility('font', 'heading');
+  font-size: get-size('700');
+  font-weight: 400;
+  width: 90%;
 }
 
 .archive__date {
@@ -39,5 +131,25 @@ $outputTokenCSS: false;
     color: get-color('dark-glare');
     font-size: get-size('400');
     font-weight: normal;
+  }
+}
+
+.related-taxonomy {
+  margin-top: get-size('700');
+}
+
+.related-taxonomy__list {
+  display: flex;
+
+  li {
+    font-size: get-size('400');
+    + li {
+      margin-left: get-size('400');
+    }
+  }
+
+  .list__url {
+    color: get-color('secondary');
+    text-decoration-color: get-color('light-shade');
   }
 }

@@ -1,0 +1,5 @@
+{
+  "layout": "layouts/archive.html",
+  "type": "series",
+  "permalink": "/series/{{ page.fileSlug }}/"
+}

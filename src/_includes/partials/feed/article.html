@@ -1,7 +1,8 @@
 <article class="feed-post feed-entry h-entry">
   <header class="feed-post__header flow flow-space-300">
-    {% if item.data.tags %}
-      <a href="/tag/{{ item.data.tags[0] | slug }}" class="feed-post__category"><span class="visually-hidden">Post filed under:</span>{{ item.data.tags[0] }}</a>
+    {% if item.data.topics %}
+      {% set postTopic = collections.topics | getTaxonomy(item.data.topics) | first %}
+      <a href="/tag/{{ item.data.topics }}" class="feed-post__category"><span class="visually-hidden">Post filed under:</span>{{ postTopic.data.title }}</a>
     {% endif %}
     <div class="[ feed-post__hgroup ] [ flow ]">
       <h1 class="[ feed-post__title ] [ p-name ]"><a class="feed-post__url" href="{{ item.url }}">{{ item.data.title | widont }}</a></h1>

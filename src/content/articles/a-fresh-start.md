@@ -1,6 +1,6 @@
 ---
 title: 'A Fresh Start'
-tags: 'Announcements'
+topics: 'personal'
 featuredImage: '/images/uploads/2020/first-post-thumb.jpg'
 date: 2020-07-07T22:11-07:00
 ---

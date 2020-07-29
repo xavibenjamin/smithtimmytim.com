@@ -81,4 +81,18 @@
       @include apply-utility('measure', 'long');
     }
   }
+
+  &[data-variant='small-right'] {
+    float: right;
+    margin-left: get-size('600');
+    width: 40%;
+
+    @include media-query('md') {
+      width: 45%;
+    }
+
+    @include media-query('lg') {
+      margin-right: -#{get-size('800')};
+    }
+  }
 }

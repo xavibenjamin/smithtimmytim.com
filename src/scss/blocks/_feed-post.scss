@@ -22,10 +22,11 @@
 }
 
 .feed-post__category {
-  font-size: get-size('400');
+  font-size: get-size('300');
   font-weight: bold;
 
-  color: get-color('primary');
+  color: get-color('secondary');
+  text-decoration: none;
   text-transform: uppercase;
 }
 
@@ -39,9 +40,15 @@
 }
 
 .feed-post__subhead {
+  color: get-color('dark-glare');
   font-size: get-size('600');
   font-weight: normal;
-  color: get-color('dark-glare');
+  line-height: 1.1;
+}
+
+.feed-post__meta {
+  display: flex;
+  align-items: center;
 }
 
 .feed-post__date {

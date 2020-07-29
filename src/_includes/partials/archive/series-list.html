@@ -1,0 +1,14 @@
+<div class="[ taxonomy ] [ lg:gap-top-800 ]">
+  <h3 class="taxonomy__title mini-headline">Browse by Series</h3>
+  <ul class="taxonomy-list">
+    {% set seriesList = helpers.sortByAlpha(collections.series) %}
+    {% for item in seriesList %}
+      {% set seriesItems = helpers.filterCollectionByTaxonomy(collections.articles,item.fileSlug, 'series') | length %}
+
+      <li class="taxonomy-list__item">
+        <a class="taxonomy-list__url" href="{{ item.url }}">{{ item.data.title }}<span class="taxonomy__count">{{ seriesItems }}</span></a>
+      </li>
+      
+    {% endfor %}
+  </ul>
+</div>

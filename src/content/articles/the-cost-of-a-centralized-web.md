@@ -1,7 +1,7 @@
 ---
 title: 'The Cost of a Centralized Web'
 date: 2019-01-21T14:57-07:00
-tags: 'Technology'
+topics: 'technology'
 ---
 
 [DHH on *Signal v. Noise*](https://m.signalvnoise.com/signal-v-noise-exits-medium/):

@@ -1,5 +1,6 @@
 .article__category {
-  color: get-color('primary');
+  color: get-color('secondary');
+  text-decoration: none;
   font-size: get-size('400');
   font-weight: bold;
 
@@ -11,6 +12,8 @@
 }
 
 .article__meta {
+  align-items: center;
+  display: flex;
   margin-top: get-size('600');
 }
 
@@ -20,7 +23,32 @@
 }
 
 .article__reading-time {
-  font-weight: bold;
-  margin-inline-start: 0.5rem;
+  margin-left: get-size('400');
   font-size: get-size('400');
+  color: get-color('light-shade-text');
+}
+
+.article__syndicated {
+  font-size: 0.8rem;
+  margin-left: get-size('400');
+  justify-self: flex-end;
+  flex: 1;
+  text-align: right;
+
+  svg {
+    margin-left: 0.2rem;
+    position: relative;
+    top: -0.1em;
+    width: 0.85em;
+    g {
+      stroke: get-color('dark-glare');
+    }
+  }
+
+  .article__letterboxd-link {
+    align-items: center;
+    color: get-color('dark-glare');
+    display: inline-flex;
+    text-decoration-color: get-color('light-shade');
+  }
 }

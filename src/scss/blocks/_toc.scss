@@ -1,12 +1,13 @@
 .table-of-contents {
   background-color: get-color('light-glare');
   border-left: 3px solid get-color('light-shade');
+  margin-bottom: get-size('600');
   padding: get-size('600');
-  font-size: get-size('400');
 
   @include media-query('md') {
     float: right;
     margin-left: get-size('600');
+    @include apply-utility('measure', 'micro');
   }
 
   @include media-query('lg') {
@@ -27,6 +28,10 @@
   ol {
     padding-left: get-size('400') !important;
     margin-bottom: 0;
+  }
+
+  li {
+    font-size: 0.9rem;
   }
 
   a,

@@ -38,7 +38,7 @@ $gorko-colors: (
   'light-shade-text': #ce5c0c,
   'light-glare': #fff9f5,
   'primary': #ea4a87,
-  'primary-shade': #e7236e,
+  'primary-shade': #da256a,
   'primary-glare': #ffa3c6,
   'secondary': #03749a,
   'secondary-glare': #86c9de,
@@ -107,11 +107,10 @@ $gorko-config: (
   ),
   'measure': (
     'items': (
-      'micro': '10ch',
-      'compact': '30ch',
+      'micro': '18rem',
       'short': '24rem',
       'medium': '38rem',
-      'long': '43.4rem',
+      'long': '43.6rem',
       'xl': '50rem',
       'xxl': '58rem',
     ),

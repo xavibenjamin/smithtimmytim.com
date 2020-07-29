@@ -1,6 +1,10 @@
 {% set pageHeaderMarkup %}
-  {% if tags %}
-    <a href="/tag/{{ tags[0] | slug }}" class="article__category"><span class="visually-hidden">Post filed under:</span>{{ tags[0] }}</a>
+  {% if topics %}
+    {% set postTopic = collections.topics | getTaxonomy(topics) | first %}
+    <a href="/topics/{{ topics }}" class="article__category"><span class="visually-hidden">Post filed under:</span>{{ postTopic.data.title }}</a>
+  {% endif %}
+  {% if type === 'series' or type === 'topic' %}
+    <a href="/archive/" class="archive__breadcrumb mini-headline">&larr; Back to Archive</a>
   {% endif %}
   <h1 class="[ page-header__heading ] [ headline ]{% if type == 'article'%}[ p-name ]{% endif %}">{{ pageHeaderTitle | safe }}</h1>
   {% if pageHeaderSummary %}
@@ -11,7 +15,7 @@
 {% endset %}
 
 <header class="[ page-header ] [ bg-light-glare ]">
-  {% if layout == 'layouts/work-landing.html' or layout == 'layouts/photo-landing.html' %}
+  {% if layout == 'layouts/work-landing.html' or layout == 'layouts/photo-landing.html' or page.url == '/archive/' %}
   <div class="[ wrapper ] [ flow flow-space-300 ]">
     {{ pageHeaderMarkup | safe }}
   </div>
