@@ -1,13 +1,12 @@
 ---
 title: 'Show Off Your Letterboxd Film Diary with Eleventy'
 subhead: 'We’ll use an Eleventy data file and an NPM package to parse the Letterboxd RSS feed into JSON'
-date: 2020-07-24T18:52-07:00
+date: 2020-07-28T14:00-07:00
 topics: 'code'
 series: 'learn-eleventy'
-draft: true
+socialImage: '/images/uploads/2020/letterboxd-film-diary-thumb.jpg'
 ---
-
-{% youtube 'klz7aNIXUxM' %}
+{% youtube 'HpRmsRn-k48' %}
 
 One of my favorite new parts of my site is my Film Diary. I love to watch movies, and I thought it would be fun to prominently display diary entries from Letterboxd.
 
