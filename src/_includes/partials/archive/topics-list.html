@@ -3,9 +3,10 @@
   <ul class="taxonomy-list">
     {% set topicsList = helpers.sortByAlpha(collections.topics) %}
     {% for item in topicsList %}
+      {% set topicsItems = helpers.filterCollectionByTaxonomy(collections.articles,item.fileSlug, 'topics') | length %}
 
       <li class="taxonomy-list__item">
-        <a class="taxonomy-list__url" href="{{ item.url }}">{{ item.data.title }}</a>
+        <a class="taxonomy-list__url" href="{{ item.url }}">{{ item.data.title }}<span class="taxonomy__count">{{ topicsItems }}</span></a>
       </li>
       
     {% endfor %}

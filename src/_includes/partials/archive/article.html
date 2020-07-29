@@ -18,5 +18,7 @@
   {%- endif -%}
 </div>
 
-<span class="archive__category"><a href="#" class="category__url">{{ item.data.tags[0] }}</a></span>
- 
+{% if item.data.topics %}
+  {% set postTopic = collections.topics | getTaxonomy(item.data.topics) | first %}
+  <span class="archive__category"><a href="/topics/{{ item.data.topics }}" class="category__url">{{ postTopic.data.title }}</a></span>
+{% endif %}

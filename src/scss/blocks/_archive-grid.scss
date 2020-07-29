@@ -16,5 +16,14 @@
 }
 
 .grid__sidebar {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: get-size('600');
   grid-area: sidebar;
+
+  @include media-query('lg') {
+    display: block;
+    // grid-template-columns: none;
+    // grid-gap: 0;
+  }
 }

@@ -6,38 +6,88 @@
 {% set pageHeaderSummary = content %}
 
 {# If this is a tag, grab those items instead as one large collection #}
-{% if tag %}
-  {% set archiveListItems = collections[tag] | reverse %}
-  {% set pageHeaderTitle %}
-    <span class="visually-hidden">Blog posts filed under: </span>{{ tag }}
-  {% endset %}
-  {% set metaTitle = 'Tag: ' + tag + ' - ' + site.name %}
 
-  {% if tag === 'Business' %}
-    {% set pageHeaderSummary = '<p>It’s business time</p>' %}
-  {% elif tag === 'Code' %}
-    {% set pageHeaderSummary = '<p>I do this for work; I <em>may</em> have some opinions</p>' %}
-  {% elif tag === 'Comics' %}
-    {% set pageHeaderSummary = '<p>What I’m reading and other comics-related news</p>' %}
-  {% elif tag === 'Film' %}
-    {% set pageHeaderSummary = '<p>I love watching movies; sometimes I write about them</p>' %}
-  {% elif tag === 'Star Wars' %}
-    {% set pageHeaderSummary = '<p>These <em>are</em> the words you’re looking for</p>' %}
-  {% elif tag === 'Technology' %}
-    {% set pageHeaderSummary = '<p>One of my favorite things to write about</p>' %}
-  {% endif %}
+{% if type === 'topic' %}
+  {% set archiveListItems = helpers.filterCollectionByTaxonomy(collections.articles,page.fileSlug,'topics') %}
+
+  {% set pageHeaderTitle %}
+    <span class="visually-hidden">Blog posts filed under: </span>{{ title }}
+  {% endset %}
+  {% set metaTitle = 'Topic: ' + title + ' - ' + site.name %}
+
+  {% set pageHeaderSummary %}
+
+    {{ content | safe }}
+    
+    <div class="related-taxonomy">
+      <h3 class="[ mini-headline ] [ gap-bottom-300 ]">Explore Other Topics</h3>
+
+      <ul class="related-taxonomy__list">
+        {% set relatedTopics = helpers.getSiblingContent(collections.topics, page) %}
+
+        {% for item in relatedTopics %}
+          <li><a class="list__url" href="{{ item.url }}">{{ item.data.title }}</a></li>
+        {% endfor %}
+      </ul>
+    
+    </div>
+
+  {% endset %}
+{% endif %}
+
+{% if type === 'series' %}
+  {% set archiveListItems = helpers.filterCollectionByTaxonomy(collections.articles,page.fileSlug,'series') %}
   
+  {% set pageHeaderSummary %}
+
+    {{ content | safe }}
+    
+    <div class="related-taxonomy">
+      <h3 class="[ mini-headline ] [ gap-bottom-300 ]">Explore Other Series</h3>
+
+      <ul class="related-taxonomy__list">
+        {% set relatedSeries = helpers.getSiblingContent(collections.series, page) %}
+
+        {% for item in relatedSeries %}
+          <li><a class="list__url" href="{{ item.url }}">#{{ item.fileSlug }}</a></li>
+        {% endfor %}
+      </ul>
+    
+    </div>
+
+  {% endset %}
+
 {% endif %}
 
 {% block content %}
 
   {% include "partials/page-header.html" %}
 
-  <div class="[ archive ] [ panel ]">
-    <div class="wrapper">
-      <div class="inner-wrapper">
-        {% include 'partials/archive-list.html' %}
+  {% if pagination.data == 'collections.articles' %}
+    <div class="[ archive ] [ panel ]">
+      <div class="wrapper">
+        <div class="archive-grid">
+          <article class="grid__main">
+            {% include 'partials/archive-list.html' %}
+          </article>
+          <aside class="grid__sidebar">
+            {% include 'partials/archive/topics-list.html' %}
+            {% include 'partials/archive/series-list.html' %}
+          </aside>
+        </div>
       </div>
     </div>
-  </div>
+  {% else %}
+    <div class="[ archive ] [ panel ]">
+      <div class="wrapper">
+        <div class="inner-wrapper">
+          {% include 'partials/archive-list.html' %}
+        </div>
+      </div>
+    </div>
+  {% endif %}
+
+  
+
+  
 {% endblock %}

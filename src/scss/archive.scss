@@ -16,6 +16,15 @@ $outputTokenCSS: false;
 @import 'utilities/inner-wrapper';
 @import 'utilities/mini-headline';
 
+.archive__breadcrumb {
+  color: get-color('secondary');
+  display: inline-block;
+  font-size: get-size('300');
+  font-weight: bold;
+  margin-bottom: get-size('500');
+  text-decoration: none;
+}
+
 .archive__item {
   + .archive__item {
     margin-top: get-size('600');
