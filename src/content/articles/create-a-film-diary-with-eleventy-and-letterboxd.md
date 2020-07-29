@@ -2,8 +2,9 @@
 title: 'Show Off Your Letterboxd Film Diary with Eleventy'
 subhead: 'We’ll use an Eleventy data file and an NPM package to parse the Letterboxd RSS feed into JSON'
 date: 2020-07-24T18:52-07:00
-tags: 'Code'
+topics: 'code'
 series: 'learn-eleventy'
+draft: true
 ---
 
 {% youtube 'klz7aNIXUxM' %}
