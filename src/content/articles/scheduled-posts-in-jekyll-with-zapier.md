@@ -2,7 +2,7 @@
 title: 'Scheduled Posts in Jekyll with Zapier'
 subhead: 'Turned out to be a lot less difficult than anticipated'
 date: 2018-10-16T11:18-07:00
-tags: 'Code'
+topics: 'code'
 series: 'hacking-jekyll'
 ---
 

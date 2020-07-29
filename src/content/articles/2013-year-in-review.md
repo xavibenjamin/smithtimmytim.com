@@ -1,7 +1,7 @@
 ---
 title: '2013: Year in Review'
 date: '2014-01-01T21:40-07:00'
-tags: 'Life'
+topics: 'personal'
 series: 'year-in-review'
 ---
 

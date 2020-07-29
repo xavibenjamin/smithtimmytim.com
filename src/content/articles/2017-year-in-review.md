@@ -2,7 +2,7 @@
 title: '2017: Year in Review'
 subhead: 'Highlights from the year and what’s in store for the next one'
 date: 2017-12-31T20:25-07:00
-tags: 'Life'
+topics: 'personal'
 socialImage: '/images/uploads/2017/tim-and-kelly-bus-ride.jpg'
 series: year-in-review
 ---

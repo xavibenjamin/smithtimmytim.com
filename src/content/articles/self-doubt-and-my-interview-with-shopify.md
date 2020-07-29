@@ -1,7 +1,7 @@
 ---
 title: 'Self-Doubt and My Interview With Shopify'
 date: '2017-03-20T21:43-07:00'
-tags: 'Life'
+topics: 'personal'
 ---
 
 Helen Tran wrote an awesome article for fem-designers-in-tech:

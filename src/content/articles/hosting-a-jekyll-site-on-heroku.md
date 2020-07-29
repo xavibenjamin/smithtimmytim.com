@@ -2,7 +2,7 @@
 title: 'Hosting a Jekyll Site on Heroku'
 subhead: 'Avoid pulling your hair out like I did'
 date: 2015-06-29T16:46-07:00
-tags: 'Code'
+topics: 'code'
 series: 'jekyll-with-heroku'
 ---
 

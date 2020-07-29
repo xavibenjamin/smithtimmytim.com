@@ -2,7 +2,7 @@
 title: 'Using forloop in Jekyll for Placing Ads'
 subhead: 'A quick look at how I made ads less obtrusive for smaller screens'
 date: '2018-10-01T15:24-07:00'
-tags: 'Code'
+topics: 'code'
 series: 'hacking-jekyll'
 ---
 

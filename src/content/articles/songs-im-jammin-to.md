@@ -1,7 +1,7 @@
 ---
 title: 'Songs I’m Jammin’ to Right Now'
 date: 2020-01-16T14:46-07:00
-tags: 'Music'
+topics: 'music'
 featuredImage: '/images/uploads/2020/23277d39-8aed-42d4-82d1-71b7e5b9b6f6.jpeg'
 summary: 'A list of ten songs I’m enjoying'
 ---

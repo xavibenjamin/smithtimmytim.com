@@ -2,7 +2,7 @@
 title: '2014: Year in Review'
 subhead: 'Another year has come and gone'
 date: '2015-02-11T21:36-07:00'
-tags: 'Life'
+topics: 'personal'
 series: 'year-in-review'
 ---
 

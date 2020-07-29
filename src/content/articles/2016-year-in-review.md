@@ -2,7 +2,7 @@
 title: '2016: Year in Review'
 subhead: 'Another year came and went, here are some highlights'
 date: 2016-12-31T19:34-07:00
-tags: 'Life'
+topics: 'personal'
 series: 'year-in-review'
 ---
 

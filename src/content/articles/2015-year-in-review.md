@@ -2,7 +2,7 @@
 title: '2015: Year in Review'
 subhead: 'The year came and went, and as usual, here’s my annual year in review'
 date: 2016-01-07T19:17-07:00
-tags: 'Life'
+topics: 'personal'
 series: 'year-in-review'
 featuredImage: '/images/uploads/2016/smith-wedding-party-silly.jpg'
 ---

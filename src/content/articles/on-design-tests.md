@@ -2,7 +2,7 @@
 title: 'On Design Tests'
 subhead: 'Should you take them?'
 date: '2016-08-25T18:31-07:00'
-tags: 'Design'
+topics: 'work'
 ---
 
 Looking for a job is a stressful affair. Filtering through hundreds of job descriptions requires stellar skimming skills. After all, you want to minimize wasted time on ones that don't meet your personal requirements. Postings with little to no details about salary, benefits, and the day to day of the position are surprisingly prevalent.

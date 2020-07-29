@@ -2,7 +2,7 @@
 title: 'Switching Back to Kramdown'
 subhead: 'Quick update on my markdown woes'
 date: '2016-11-15T15:19-07:00'
-tags: 'Code'
+topics: 'code'
 series: 'hacking-jekyll'
 ---
 

@@ -2,7 +2,7 @@
 title: 'Star Wars: The Last Jedi'
 date: '2017-12-15T21:50-07:00'
 subhead: 'The latest of the Star Wars saga films is a fresh, new, and exciting chapter of my favorite franchise'
-tags: 'Star Wars'
+topics: 'star-wars'
 review:
   rating: 5
 letterboxdLink: https://letterboxd.com/ttimsmith/film/star-wars-the-last-jedi/

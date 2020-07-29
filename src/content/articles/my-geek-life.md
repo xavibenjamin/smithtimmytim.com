@@ -2,7 +2,7 @@
 title: 'My Geek Life'
 subhead: 'The geekery… it’s always been there'
 date: '2018-11-05T18:40-07:00'
-tags: 'Comics'
+topics: 'geekery'
 featuredImage: '/images/uploads/2018/my-geek-life.jpg'
 ---
 

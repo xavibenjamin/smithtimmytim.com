@@ -1,7 +1,7 @@
 ---
 title: 'Switching to Redcarpet'
 date: '2015-12-01T15:30-07:00'
-tags: 'Code'
+topics: 'code'
 series: 'hacking-jekyll'
 ---
 

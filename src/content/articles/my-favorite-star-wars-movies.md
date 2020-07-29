@@ -1,7 +1,7 @@
 ---
 title: 'My Favorite ‘Star Wars’ Movies'
 date: 2019-12-26T11:53-07:00
-tags: 'Star Wars'
+topics: 'star-wars'
 ---
 
 After recording [an episode of *Retake* about *Rogue One*](https://nightowl.fm/retake/15), TJ and I started talking about where the movie fell within our personal favorites list. I realized I didn’t have my list written somewhere.

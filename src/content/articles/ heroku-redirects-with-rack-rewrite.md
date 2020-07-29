@@ -2,7 +2,7 @@
 title: 'Heroku Redirects with rack-rewrite'
 subhead: 'Moved this blog to Heroku, now what?'
 date: 2015-07-31T16:43-07:00
-tags: 'Code'
+topics: 'code'
 series: 'jekyll-with-heroku'
 ---
 

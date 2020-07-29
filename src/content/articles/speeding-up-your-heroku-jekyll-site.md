@@ -2,7 +2,7 @@
 title: 'Speeding Up Your Jekyll Site on Heroku'
 subhead: 'Cache the hell out of all the things'
 date: '2017-01-17T16:34-07:00'
-tags: 'Code'
+topics: 'code'
 series: jekyll-with-heroku
 ---
 

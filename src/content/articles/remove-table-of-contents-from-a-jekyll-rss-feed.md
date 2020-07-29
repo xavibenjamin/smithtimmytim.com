@@ -2,7 +2,7 @@
 title: 'Remove Table of Contents From a Jekyll RSS Feed'
 subhead: 'How is this not a post on the internet yet?'
 date: '2017-11-07T07:30-07:00'
-tags: 'Code'
+topics: 'code'
 series: 'hacking-jekyll'
 ---
 

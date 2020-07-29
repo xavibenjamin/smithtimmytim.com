@@ -2,7 +2,7 @@
 title: 'Fix Broken Images from Siteleaf'
 subhead: 'Images weren’t working for me, but I finally figured out what was wrong'
 date: '2018-09-24T15:17-07:00'
-tags: 'Code'
+topics: 'code'
 series: 'hacking-jekyll'
 ---
 

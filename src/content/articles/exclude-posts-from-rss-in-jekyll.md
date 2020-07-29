@@ -2,7 +2,7 @@
 title: 'Exclude Posts From RSS in Jekyll'
 subhead: 'Two different solutions depending on your circumstance'
 date: '2017-11-09T15:26-07:00'
-tags: 'Code'
+topics: 'code'
 series: 'hacking-jekyll'
 ---
 

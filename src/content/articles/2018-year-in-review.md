@@ -2,7 +2,7 @@
 title: '2018: Year in Review'
 subhead: 'Highlights of the past year'
 date: '2018-12-31T17:23-07:00'
-tags: 'Life'
+topics: 'personal'
 featuredImage: '/images/uploads/2018/florida-002.jpg'
 socialImage: '/images/uploads/2018/florida-002.jpg'
 series: 'year-in-review'
