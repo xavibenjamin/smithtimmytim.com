@@ -85,7 +85,9 @@ module.exports = (config) => {
   });
 
   config.addCollection('articles', (collection) => {
-    return collection.getFilteredByGlob(globs.posts).reverse();
+    const drafts = (item) => !(item.data.draft && isProduction);
+
+    return collection.getFilteredByGlob(globs.posts).reverse().filter(drafts);
   });
 
   config.addCollection('notes', (collection) => {
