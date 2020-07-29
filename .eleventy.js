@@ -7,7 +7,7 @@ const dateNotePermalink = require('./src/filters/date-note-permalink.js');
 const dateLetterboxd = require('./src/filters/date-letterboxd.js');
 const webmentionsForUrl = require('./src/filters/webmentions-for-url.js');
 const webmentionCountByType = require('./src/filters/webmention-count-by-type.js');
-const getSeries = require('./src/filters/get-series.js');
+const getTaxonomy = require('./src/filters/get-taxonomy.js');
 const rating = require('./src/filters/rating.js');
 
 // Plugins
@@ -108,7 +108,7 @@ module.exports = (config) => {
   config.addFilter('dateLetterboxd', dateLetterboxd);
   config.addFilter('webmentionsForUrl', webmentionsForUrl);
   config.addFilter('webmentionCountByType', webmentionCountByType);
-  config.addFilter('getSeries', getSeries);
+  config.addFilter('getTaxonomy', getTaxonomy);
   config.addFilter('rating', rating);
 
   // Plugins
