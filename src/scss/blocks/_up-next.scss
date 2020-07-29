@@ -1,0 +1,25 @@
+.up-next {
+  .next-list__url {
+    color: get-color('light');
+    text-decoration: none;
+  }
+}
+
+.next-list__item {
+  time {
+    color: get-color('light-shade');
+    display: block;
+    font-size: get-size('400');
+
+    @include media-query('md') {
+      display: inline-block;
+      margin-left: get-size('300');
+    }
+  }
+  + .next-list__item {
+    margin-top: 1rem;
+    @include media-query('md') {
+      margin-top: 0.25rem;
+    }
+  }
+}

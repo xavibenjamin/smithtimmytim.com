@@ -1,0 +1,16 @@
+<div class="up-next panel bg-dark gap-top-700 md:gap-top-900 gap-bottom-700 md:gap-bottom-900">
+  <div class="wrapper">
+    <div class="inner-wrapper">
+    
+      <h1 class="headline color-primary gap-bottom-600">Up Next</h1>
+      {% set nextPosts = helpers.getSiblingContent(collections.articles, page) %}
+
+      <ul class="up-next__list">
+        {% for item in nextPosts %}
+          <li class="next-list__item"><a class="next-list__url" href="{{ item.url }}">{{ item.data.title }}</a>&nbsp;<time datetime="{{ item.date | dateIso }}" class="dt-published">{{ item.date | dateReadable }}</time></li>
+        {% endfor %}
+      </ul>
+
+    </div>
+  </div>
+</div>
