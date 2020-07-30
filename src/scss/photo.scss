@@ -29,7 +29,9 @@ $outputTokenCSS: false;
 }
 
 .photo-list {
-  @include apply-utility('measure', 'long');
+  img {
+    border-radius: 0.25rem;
+  }
 }
 
 // Pull in blocks
