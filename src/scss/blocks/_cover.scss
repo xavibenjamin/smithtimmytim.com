@@ -1,7 +1,7 @@
 .cover {
   @include media-query('md') {
     height: 75vh;
-    max-height: 52.5rem;
+    max-height: 42rem;
   }
 }
 
@@ -27,7 +27,7 @@
 }
 
 .cover__media {
-  max-width: 36.5rem;
+  max-width: 32rem;
 
   img {
     width: 100vw;
@@ -39,7 +39,7 @@
       width: 100%;
       object-fit: cover;
       height: 75vh;
-      max-height: 52.5rem;
+      max-height: 42rem;
     }
   }
 }
