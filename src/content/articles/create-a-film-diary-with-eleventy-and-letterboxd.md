@@ -36,13 +36,12 @@ Let's create a new data file. I store mine in `./src/_data/`. We'll call it `let
 const letterboxd = require('letterboxd');
 
 module.exports = async () => {
-  const items = await letterboxd('ttimsmith', (error, items) => {
-    if (error) {
-      return console.log(error);
-    }
-  });
-
-  return items;
+  try {
+    const items = await letterboxd('ttimsmith');
+    return items;
+  } catch (err) {
+    console.log(err);
+  }
 };
 ```
 
@@ -64,7 +63,7 @@ Now let's create a partial for our film diary. I put my partials in `./src/_incl
   <article class="film__entry">
     <a href="{{ item.uri }}" class="film__url">
       <div class="film__media">
-        <img 
+        <img
           src="{{ item.film.image.tiny }}"
           alt="Poster for {{ item.film.title }}"
           loading="lazy">
@@ -94,3 +93,7 @@ You'll want to include this partial in your template like this:
 And there you have it! You're pulling in your last five diary entries from Letterboxd and displaying them on your site. Now's the time to add your own styles and make it look great.
 
 If you need help, or end up using this tutorial to create your own film diary, please let me know! I'm @smithtimmytim on Twitter.
+
+---
+
+**Update on July 30, 2020 at 11:21 am:** Updated Letterboxd data file after learning more about async. If you're interested, [here's the video](https://youtu.be/_8gHHBlbziw) I watched.
