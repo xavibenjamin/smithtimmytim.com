@@ -13,6 +13,10 @@
     padding: get-size('700') get-size('800');
   }
 
+  .series__info {
+    @include apply-utility('measure', 'short');
+  }
+
   .series__title {
     color: get-color('dark-shade');
     margin-bottom: 0.45rem;
@@ -31,7 +35,7 @@
   }
 
   .series__url {
-    color: get-color('primary-shade');
+    color: get-color('secondary');
     display: inline-block;
     font-size: get-size('300');
     font-weight: bold;
@@ -42,18 +46,17 @@
   }
 
   .series-item {
-    font-size: get-size('300');
-    font-weight: 700;
+    font-size: get-size('400');
     padding-bottom: 0.5rem;
 
     + .series-item {
-      border-top: 2px solid lighten(get-color('primary-glare'), 10%);
+      border-top: 0.15rem solid lighten(get-color('light-shade'), 10%);
       padding-top: 0.5rem;
     }
   }
 
   .series-item__url {
-    color: get-color('primary-shade');
+    color: get-color('secondary');
     text-decoration: none;
   }
 }
