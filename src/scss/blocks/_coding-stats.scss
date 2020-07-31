@@ -1,0 +1,74 @@
+.coding {
+  background-color: get-color('light-glare');
+  padding: get-size('700');
+  border-radius: 0.25rem;
+  margin-top: get-size('800');
+
+  .cursor {
+    animation: 1s blink step-end infinite;
+    background-color: get-color('secondary-glare');
+    width: 0.1em;
+    height: 1em;
+    display: inline-block;
+    position: relative;
+    top: 0.2em;
+    margin-left: 0.1rem;
+  }
+
+  .language__heading {
+    display: flex;
+    align-items: center;
+    svg {
+      height: 1em;
+      width: 1em;
+      fill: get-color('light-shade');
+    }
+  }
+}
+
+.language-list {
+  @include apply-utility('font', 'mono');
+  margin-top: get-size('500') !important;
+
+  .language__item {
+    align-items: center;
+    display: grid;
+    grid-template-columns: auto auto 1fr;
+    grid-gap: 0.5rem;
+    + .language__item {
+      margin-top: 0.5rem;
+    }
+  }
+
+  .language__name {
+    color: get-color('dark-glare');
+    font-size: 0.85em;
+  }
+
+  .language__time {
+    color: get-color('light-shade-text');
+    font-size: get-size('400');
+    text-align: right;
+  }
+
+  .progress {
+    border-radius: 20rem;
+    width: 100%;
+  }
+
+  .progress-length {
+    height: 0.5rem;
+    border-radius: 20rem;
+  }
+}
+
+// Blink Animation
+@keyframes blink {
+  from,
+  to {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
