@@ -1,0 +1,21 @@
+{% set projectCount = wakatime.data.projects.length %}
+{% set myLanguages = wakatime.data.languages.slice(0,4) %}
+
+<div class="coding" data-frame="light-shade">
+  <h1 class="coding__headline">.coding<span class="cursor"></span></h1>
+  
+  <ul class="language-list">
+    {% for item in myLanguages %}
+      <li class="language__item">
+        <span class="language__name">{{ item.name }}</span>
+        <span class="language__time"> {{ item.text }}</span>
+        <div class="progress bg-primary-glare">
+          <div class="progress-length bg-primary" style="width:{{ item.percent }}%"></div>
+        </div>
+      </li>
+    {% endfor %}
+  </ul>
+  
+
+
+</div>
