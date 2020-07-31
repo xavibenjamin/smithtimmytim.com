@@ -1,0 +1,26 @@
+{% set projectCount = wakatime.data.projects.length %}
+{% set codingActivity = wakatime.data.human_readable_total %}
+{% set editor = wakatime.data.editors[0].name %}
+{% set os = wakatime.data.operating_systems[0].name %}
+{% set myLanguages = wakatime.data.languages.slice(0,4) %}
+
+<div class="coding flow" data-frame="light-shade">
+  <h1 class="coding__headline">.coding<span class="cursor"></span></h1>
+
+  <ul class="stats__list">
+    <li>{% include 'partials/icons/icon-activity.svg' %}{{ codingActivity }}</li>
+    <li>{% include 'partials/icons/icon-computer.svg' %}{{ editor }} on {{ os }}</li>
+  </ul>
+  
+  <ul class="language-list">
+    {% for item in myLanguages %}
+      <li class="language__item">
+        <span class="language__name">{{ item.name }}</span>
+        <span class="language__time">{{ item.text }}</span>
+        <div class="progress bg-primary-glare">
+          <div class="progress-length bg-primary" style="width:{{ item.percent }}%"></div>
+        </div>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
