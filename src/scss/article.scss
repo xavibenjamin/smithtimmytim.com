@@ -35,7 +35,7 @@ $outputTokenCSS: false;
   transform: translateX(-50%);
   width: 100vw;
   &:before {
-    background-color: get-color('light-glare');
+    background-color: var(--color-bg-alt);
     content: '';
     display: block;
     position: absolute;

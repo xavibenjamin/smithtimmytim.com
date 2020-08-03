@@ -1,4 +1,5 @@
 .post-series {
+  background-color: var(--color-bg-alt);
   display: grid;
   padding: get-size('700');
   grid-gap: get-size('700');
@@ -18,10 +19,10 @@
   }
 
   .series__title {
-    color: get-color('dark-shade');
+    color: var(--color-heading);
     margin-bottom: 0.45rem;
     small {
-      color: get-color('dark-glare');
+      color: var(--color-text-alt);
       display: block;
       font-size: 0.55em;
       margin-bottom: 0.15rem;
@@ -35,7 +36,7 @@
   }
 
   .series__url {
-    color: get-color('secondary');
+    color: var(--color-link);
     display: inline-block;
     font-size: get-size('300');
     font-weight: bold;
@@ -50,13 +51,13 @@
     padding-bottom: 0.5rem;
 
     + .series-item {
-      border-top: 0.15rem solid lighten(get-color('light-shade'), 10%);
+      border-top: 0.15rem solid var(--color-bg);
       padding-top: 0.5rem;
     }
   }
 
   .series-item__url {
-    color: get-color('secondary');
+    color: var(--color-link);
     text-decoration: none;
   }
 }

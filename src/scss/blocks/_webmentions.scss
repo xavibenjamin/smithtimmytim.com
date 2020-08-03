@@ -1,3 +1,7 @@
+.webmentions {
+  background-color: var(--color-bg-alt);
+}
+
 .webmentions__inner {
   @include apply-utility('measure', 'medium');
 }
@@ -19,14 +23,14 @@
   top: -0.1em;
 
   svg {
-    fill: get-color('light-shade');
+    fill: var(--color-accent);
     height: 1em;
     width: 1em;
     margin: 0 0.05em 0 0.1em;
   }
 
   .webmentions-stat__number {
-    color: get-color('dark-glare');
+    color: var(--color-text-alt);
     font-size: get-size('400');
     margin-left: 0.5rem;
 
@@ -42,7 +46,7 @@
   + .webmentions__item {
     margin-top: get-size('600');
     padding-top: get-size('600');
-    border-top: 1px solid get-color('light-shade');
+    border-top: 1px solid var(--color-bg);
   }
 }
 
@@ -52,12 +56,12 @@
 }
 
 .webmention__author {
-  color: get-color('dark-glare');
+  color: var(--color-heading);
   text-decoration-color: get-color('secondary-glare');
 }
 
 .webmention__pubdate {
-  color: get-color('dark-glare');
+  color: var(--color-text-alt);
   font-size: get-size('400');
   display: block;
 

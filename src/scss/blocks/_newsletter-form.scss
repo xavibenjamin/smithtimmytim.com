@@ -1,3 +1,7 @@
+.site-newsletter {
+  background-color: var(--color-bg-shade);
+}
+
 .newsletter-form {
   margin-top: get-size('700') !important;
 }
@@ -18,7 +22,7 @@
 .newsletter-form__section {
   width: 100%;
   label {
-    color: get-color('dark-glare');
+    color: var(--color-text-alt);
     display: block;
     font-size: get-size('400');
     font-weight: bold;
@@ -28,9 +32,9 @@
 
   input {
     border: 0;
-    border-bottom: 0.2rem solid get-color('dark-glare');
-    background-color: rgba(get-color('light'), 0.3);
-    color: get-color('dark');
+    border-bottom: 0.2rem solid var(--color-bg);
+    background-color: transparent;
+    color: var(--color-text);
     -webkit-appearance: none;
     font-size: get-size('400');
     width: 100%;
@@ -39,11 +43,11 @@
 
     &:focus {
       background-color: transparent;
-      border-bottom: 0.2rem solid get-color('dark-shade');
+      border-bottom: 0.2rem solid var(--color-accent);
       outline: none;
 
       + label {
-        color: get-color('dark-shade');
+        color: var(--color-accent);
         transform: translateY(-310%);
       }
     }

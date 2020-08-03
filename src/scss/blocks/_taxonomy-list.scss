@@ -1,5 +1,5 @@
 .taxonomy__title {
-  border-bottom: 0.2rem solid get-color('dark-glare');
+  border-bottom: 0.2rem solid var(--color-text-alt);
   padding-bottom: 0.4rem;
 }
 
@@ -8,11 +8,11 @@
   font-size: get-size('400');
 
   + .taxonomy-list__item {
-    border-top: 0.2rem solid get-color('light-shade');
+    border-top: 0.2rem solid var(--color-bg-shade);
   }
 
   .taxonomy-list__url {
-    color: get-color('secondary');
+    color: var(--color-link);
     display: flex;
     align-items: center;
     text-decoration: none;

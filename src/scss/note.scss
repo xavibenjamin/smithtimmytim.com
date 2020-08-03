@@ -25,7 +25,7 @@ $outputTokenCSS: false;
 
 .note__url {
   font-size: get-size('400');
-  color: get-color('dark-glare');
+  color: var(--color-text-alt);
 }
 
 // Pull in blocks

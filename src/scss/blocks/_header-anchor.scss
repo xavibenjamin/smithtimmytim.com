@@ -1,5 +1,5 @@
 .header-anchor {
-  color: get-color('primary');
+  color: var(--color-accent);
   font-size: 0.8em;
   font-weight: 400;
   margin-inline-start: 0.4rem;
@@ -8,6 +8,6 @@
 
   &:hover,
   &:focus {
-    color: get-color('dark-glare');
+    color: var(--color-text-alt);
   }
 }

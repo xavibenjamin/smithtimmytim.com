@@ -4,6 +4,11 @@
 // Next: pull in gorko for design tokens
 @import '../../node_modules/gorko/gorko.scss';
 
+// Local mixins
+@import 'mixins/dark-mode';
+
+@import 'theme';
+
 @import 'reset';
 @import 'mono-fonts';
 
@@ -17,8 +22,8 @@ html {
 }
 
 body {
-  background: get-color('light');
-  color: get-color('dark');
+  background: var(--color-bg);
+  color: var(--color-text);
   line-height: 1.6;
   font-size: get-size('500');
 
@@ -26,17 +31,17 @@ body {
 }
 
 a:not([class]) {
-  color: get-color('secondary');
-  text-decoration-color: get-color('secondary-glare');
+  color: var(--color-link);
+  text-decoration-color: var(--color-link-alt);
   hyphens: none;
 
   &:visited {
-    color: get-color('dark-glare');
+    color: var(--color-text);
   }
 }
 
 :focus {
-  outline: 2px dashed get-color('primary');
+  outline: 2px dashed var(--color-accent);
   outline-offset: 0.25rem;
 }
 
@@ -45,7 +50,7 @@ main:focus {
 }
 
 h1 {
-  color: get-color('dark-shade');
+  color: var(--color-heading);
   font-weight: 800;
 
   @include apply-utility('font', 'display');
@@ -62,11 +67,11 @@ h3 {
 }
 
 h2 {
-  color: get-color('dark-shade');
+  color: var(--color-heading);
 }
 
 h3 {
-  color: get-color('dark-glare');
+  color: var(--color-text-alt);
 }
 
 ul:not([class]) {
@@ -77,7 +82,7 @@ ul:not([class]) {
 
     &:before {
       border-radius: 50%;
-      color: get-color('light-shade-text');
+      color: var(--color-text-accent);
       content: '•';
       display: inline-block;
       position: absolute;
@@ -106,7 +111,7 @@ ol:not([class]),
     position: relative;
 
     &:before {
-      color: get-color('light-shade-text');
+      color: var(--color-text-accent);
       content: counter(section);
       counter-increment: section;
       font-size: 0.85em;

@@ -16,7 +16,7 @@
 }
 
 .screenshot__container {
-  background: get-color('light-glare');
+  background: var(--color-bg-alt);
   border-radius: 0.25rem;
   padding: get-size('600');
   display: grid;

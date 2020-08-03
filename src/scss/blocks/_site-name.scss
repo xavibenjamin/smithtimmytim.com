@@ -15,12 +15,12 @@
 
   svg {
     width: 5rem;
-    fill: get-color('primary');
+    fill: var(--color-accent);
   }
 }
 
 .site-pronouns {
-  color: get-color('dark-glare');
+  color: var(--color);
   display: flex;
   font-size: get-size('400');
   font-weight: bold;
@@ -36,7 +36,7 @@
   li + li {
     &:before {
       content: '//';
-      color: get-color('light-shade');
+      color: var(--color-border);
       margin: 0 0.3rem;
       letter-spacing: -1.5px;
 

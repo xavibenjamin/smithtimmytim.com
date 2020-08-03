@@ -7,6 +7,10 @@ $outputTokenCSS: false;
 // Next: pull in gorko for design tokens
 @import '../../node_modules/gorko/gorko.scss';
 
+.photos {
+  background-color: var(--color-bg-alt);
+}
+
 .photo__body {
   margin-top: get-size('800');
 
@@ -25,7 +29,7 @@ $outputTokenCSS: false;
 
 .photo__url {
   font-size: get-size('400');
-  color: get-color('dark-glare');
+  color: var(--color-text-alt);
 }
 
 .photo-list {

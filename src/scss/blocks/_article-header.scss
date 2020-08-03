@@ -1,5 +1,5 @@
 .article__category {
-  color: get-color('secondary');
+  color: var(--color-link);
   text-decoration: none;
   font-size: get-size('400');
   font-weight: bold;
@@ -8,7 +8,7 @@
 }
 
 .article__subhead {
-  color: get-color('dark-glare');
+  color: var(--color-text);
 }
 
 .article__meta {
@@ -18,14 +18,14 @@
 }
 
 .article__date {
-  color: get-color('dark-glare');
-  text-decoration-color: get-color('light-shade');
+  color: var(--color-text-alt);
+  text-decoration-color: var(--color-border);
 }
 
 .article__reading-time {
   margin-left: get-size('400');
   font-size: get-size('400');
-  color: get-color('light-shade-text');
+  color: var(--color-text-accent);
 }
 
 .article__syndicated {
@@ -41,14 +41,14 @@
     top: -0.1em;
     width: 0.85em;
     g {
-      stroke: get-color('dark-glare');
+      stroke: var(--color-text-alt);
     }
   }
 
   .article__letterboxd-link {
     align-items: center;
-    color: get-color('dark-glare');
+    color: var(--color-text-alt);
     display: inline-flex;
-    text-decoration-color: get-color('light-shade');
+    text-decoration-color: var(--color-border);
   }
 }

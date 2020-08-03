@@ -1,4 +1,5 @@
 .cover {
+  background-color: var(--color-bg-alt);
   @include media-query('md') {
     height: 75vh;
     max-height: 42rem;

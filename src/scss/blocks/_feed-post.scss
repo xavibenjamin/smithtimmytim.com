@@ -25,7 +25,7 @@
   font-size: get-size('300');
   font-weight: bold;
 
-  color: get-color('secondary');
+  color: var(--color-link);
   text-decoration: none;
   text-transform: uppercase;
 }
@@ -34,13 +34,13 @@
   font-size: get-size('800');
 
   a {
-    color: get-color('dark-shade');
+    color: var(--color-heading);
     text-decoration: none;
   }
 }
 
 .feed-post__subhead {
-  color: get-color('dark-glare');
+  color: var(--color-text);
   font-size: get-size('600');
   font-weight: normal;
   line-height: 1.1;
@@ -52,12 +52,12 @@
 }
 
 .feed-post__date {
-  color: get-color('dark-glare');
+  color: var(--color-text-alt);
   font-size: get-size('400');
 }
 
 .feed-post__reading-time {
   margin-left: get-size('400');
   font-size: get-size('300') !important;
-  color: get-color('light-shade-text');
+  color: var(--color-text-accent);
 }

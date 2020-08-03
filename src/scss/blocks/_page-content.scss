@@ -8,13 +8,13 @@
   }
 
   mark {
-    color: get-color('dark');
-    background-color: get-color('highlight');
+    color: var(--color-text);
+    background-color: var(--color-code);
   }
 
   blockquote:not([class]) {
-    color: get-color('dark-glare');
-    border-left: 0.3rem solid get-color('light-shade');
+    color: var(--color-text-alt);
+    border-left: 0.3rem solid var(--color-border);
     padding-left: get-size('600');
     > ul,
     > ol {
@@ -36,7 +36,7 @@
 
   hr {
     border: 0;
-    border-bottom: 3px solid get-color('light-shade');
+    border-bottom: 3px solid var(--color-border);
     margin: get-size('700') 0;
 
     @include apply-utility('measure', 'short');
@@ -48,14 +48,14 @@
     @include apply-utility('font', 'mono');
 
     a {
-      color: get-color('light-shade-text');
-      text-decoration-color: get-color('light-shade-text');
+      color: var(--color-link);
+      text-decoration-color: var(--color-link-alt);
     }
   }
 
   .footnote-backref {
     border-radius: 50%;
-    color: get-color('secondary');
+    color: var(--color-link);
     text-decoration: none;
     position: relative;
     top: 0.15em;
@@ -83,12 +83,12 @@
     }
 
     tbody td {
-      border-top: 1px solid get-color('light-shade');
+      border-top: 1px solid var(--color-bg-alt);
     }
   }
 
   thead th {
-    color: get-color('dark-shade');
+    color: var(--color-heading);
     font-weight: bold;
     text-align: left;
 
