@@ -48,4 +48,9 @@
   > * + * {
     margin-left: get-size('400');
   }
+
+  li {
+    display: flex;
+    align-items: center;
+  }
 }

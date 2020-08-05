@@ -1,0 +1,57 @@
+.theme-toggle {
+  background: none;
+  border: 0;
+  cursor: pointer;
+  display: inline-grid;
+
+  svg {
+    fill: var(--color-accent);
+    height: 1.2em;
+    width: 1.2em;
+    transition: fill 0.8s ease 0.2s;
+
+    [data-user-color-scheme='dark'] & {
+      fill: var(--color-border);
+    }
+  }
+
+  &:focus {
+    svg {
+      animation: buzz 0.75s linear infinite;
+      -webkit-animation-play-state: paused;
+    }
+  }
+}
+
+@keyframes buzz {
+  10% {
+    transform: translateX(3px) rotate(2deg);
+  }
+  20% {
+    transform: translateX(-3px) rotate(-2deg);
+  }
+  30% {
+    transform: translateX(3px) rotate(2deg);
+  }
+  40% {
+    transform: translateX(-3px) rotate(-2deg);
+  }
+  50% {
+    transform: translateX(2px) rotate(1deg);
+  }
+  60% {
+    transform: translateX(-2px) rotate(-1deg);
+  }
+  70% {
+    transform: translateX(2px) rotate(1deg);
+  }
+  80% {
+    transform: translateX(-2px) rotate(-1deg);
+  }
+  90% {
+    transform: translateX(1px) rotate(0);
+  }
+  100% {
+    transform: translateX(-1px) rotate(0);
+  }
+}
