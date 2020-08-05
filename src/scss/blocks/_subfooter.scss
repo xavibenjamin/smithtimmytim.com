@@ -9,7 +9,7 @@
   }
 
   svg {
-    fill: get-color('primary');
+    fill: var(--color-accent);
     width: 1em;
     position: relative;
     top: 2px;

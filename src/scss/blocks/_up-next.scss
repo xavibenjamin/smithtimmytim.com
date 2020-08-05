@@ -1,15 +1,20 @@
 .up-next {
+  h2 {
+    color: var(--color-text-alt);
+  }
+
   .next-list__url {
-    color: get-color('light');
-    text-decoration: none;
+    color: var(--color-link);
+    text-decoration-color: var(--color-link-alt);
   }
 }
 
 .next-list__item {
+  font-size: get-size('400');
+
   time {
-    color: get-color('light-shade');
+    color: var(--color-text-alt);
     display: block;
-    font-size: get-size('400');
 
     @include media-query('md') {
       display: inline-block;

@@ -11,7 +11,7 @@ pre {
 }
 
 code {
-  background: get-color('light-shade');
+  background: var(--color-code);
   border-radius: 0.25rem;
   font-family: JetBrains Mono, Operator Mono, monospace;
   font-size: 0.85em;

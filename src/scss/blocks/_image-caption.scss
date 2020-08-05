@@ -1,5 +1,5 @@
 .image__caption {
-  color: get-color('dark-glare');
+  color: var(--color-text-alt);
   font-size: get-size('400');
   margin-top: get-size('600');
 

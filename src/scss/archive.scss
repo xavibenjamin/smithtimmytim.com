@@ -17,7 +17,7 @@ $outputTokenCSS: false;
 @import 'utilities/mini-headline';
 
 .archive__breadcrumb {
-  color: get-color('secondary');
+  color: var(--color-link);
   display: inline-block;
   font-size: get-size('300');
   font-weight: bold;
@@ -45,7 +45,7 @@ $outputTokenCSS: false;
     }
 
     + li {
-      border-top: 0.15rem solid get-color('light-shade');
+      border-top: 0.15rem solid var(--color-bg-shade);
       padding-top: get-size('600');
     }
   }
@@ -70,23 +70,23 @@ $outputTokenCSS: false;
   @extend .mini-headline;
 
   font-size: get-size('300');
-  color: get-color('light-shade-text');
+  color: var(--color-text-accent);
 }
 
 .archive__text {
   grid-area: text;
 
   p {
-    color: get-color('dark-glare');
+    color: var(--color-text);
   }
 }
 
 .archive__url {
-  color: get-color('light-shade-text');
+  color: var(--color-link);
   @include apply-utility('font', 'mono');
 
   &[data-variant='article'] {
-    color: get-color('dark-shade');
+    color: var(--color-heading);
     @include apply-utility('font', 'display');
     text-decoration: none;
 
@@ -110,7 +110,7 @@ $outputTokenCSS: false;
   }
 
   .category__url {
-    color: get-color('secondary');
+    color: var(--color-link);
     text-decoration: none;
   }
 }
@@ -128,7 +128,7 @@ $outputTokenCSS: false;
   font-weight: bold;
 
   &[data-variant='article'] {
-    color: get-color('dark-glare');
+    color: var(--color-text-alt);
     font-size: get-size('400');
     font-weight: normal;
   }
@@ -149,7 +149,6 @@ $outputTokenCSS: false;
   }
 
   .list__url {
-    color: get-color('secondary');
-    text-decoration-color: get-color('light-shade');
+    color: var(--color-link);
   }
 }

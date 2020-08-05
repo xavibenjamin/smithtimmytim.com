@@ -4,7 +4,7 @@
 {% set repostCount = webmentions.children | webmentionCountByType(absoluteUrl, "repost-of") %}
 
 {% if mentions.length > 0 or likeCount > 0 or repostCount > 0 %}
-<div class="webmentions panel bg-light-glare">
+<div class="[ webmentions ] [ panel ]">
   <div class="wrapper">
     <div class="inner-wrapper">
       <div class="webmentions__inner">

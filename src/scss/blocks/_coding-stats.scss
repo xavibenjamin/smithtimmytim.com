@@ -1,19 +1,18 @@
 .coding {
-  background-color: get-color('light-glare');
-  border-left: 0.5rem solid get-color('light-shade');
+  background-color: var(--color-bg-alt);
+  border-left: 0.5rem solid var(--color-border);
   padding: get-size('700');
   border-radius: 0.25rem;
   margin-top: get-size('800');
   position: relative;
 
   &:after {
-    background-color: get-color('light');
+    background-color: var(--color-bg);
     background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0'%3F%3E%3Csvg xmlns='http://www.w3.org/2000/svg' enable-background='new 0 0 24 24' viewBox='0 0 24 24' fill='%23f9b98b'%3E%3Cpath d='m18.939 6.94c-.586-.586-1.535-.586-2.121 0s-.586 1.535 0 2.121l2.94 2.939-2.939 2.939c-.586.586-.586 1.535 0 2.121.293.293.677.439 1.061.439s.768-.146 1.061-.439l5.059-5.06zm-11.757 0c-.586-.586-1.535-.586-2.121 0l-5.061 5.06 5.061 5.061c.293.293.676.439 1.06.439s.768-.146 1.061-.439c.586-.586.586-1.535 0-2.121l-2.94-2.94 2.939-2.939c.587-.586.587-1.535.001-2.121zm8.081-6.905c-.534-.146-1.083.17-1.228.702l-6 22c-.145.532.169 1.082.702 1.228.088.024.177.035.263.035.44 0 .843-.292.964-.737l6-22c.146-.532-.168-1.082-.701-1.228z'%3E%3C/path%3E%3C/svg%3E");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: 45%;
     border-radius: 100%;
-    color: get-color('light');
     content: '';
     display: block;
     font-size: get-size('900');
@@ -46,7 +45,7 @@
 
   li {
     align-items: center;
-    color: get-color('dark-glare');
+    color: var(--color-text-alt);
     display: flex;
     font-weight: bold;
     line-height: 1.1;
@@ -58,7 +57,7 @@
   svg {
     width: 1em;
     height: 1em;
-    fill: get-color('light-shade');
+    fill: var(--color-accent);
     margin-right: 0.5rem;
   }
 }
@@ -78,11 +77,11 @@
   }
 
   .language__name {
-    color: get-color('dark-glare');
+    color: var(--color-text);
   }
 
   .language__time {
-    color: get-color('light-shade-text');
+    color: var(--color-text-accent);
     font-size: 0.8em;
     text-align: right;
     line-height: 1.1;

@@ -1,6 +1,6 @@
 .table-of-contents {
-  background-color: get-color('light-glare');
-  border-left: 3px solid get-color('light-shade');
+  background-color: var(--color-bg-alt);
+  border-left: 3px solid var(--color-border);
   margin-bottom: get-size('600');
   padding: get-size('600');
   position: relative;
@@ -38,7 +38,7 @@
 
   a,
   a:visited {
-    color: get-color('secondary');
+    color: var(--color-link);
     text-decoration: none;
   }
 }

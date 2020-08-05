@@ -1,4 +1,5 @@
 .films {
+  background-color: var(--color-bg-alt);
   padding: get-size('700');
 
   @include media-query('md') {
@@ -6,13 +7,12 @@
   }
 
   &:after {
-    background-color: get-color('primary');
+    background-color: var(--color-accent);
     background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0'%3F%3E%3Csvg xmlns='http://www.w3.org/2000/svg' enable-background='new 0 0 24 24' viewBox='0 0 24 24' fill='%23fff'%3E%3Cpath d='m22 0h-20c-1.104 0-2 .896-2 2v20c0 1.104.896 2 2 2h20c1.105 0 2-.896 2-2v-20c0-1.104-.895-2-2-2zm-18 21h-2v-2h2zm0-5h-2v-2h2zm0-6h-2v-2h2zm0-5h-2v-2h2zm14 15h-12v-7h12zm0-9h-12v-7h12zm4 10h-2v-2h2zm0-5h-2v-2h2zm0-6h-2v-2h2zm0-5h-2v-2h2z'%3E%3C/path%3E%3C/svg%3E");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: 45%;
     border-radius: 100%;
-    color: get-color('light');
     content: '';
     display: block;
     font-size: get-size('900');
@@ -49,7 +49,7 @@
 
     &:focus,
     &:hover {
-      background-color: rgba(get-color('light'), 0.5);
+      background-color: var(--color-bg);
       border-radius: 0.25rem;
     }
   }
@@ -57,13 +57,13 @@
   + .film__entry {
     margin-top: get-size('500');
     padding-top: get-size('500');
-    border-top: 1px solid get-color('light');
+    border-top: 1px solid var(--color-bg-shade);
   }
 }
 
 .film__media {
   img {
-    border: 1px solid get-color('dark');
+    border: 1px solid var(--color-text);
     border-radius: 0.25rem;
   }
 }
@@ -83,7 +83,7 @@
 }
 
 .film__title {
-  color: get-color('dark');
+  color: var(--color-text);
   margin-bottom: 0.35rem;
 
   font-weight: bold;
@@ -91,12 +91,12 @@
 }
 
 .film__watched-date {
-  color: get-color('dark-glare');
+  color: var(--color-text-alt);
   font-size: get-size('400');
 }
 
 .film__rating {
-  color: get-color('primary');
+  color: var(--color-accent);
   font-size: get-size('400');
   margin-left: 0.4rem;
   position: relative;

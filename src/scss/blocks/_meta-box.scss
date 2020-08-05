@@ -1,6 +1,6 @@
 .meta-box {
-  background-color: get-color('light-glare');
-  border-left: 3px solid get-color('light-shade');
+  background-color: var(--color-bg-alt);
+  border-left: 3px solid var(--color-border);
   font-size: get-size('400');
   padding: get-size('600');
 
@@ -14,6 +14,7 @@
   }
 
   h4 {
+    color: var(--color-heading);
     font-size: get-size('300');
     font-weight: bold;
     text-transform: uppercase;

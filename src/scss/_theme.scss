@@ -1,0 +1,29 @@
+:root {
+  --color-bg: #{get-color('light')};
+  --color-bg-alt: #{get-color('light-glare')};
+  --color-bg-shade: #{get-color('primary-glare')};
+  --color-heading: #{get-color('dark-shade')};
+  --color-text: #{get-color('dark')};
+  --color-text-alt: #{get-color('dark-glare')};
+  --color-text-accent: #814b8e;
+  --color-link: #{get-color('secondary')};
+  --color-link-alt: #{get-color('secondary-glare')};
+  --color-accent: #{get-color('primary')};
+  --color-border: #{get-color('light-shade')};
+  --color-code: #{get-color('light-shade')};
+}
+
+@include dark-mode() {
+  --color-mode: 'dark';
+  --color-bg: #{get-color('dark-shade')};
+  --color-bg-alt: #54455f;
+  --color-bg-shade: #312838;
+  --color-heading: #{get-color('light-glare')};
+  --color-text: #{get-color('light')};
+  --color-text-alt: #c5b9ce;
+  --color-text-accent: #e1afff;
+  --color-link: #{get-color('secondary-glare')};
+  --color-accent: #ff7bad;
+  --color-code: var(--color-bg-alt);
+  --color-next-bg: #28202d;
+}

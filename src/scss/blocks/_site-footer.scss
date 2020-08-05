@@ -13,11 +13,11 @@
 }
 
 .site-footer__link {
-  color: get-color('light-shade');
+  color: var(--color-link-alt);
 }
 
 .footer__heading {
-  color: get-color('light');
+  color: get-color('light-glare');
   margin-bottom: get-size('400');
   font-size: get-size('600');
 }

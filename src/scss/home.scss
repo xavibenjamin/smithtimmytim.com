@@ -7,6 +7,9 @@ $outputTokenCSS: false;
 // Next: pull in gorko for design tokens
 @import '../../node_modules/gorko/gorko.scss';
 
+// Local mixins
+@import 'mixins/dark-mode';
+
 // Pull in blocks
 @import 'blocks/cover';
 @import 'blocks/films';

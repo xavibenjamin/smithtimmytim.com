@@ -4,9 +4,9 @@
 }
 
 .star-filled {
-  fill: get-color('primary');
+  fill: var(--color-accent);
 }
 
 .star-empty {
-  fill: get-color('light-shade');
+  fill: var(--color-border);
 }

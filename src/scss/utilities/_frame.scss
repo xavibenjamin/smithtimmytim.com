@@ -11,9 +11,8 @@ $frame-colors: ('primary', 'light-shade', 'secondary');
     position: absolute;
     top: -0.3rem;
     left: 0.3rem;
-    border: 0.1rem solid get-color('dark');
+    border: 0.1rem solid var(--color-border);
     z-index: 1;
-    mix-blend-mode: multiply;
 
     @include media-query('md') {
       top: -0.5rem;
