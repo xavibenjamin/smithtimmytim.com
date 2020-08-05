@@ -1,9 +1,11 @@
 .nav {
   font-size: get-size('400');
-  margin-top: get-size('500');
+  margin-top: get-size('600');
+  margin-bottom: get-size('300');
 
   @include media-query('md') {
     margin-top: 0;
+    margin-bottom: 0;
   }
 
   a {
