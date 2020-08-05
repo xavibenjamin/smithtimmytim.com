@@ -8,11 +8,13 @@ I love *Star Wars*, [coffee](https://youtu.be/sNlf_SLh_v4), taking pictures, spe
 
 I was born and raised in Southern California. In 2012, I moved to Minnesota and spent seven years there. It was a great adventure. It helped me grow in ways I would've never imagined and lead me to meet my incredible spouse.
 
-I'm an empathetic human, striving to be kind and loving to my fellow humans. 
+I'm an empathetic human, striving to be kind and loving to my fellow humans.
 
 ## Work Stuff
 
-I'm currently building [Bokeh](https://bokeh.pics/). In 2019, I successfully raised over $10k [on Kickstarter](https://www.kickstarter.com/projects/timothybsmith/bokeh-private-independent-and-user-funded-photo-sh/description) to create an initial app. Bokeh is an Instagram alternative to share photos with friends and family privately.
+I'm a Senior Frontend Engineer at [10up](https://10up.com/).
+
+I'm also the creator of [Bokeh](https://bokeh.pics/). In 2019, I successfully raised over $10k [on Kickstarter](https://www.kickstarter.com/projects/timothybsmith/bokeh-private-independent-and-user-funded-photo-sh/description) to create an initial app. Bokeh is an Instagram alternative to share photos with friends and family privately.
 
 Previously, I was the Senior Producer at [Changelog](https://changelog.com/), Senior UX Designer & Developer at [Mealthy](https://mealthy.com/), Design Mentor at [Bloc](https://www.bloc.io/), UX Developer at [Galvanize](https://www.wegalvanize.com/), and Owner of [Anythin' Goes](https://anythingoes.net/). [Relay FM](https://www.relay.fm/), [Carbon Ads](https://carbonads.net/), [&Yet](https://andyet.com/), [Lullabot](https://www.lullabot.com/), [Crush & Lovely](https://crushlovely.com/), and [The Clinton Foundation](https://www.clintonfoundation.org/) are more of the amazing organizations I've had the chance to work with. Here's [my resume](/files/timsmith-resume.pdf) if you're interested.
 
