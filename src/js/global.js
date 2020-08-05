@@ -1,3 +1,5 @@
+'use strict';
+
 const STORAGE_KEY = 'user-color-scheme';
 const COLOR_MODE_KEY = '--color-mode';
 
@@ -47,11 +49,22 @@ const toggleSetting = () => {
   return currentSetting;
 };
 
-toggleButton.addEventListener('click', (evt) => {
-  evt.preventDefault();
-  // evt.style.webkitAnimationPlayState = 'running';
+toggleButton.addEventListener(
+  'click',
+  (evt) => {
+    evt.preventDefault();
 
-  applySetting(toggleSetting());
-});
+    const animateClass = 'animate-buzz';
+
+    toggleButton.classList.remove(animateClass);
+
+    void toggleButton.offsetWidth;
+
+    toggleButton.classList.add(animateClass);
+
+    applySetting(toggleSetting());
+  },
+  false
+);
 
 applySetting();
