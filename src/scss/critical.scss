@@ -148,17 +148,12 @@ ol:not([class]),
 // folks read the text easier
 ::selection {
   color: get-color('light');
-
   background: rgba(get-color('dark'), 0.99);
 }
 
 // Scrollbar styles
 ::-webkit-scrollbar {
   width: 10px;
-}
-
-::-webkit-scrollbar-track {
-  background-color: get-color('primary-glare');
 }
 
 ::-webkit-scrollbar-thumb {
