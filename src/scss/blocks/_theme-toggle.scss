@@ -8,19 +8,20 @@
     fill: var(--color-accent);
     height: 1.2em;
     width: 1.2em;
-    transition: fill 0.8s ease 0.2s;
+    transition: fill 0.5s ease 0.2s;
 
     [data-user-color-scheme='dark'] & {
       fill: var(--color-border);
     }
-  }
 
-  &:focus {
-    svg {
-      animation: buzz 0.75s linear infinite;
-      -webkit-animation-play-state: paused;
+    [data-variant='light'] & {
+      fill: get-color('light');
     }
   }
+}
+
+.animate-buzz {
+  animation: buzz 0.5s ease;
 }
 
 @keyframes buzz {
