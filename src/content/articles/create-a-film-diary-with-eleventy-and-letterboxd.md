@@ -36,12 +36,13 @@ Let's create a new data file. I store mine in `./src/_data/`. We'll call it `let
 const letterboxd = require('letterboxd');
 
 module.exports = async () => {
-  try {
-    const items = await letterboxd('ttimsmith');
-    return items;
-  } catch (err) {
-    console.log(err);
-  }
+  const items = letterboxd('ttimsmith', (error, items) => {
+    if (error) {
+      return console.log(error);
+    }
+  });
+
+  return items;
 };
 ```
 
@@ -93,7 +94,3 @@ You'll want to include this partial in your template like this:
 And there you have it! You're pulling in your last five diary entries from Letterboxd and displaying them on your site. Now's the time to add your own styles and make it look great.
 
 If you need help, or end up using this tutorial to create your own film diary, please let me know! I'm @smithtimmytim on Twitter.
-
----
-
-**Update on July 30, 2020 at 11:21 am:** Updated Letterboxd data file after learning more about async. If you're interested, [here's the video](https://youtu.be/_8gHHBlbziw) I watched.
