@@ -1,3 +1,3 @@
 ---
-title: Work
+title: '💼 Work'
 ---

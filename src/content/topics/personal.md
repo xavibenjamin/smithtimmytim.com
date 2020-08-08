@@ -1,3 +1,3 @@
 ---
-title: 'Personal'
+title: '👨🏽‍💻 Personal'
 ---
