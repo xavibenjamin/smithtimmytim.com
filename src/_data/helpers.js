@@ -64,6 +64,6 @@ module.exports = {
   },
 
   sortByAlpha(collection) {
-    return collection.sort((a, b) => a.data.title.localeCompare(b.data.title));
+    return collection.sort((a, b) => a.fileSlug.localeCompare(b.fileSlug));
   },
 };
