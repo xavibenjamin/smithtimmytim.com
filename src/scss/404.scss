@@ -11,30 +11,33 @@ $outputTokenCSS: false;
 
 // Global stuff
 
+:focus {
+  outline: 2px dashed get-color('primary');
+  outline-offset: 0.25rem;
+}
+
 html {
   font-size: clamp(13.5px, 1.3vw, 18.5px);
 }
 
 body {
-  background: var(--color-bg);
-  color: var(--color-text);
-  line-height: 1.6;
-  font-size: get-size('500');
-
-  @include apply-utility('font', 'base');
-}
-
-body {
+  align-items: center;
   background-color: get-color('dark-shade');
   display: flex;
-  align-items: center;
+  font-size: get-size('500');
   justify-content: center;
+  line-height: 1.6;
+  @include apply-utility('font', 'base');
 }
 
 main {
   max-width: 72.5rem;
   padding: 0 get-size('600');
   position: relative;
+
+  &:focus {
+    outline: none;
+  }
 }
 
 svg {
@@ -48,15 +51,6 @@ svg {
     top: 1rem;
     width: 10rem;
   }
-}
-
-main:focus {
-  outline: none;
-}
-
-:focus {
-  outline: 2px dashed get-color('primary');
-  outline-offset: 0.25rem;
 }
 
 .text-content {
