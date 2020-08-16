@@ -1,0 +1,106 @@
+// First up: config and functions
+@import 'config';
+
+// Set Gorko to output no CSS for this file
+$outputTokenCSS: false;
+
+// Next: pull in gorko for design tokens
+@import '../../node_modules/gorko/gorko.scss';
+
+@import 'reset';
+
+// Global stuff
+
+html {
+  font-size: clamp(13.5px, 1.3vw, 18.5px);
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+  font-size: get-size('500');
+
+  @include apply-utility('font', 'base');
+}
+
+body {
+  background-color: get-color('dark-shade');
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  max-width: 72.5rem;
+  padding: 0 get-size('600');
+  position: relative;
+}
+
+svg {
+  fill: get-color('light-shade');
+  margin-bottom: get-size('500');
+  width: 8rem;
+
+  @include media-query('md') {
+    margin-bottom: 0;
+    position: absolute;
+    top: 1rem;
+    width: 10rem;
+  }
+}
+
+main:focus {
+  outline: none;
+}
+
+:focus {
+  outline: 2px dashed get-color('primary');
+  outline-offset: 0.25rem;
+}
+
+.text-content {
+  @include media-query('md') {
+    padding-left: 13rem;
+  }
+}
+
+h1 {
+  color: get-color('light-glare');
+  line-height: 1.2;
+  font-size: get-size('800');
+  @include apply-utility('font', 'display');
+
+  @include media-query('md') {
+    font-size: get-size('major');
+  }
+}
+
+p {
+  color: get-color('light');
+  @include apply-utility('measure', 'long');
+
+  + p {
+    margin-top: get-size('700');
+  }
+}
+
+a {
+  color: get-color('secondary-glare');
+  hyphens: none;
+}
+
+.home-link {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+// High contrast selection because it can help visually-impaired
+// folks read the text easier
+::selection {
+  color: get-color('light');
+  background: rgba(get-color('dark'), 0.99);
+}
+
+// Import utilities
+@import 'utilities/mini-headline';
