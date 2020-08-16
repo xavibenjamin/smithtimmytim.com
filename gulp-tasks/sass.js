@@ -22,6 +22,7 @@ const criticalStyles = [
   'photo.scss',
   'page.scss',
   'archive.scss',
+  '404.scss',
 ];
 
 // Takes the arguments passed by `dest` and determines where the output file goes
@@ -52,8 +53,8 @@ const sass = () => {
       cleanCSS(
         isProduction
           ? {
-              level: 2,
-            }
+            level: 2,
+          }
           : {}
       )
     )
