@@ -1,0 +1,30 @@
+{% set assetHash = global.random() %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% include "partials/meta-info.html" %}
+
+    <style>{% include "css/404.css" %}</style>
+
+    <link rel="stylesheet" type="text/css" href="https://cloud.typography.com/7114076/6858412/css/fonts.css" media="print" onload="this.media='all'" />
+  </head>
+  <body>
+    <div class="site-wrap">
+
+      <main tabindex="-1" id="main-content">
+        <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 24 24">
+          <path d="m18 5.999c0-3.313-2.687-5.999-6-5.999s-6 2.686-6 5.999v1.001h12zm-7.5-.999c-.829 0-1.5-.672-1.5-1.5 0-.827.671-1.5 1.5-1.5.827 0 1.5.673 1.5 1.5 0 .828-.673 1.5-1.5 1.5zm3.5 1c-.553 0-1-.448-1-1 0-.551.447-1 1-1s1 .449 1 1c0 .552-.447 1-1 1zm3 18h6l-1-4v-9c0-1.105-.895-2-2-2h-16c-1.105 0-2 .895-2 2v9l-1 4h6l-1-4v-1l2 2h8l2-2v1zm-2-7h-6c-.55 0-1-.45-1-1s.45-1 1-1h6c.55 0 1 .45 1 1s-.45 1-1 1zm0-4h-6c-.55 0-1-.45-1-1s.45-1 1-1h6c.55 0 1 .45 1 1s-.45 1-1 1z"></path>
+        </svg>
+
+        <div class="text-content">
+          {{ content | safe }}
+
+          <p><a class="home-link mini-headline" href="{{ site.url }}">&larr; Back Home</a></p>
+        </div>
+      </main>
+      
+    </div>
+  </body>
+</html>
