@@ -10,10 +10,10 @@
 
 .feed-post__featured-image {
   @include media-query('md') {
-    width: 100vw;
+    @include apply-utility('measure', 'xxl');
     margin-left: 50%;
     transform: translateX(-50%);
-    @include apply-utility('measure', 'xxl');
+    width: 100vw;
   }
 
   img {
@@ -22,10 +22,9 @@
 }
 
 .feed-post__category {
+  color: var(--color-link);
   font-size: get-size('300');
   font-weight: bold;
-
-  color: var(--color-link);
   text-decoration: none;
   text-transform: uppercase;
 }
@@ -47,8 +46,8 @@
 }
 
 .feed-post__meta {
-  display: flex;
   align-items: center;
+  display: flex;
 }
 
 .feed-post__date {
@@ -57,9 +56,9 @@
 }
 
 .feed-post__reading-time {
-  margin-left: get-size('400');
-  font-size: get-size('300') !important;
   color: var(--color-text-accent);
+  font-size: get-size('300') !important;
+  margin-left: get-size('400');
 }
 
 .feed__archive-link {

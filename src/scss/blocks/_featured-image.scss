@@ -1,22 +1,22 @@
 .featured-image {
   position: relative;
 
-  &:before {
+  &::before {
     background-color: var(--color-bg-alt);
+    bottom: 50%;
     content: '';
     display: block;
-    position: absolute;
-    bottom: 50%;
     left: 0;
+    position: absolute;
     right: 0;
     top: 0;
   }
 
   img {
+    @include apply-utility('measure', 'xxl');
     border-radius: 0.25rem;
     margin-left: auto;
     margin-right: auto;
     width: 100%;
-    @include apply-utility('measure', 'xxl');
   }
 }

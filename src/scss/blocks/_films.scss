@@ -6,7 +6,7 @@
     padding: get-size('700');
   }
 
-  &:after {
+  &::after {
     background-color: var(--color-accent);
     background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0'%3F%3E%3Csvg xmlns='http://www.w3.org/2000/svg' enable-background='new 0 0 24 24' viewBox='0 0 24 24' fill='%23fff'%3E%3Cpath d='m22 0h-20c-1.104 0-2 .896-2 2v20c0 1.104.896 2 2 2h20c1.105 0 2-.896 2-2v-20c0-1.104-.895-2-2-2zm-18 21h-2v-2h2zm0-5h-2v-2h2zm0-6h-2v-2h2zm0-5h-2v-2h2zm14 15h-12v-7h12zm0-9h-12v-7h12zm4 10h-2v-2h2zm0-5h-2v-2h2zm0-6h-2v-2h2zm0-5h-2v-2h2z'%3E%3C/path%3E%3C/svg%3E");
     background-position: center center;
@@ -16,23 +16,23 @@
     content: '';
     display: block;
     font-size: get-size('900');
+    height: 5rem;
+    left: 80%;
 
     position: absolute;
     top: -1.5rem;
-    left: 80%;
 
     width: 5rem;
-    height: 5rem;
-
-    @include media-query('md') {
-      top: -3rem;
-      left: -1.8rem;
-
-      width: 5rem;
-      height: 5rem;
-    }
 
     z-index: 2;
+
+    @include media-query('md') {
+      height: 5rem;
+      left: -1.8rem;
+      top: -3rem;
+
+      width: 5rem;
+    }
   }
 }
 
@@ -43,8 +43,8 @@
 .film__entry {
   a {
     display: grid;
-    grid-template-columns: 5rem 1fr;
     grid-gap: get-size('500');
+    grid-template-columns: 5rem 1fr;
     transition: background-color 0.3s;
 
     &:focus,
@@ -55,9 +55,9 @@
   }
 
   + .film__entry {
+    border-top: 1px solid var(--color-bg-shade);
     margin-top: get-size('500');
     padding-top: get-size('500');
-    border-top: 1px solid var(--color-bg-shade);
   }
 }
 
@@ -83,11 +83,11 @@
 }
 
 .film__title {
+  @include apply-utility('font', 'heading');
   color: var(--color-text);
-  margin-bottom: 0.35rem;
 
   font-weight: bold;
-  @include apply-utility('font', 'heading');
+  margin-bottom: 0.35rem;
 }
 
 .film__watched-date {

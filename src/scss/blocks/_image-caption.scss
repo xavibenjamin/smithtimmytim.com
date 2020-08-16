@@ -1,12 +1,11 @@
 .image__caption {
+  @include apply-utility('measure', 'medium');
   color: var(--color-text-alt);
   font-size: get-size('400');
   margin-top: get-size('600');
 
-  @include apply-utility('measure', 'medium');
-
   &[data-variant='top'] {
-    margin-top: 0;
     margin-bottom: get-size('600');
+    margin-top: 0;
   }
 }

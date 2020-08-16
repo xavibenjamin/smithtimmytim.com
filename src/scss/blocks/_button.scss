@@ -1,19 +1,18 @@
 .button {
-  @extend .radius;
-
   background-color: get-color('primary');
   border: 0;
+  border-radius: var(--border-radius);
   color: get-color('light');
   cursor: pointer;
   display: inline-block;
+  font-size: get-size('400');
   font-weight: 700;
   line-height: 1;
   padding: 1rem 1.6rem;
-  text-decoration: none;
   text-align: center;
-  transition: background 300ms ease-in-out;
+  text-decoration: none;
   text-transform: uppercase;
-  font-size: get-size('400');
+  transition: background 300ms ease-in-out;
 
   // Make sure hover state trumps all variants with a good ol’ important
   &:hover {
@@ -41,7 +40,7 @@
 
     &:hover,
     &:focus {
-      background: rgba(white, 0.1) !important;
+      background: rgba(355, 355, 355, 0.1) !important;
       border-color: get-color('light');
       color: get-color('light') !important;
       outline-color: get-color('light');
