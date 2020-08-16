@@ -1,7 +1,7 @@
 .social-links {
   display: flex;
-  margin-top: get-size('600') !important;
   margin-left: -#{get-size('300')} !important;
+  margin-top: get-size('600') !important;
 
   li {
     display: inline-grid;
@@ -13,48 +13,50 @@
     position: relative;
     text-decoration: none;
 
-    &:before {
+    &::before {
+      background-color: get-color('light');
+      border-radius: 0.25rem;
+      bottom: 170%;
       color: get-color('dark');
       content: attr(title);
-      border-radius: 0.25rem;
-      background-color: get-color('light');
       font-size: get-size('300');
       font-weight: bold;
-      padding: 0.2rem 0.4rem;
-      position: absolute;
       left: 50%;
-      bottom: 170%;
-      transform: translateX(-50%);
-      white-space: nowrap;
-      pointer-events: none;
       opacity: 0;
+      padding: 0.2rem 0.4rem;
+      pointer-events: none;
+      position: absolute;
+      transform: translateX(-50%);
       transition: opacity 0.2s;
+      white-space: nowrap;
     }
 
-    &:after {
+    &::after {
       background-color: get-color('light-glare');
       border-radius: 100%;
-      content: '';
-      position: absolute;
-      top: 50%;
       bottom: 0;
-      left: 50%;
-      right: 0;
-      width: 100%;
-      padding-bottom: 100%;
+      content: '';
       height: 0;
-      z-index: 1;
+      left: 50%;
+      padding-bottom: 100%;
+      position: absolute;
+      right: 0;
+      top: 50%;
       transform: translate3d(-50%, -50%, 0) scale(0);
       transition: transform 0.2s;
+      width: 100%;
+      z-index: 1;
     }
 
     &:hover {
-      &:before {
+      &::before {
         opacity: 1;
       }
-      &:after {
+
+      &::after {
         transform: translate3d(-50%, -50%, 0) scale(0.9);
       }
+
       svg {
         fill: get-color('primary');
       }
@@ -63,9 +65,9 @@
 
   svg {
     fill: get-color('light-shade');
-    width: get-size('600');
     height: get-size('600');
     position: relative;
+    width: get-size('600');
     z-index: 2;
   }
 }

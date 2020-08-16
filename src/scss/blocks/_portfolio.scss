@@ -3,7 +3,7 @@
   grid-gap: get-size('700');
   @include media-query('md') {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
     grid-gap: get-size('900') get-size('700');
+    grid-template-columns: repeat(2, 1fr);
   }
 }

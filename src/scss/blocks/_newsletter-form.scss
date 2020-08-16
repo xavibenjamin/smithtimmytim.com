@@ -21,6 +21,7 @@
 
 .newsletter-form__section {
   width: 100%;
+
   label {
     color: var(--color-text-alt);
     display: block;
@@ -31,15 +32,14 @@
   }
 
   input {
+    background-color: transparent;
     border: 0;
     border-bottom: 0.2rem solid var(--color-text-alt);
-    background-color: transparent;
     color: var(--color-text);
-    -webkit-appearance: none;
     font-size: get-size('400');
-    width: 100%;
     padding: 0.6rem 0;
     transition: background-color 0.2s, border-bottom 0.2s, transform 0.2s;
+    width: 100%;
 
     &:focus {
       background-color: transparent;

@@ -1,13 +1,13 @@
 .post-series {
+  @include apply-utility('measure', 'xxl');
+  align-items: center;
   background-color: var(--color-bg-alt);
   display: grid;
-  padding: get-size('700');
   grid-gap: get-size('700');
-  align-items: center;
 
   margin-left: auto;
   margin-right: auto;
-  @include apply-utility('measure', 'xxl');
+  padding: get-size('700');
 
   @include media-query('md') {
     grid-template-columns: 1fr 1fr;
@@ -21,6 +21,7 @@
   .series__title {
     color: var(--color-heading);
     margin-bottom: 0.45rem;
+
     small {
       color: var(--color-text-alt);
       display: block;
@@ -31,8 +32,8 @@
   }
 
   .series__description {
-    font-size: get-size('400');
     @include apply-utility('leading', 'tight');
+    font-size: get-size('400');
   }
 
   .series__url {

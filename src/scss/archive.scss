@@ -5,7 +5,7 @@
 $outputTokenCSS: false;
 
 // Next: pull in gorko for design tokens
-@import '../../node_modules/gorko/gorko.scss';
+@import '../../node_modules/gorko/gorko';
 
 // Pull in Blocks
 @import 'blocks/star-rating';
@@ -38,10 +38,10 @@ $outputTokenCSS: false;
       'category';
 
     @include media-query('md') {
-      grid-template-columns: 2fr 1fr;
       grid-template-areas:
         'category category'
         'text meta';
+      grid-template-columns: 2fr 1fr;
     }
 
     + li {
@@ -52,11 +52,11 @@ $outputTokenCSS: false;
 }
 
 .archive-meta {
-  display: flex;
   align-items: center;
+  display: flex;
+  grid-area: meta;
   justify-content: space-between;
   margin-bottom: get-size('500');
-  grid-area: meta;
 
   @include media-query('md') {
     align-items: flex-end;
@@ -68,9 +68,9 @@ $outputTokenCSS: false;
 
 .archive__reading {
   @extend .mini-headline;
+  color: var(--color-text-accent);
 
   font-size: get-size('300');
-  color: var(--color-text-accent);
 }
 
 .archive__text {
@@ -82,12 +82,12 @@ $outputTokenCSS: false;
 }
 
 .archive__url {
-  color: var(--color-link);
   @include apply-utility('font', 'mono');
+  color: var(--color-link);
 
   &[data-variant='article'] {
-    color: var(--color-heading);
     @include apply-utility('font', 'display');
+    color: var(--color-heading);
     text-decoration: none;
 
     .star-rating {
@@ -99,10 +99,10 @@ $outputTokenCSS: false;
 
 .archive__category {
   font-size: get-size('300');
-  margin-top: get-size('400');
-  grid-area: category;
-  text-transform: uppercase;
   font-weight: 700;
+  grid-area: category;
+  margin-top: get-size('400');
+  text-transform: uppercase;
 
   @include media-query('md') {
     margin-bottom: get-size('300');
@@ -116,10 +116,10 @@ $outputTokenCSS: false;
 }
 
 .archive__title {
-  margin-bottom: 0.5rem;
   @include apply-utility('font', 'heading');
   font-size: get-size('700');
   font-weight: 400;
+  margin-bottom: 0.5rem;
   width: 90%;
 }
 
@@ -143,6 +143,7 @@ $outputTokenCSS: false;
 
   li {
     font-size: get-size('400');
+
     + li {
       margin-left: get-size('400');
     }

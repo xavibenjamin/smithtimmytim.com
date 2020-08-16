@@ -5,12 +5,12 @@ $success: #00c32a;
   background-color: var(--color-bg-alt);
   border-left: 0.2rem solid;
   border-radius: 0 0.25rem 0.25rem 0;
+  margin-bottom: get-size('600');
+  margin-top: get-size('600');
   padding: get-size('700');
   position: relative;
-  margin-top: get-size('600');
-  margin-bottom: get-size('600');
 
-  &:before {
+  &::before {
     background-color: var(--color-bg);
     background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0'%3F%3E%3Csvg xmlns='http://www.w3.org/2000/svg' enable-background='new 0 0 24 24' viewBox='0 0 24 24' fill='%23ea4a87'%3E%3Cpath d='m12 0c-6.627 0-12 5.37-12 12 0 6.627 5.373 12 12 12s12-5.373 12-12c0-6.63-5.373-12-12-12zm1 18c0 .552-.448 1-1 1-.552 0-1-.448-1-1v-7c0-.552.448-1 1-1 .552 0 1 .448 1 1zm-1-10c-.828 0-1.5-.672-1.5-1.5s.672-1.5 1.5-1.5 1.5.672 1.5 1.5-.672 1.5-1.5 1.5z'%3E%3C/path%3E%3C/svg%3E");
     background-position: center center;
@@ -20,22 +20,22 @@ $success: #00c32a;
     content: '';
     display: block;
     font-size: get-size('900');
+    height: 3rem;
+    left: -1.6rem;
 
     position: absolute;
     top: -1.2rem;
-    left: -1.6rem;
 
     width: 3rem;
-    height: 3rem;
 
     z-index: 2;
   }
 
   .alert__label {
+    @include apply-utility('font', 'heading');
     color: var(--color-heading);
     font-weight: bold;
     line-height: 1.1;
-    @include apply-utility('font', 'heading');
   }
 
   &[data-variant='primary'] {
@@ -44,14 +44,16 @@ $success: #00c32a;
 
   &[data-variant='success'] {
     border-left-color: $success;
-    &:before {
+
+    &::before {
       background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0'%3F%3E%3Csvg xmlns='http://www.w3.org/2000/svg' enable-background='new 0 0 24 24' viewBox='0 0 24 24' fill='%2300c32a'%3E%3Cpath d='m20.485 3.515c-4.686-4.686-12.284-4.686-16.971 0-4.686 4.687-4.686 12.284 0 16.971 4.686 4.686 12.284 4.686 16.971 0s4.687-12.285 0-16.971zm-2.726 5.136-6.61 7.711-4.749-3.562c-.442-.331-.531-.958-.2-1.4.331-.441.957-.532 1.4-.2l3.25 2.438 5.39-6.289c.36-.418.992-.467 1.41-.108.42.359.469.991.109 1.41z'%3E%3C/path%3E%3C/svg%3E");
     }
   }
 
   &[data-variant='danger'] {
     border-left-color: $danger;
-    &:before {
+
+    &::before {
       background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0'%3F%3E%3Csvg xmlns='http://www.w3.org/2000/svg' enable-background='new 0 0 24 24' viewBox='0 0 24 24' fill='%23ff8f04'%3E%3Cpath d='m23.512 17.5-8.334-14.648c-1.405-2.47-4.951-2.47-6.356 0l-8.334 14.648c-1.395 2.451.367 5.5 3.178 5.5h16.668c2.811 0 4.573-3.049 3.178-5.5zm-12.512-10.501c0-.552.448-1 1-1 .552 0 1 .447 1 1v7.001c0 .552-.448 1-1 1-.552 0-1-.447-1-1zm1 13.001c-.828 0-1.5-.672-1.5-1.5s.672-1.5 1.5-1.5 1.5.672 1.5 1.5-.672 1.5-1.5 1.5z'%3E%3C/path%3E%3C/svg%3E");
     }
   }

@@ -3,6 +3,7 @@
     display: block;
     font-size: get-size('400');
     max-width: 24rem;
+
     + small {
       margin-top: get-size('300');
     }
@@ -10,8 +11,8 @@
 
   svg {
     fill: var(--color-accent);
-    width: 1em;
     position: relative;
     top: 2px;
+    width: 1em;
   }
 }

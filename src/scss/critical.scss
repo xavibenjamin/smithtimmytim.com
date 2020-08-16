@@ -2,7 +2,7 @@
 @import 'config';
 
 // Next: pull in gorko for design tokens
-@import '../../node_modules/gorko/gorko.scss';
+@import '../../node_modules/gorko/gorko';
 
 // Local mixins
 @import 'mixins/dark-mode';
@@ -22,18 +22,17 @@ html {
 }
 
 body {
+  @include apply-utility('font', 'base');
   background: var(--color-bg);
   color: var(--color-text);
-  line-height: 1.6;
   font-size: get-size('500');
-
-  @include apply-utility('font', 'base');
+  line-height: 1.6;
 }
 
 a:not([class]) {
   color: var(--color-link);
-  text-decoration-color: var(--color-link-alt);
   hyphens: none;
+  text-decoration-color: var(--color-link-alt);
 
   &:visited {
     color: var(--color-text);
@@ -50,20 +49,18 @@ main:focus {
 }
 
 h1 {
-  color: var(--color-heading);
-  font-weight: 800;
-
   @include apply-utility('font', 'display');
   @include apply-utility('leading', 'flat');
+  color: var(--color-heading);
+  font-weight: 800;
 }
 
 h2,
 h3 {
+  @include apply-utility('font', 'heading');
   font-weight: 700;
   hyphens: none;
   line-height: 1.1;
-
-  @include apply-utility('font', 'heading');
 }
 
 h2 {
@@ -77,27 +74,30 @@ h3 {
 ul:not([class]) {
   list-style: none;
   padding-left: get-size('700');
+
   li {
     position: relative;
 
-    &:before {
+    &::before {
       border-radius: 50%;
       color: var(--color-text-accent);
       content: '•';
       display: inline-block;
-      position: absolute;
-      left: -1em;
-      top: -0.1em;
       font-family: system, -apple-system, BlinkMacSystemFont, Avenir, sans-serif;
+      left: -1em;
+      position: absolute;
+      top: -0.1em;
     }
+
     + li {
       margin-top: 0.3rem;
     }
   }
+
   ul,
   ol {
-    margin-top: get-size('300');
     margin-bottom: get-size('300');
+    margin-top: get-size('300');
   }
 }
 
@@ -110,7 +110,8 @@ ol:not([class]),
   li {
     position: relative;
 
-    &:before {
+    &::before {
+      @include apply-utility('font', 'mono');
       color: var(--color-text-accent);
       content: counter(section);
       counter-increment: section;
@@ -122,10 +123,9 @@ ol:not([class]),
       text-align: right;
       top: 0.15em;
       width: 3em;
-      @include apply-utility('font', 'mono');
     }
 
-    &:nth-child(-n + 9):before {
+    &:nth-child(-n + 9)::before {
       content: counter(section);
     }
 
@@ -137,18 +137,19 @@ ol:not([class]),
       counter-reset: section;
     }
   }
+
   ul,
   ol {
-    margin-top: get-size('300');
     margin-bottom: get-size('300');
+    margin-top: get-size('300');
   }
 }
 
 // High contrast selection because it can help visually-impaired
 // folks read the text easier
 ::selection {
-  color: get-color('light');
   background: rgba(get-color('dark'), 0.99);
+  color: get-color('light');
 }
 
 // Scrollbar styles

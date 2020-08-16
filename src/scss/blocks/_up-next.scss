@@ -21,6 +21,7 @@
       margin-left: get-size('300');
     }
   }
+
   + .next-list__item {
     margin-top: 1rem;
     @include media-query('md') {

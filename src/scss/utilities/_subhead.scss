@@ -1,6 +1,6 @@
 .subhead {
-  font-size: get-size('600');
-  font-weight: 400;
   @include apply-utility('leading', 'tight');
   @include apply-utility('measure', 'long');
+  font-size: get-size('600');
+  font-weight: 400;
 }

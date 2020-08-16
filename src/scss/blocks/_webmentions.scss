@@ -7,8 +7,8 @@
 }
 
 .webmentions__headline {
-  font-size: get-size('700');
   @include apply-utility('font', 'display');
+  font-size: get-size('700');
 
   @include media-query('lg') {
     font-size: get-size('800');
@@ -17,24 +17,23 @@
 
 .webmentions__stat {
   display: inline-flex;
-  margin-left: get-size('300');
   font-size: get-size('400');
+  margin-left: get-size('300');
   position: relative;
   top: -0.1em;
 
   svg {
     fill: var(--color-border);
     height: 1em;
-    width: 1em;
     margin: 0 0.05em 0 0.1em;
+    width: 1em;
   }
 
   .webmentions-stat__number {
+    @include apply-utility('font', 'base');
     color: var(--color-text-alt);
     font-size: get-size('400');
     margin-left: 0.5rem;
-
-    @include apply-utility('font', 'base');
   }
 }
 
@@ -44,9 +43,9 @@
 
 .webmentions__item {
   + .webmentions__item {
+    border-top: 1px solid var(--color-bg);
     margin-top: get-size('600');
     padding-top: get-size('600');
-    border-top: 1px solid var(--color-bg);
   }
 }
 
@@ -62,8 +61,8 @@
 
 .webmention__pubdate {
   color: var(--color-text-alt);
-  font-size: get-size('400');
   display: block;
+  font-size: get-size('400');
 
   @include media-query('md') {
     display: inline;
@@ -73,13 +72,13 @@
 
 .webmention__author__photo {
   border-radius: 0.25rem;
-  width: get-size('800');
   height: get-size('800');
-  position: absolute;
   left: 0;
+  position: absolute;
+  width: get-size('800');
 }
 
 .webmention__content {
-  margin-top: get-size('300');
   font-size: get-size('400');
+  margin-top: get-size('300');
 }

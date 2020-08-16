@@ -1,38 +1,38 @@
 .screenshot {
-  overflow: hidden;
-  margin-top: get-size('800');
   margin-bottom: get-size('800');
-
-  width: 100vw;
   margin-left: 50%;
+  margin-top: get-size('800');
+  overflow: hidden;
   transform: translateX(-50%);
 
+  width: 100vw;
+
   img {
-    box-shadow: 1.5vw 2vw 4vw 1vw rgba(black, 0.1);
-    border-radius: 0.25rem;
-    width: 100%;
     @include apply-utility('measure', 'xxl');
+    border-radius: 0.25rem;
+    box-shadow: 1.5vw 2vw 4vw 1vw rgba(0, 0, 0, 0.1);
+    width: 100%;
   }
 }
 
 .screenshot__container {
   background: var(--color-bg-alt);
   border-radius: 0.25rem;
-  padding: get-size('600');
   display: grid;
   justify-content: center;
+  padding: get-size('600');
 
   @include media-query('md') {
     padding: get-size('900');
   }
 
   [data-variant='2-col'] & {
-    grid-template-columns: repeat(2, 1fr);
     grid-gap: get-size('600');
+    grid-template-columns: repeat(2, 1fr);
   }
 
   [data-variant='3-col'] & {
-    grid-template-columns: repeat(3, 1fr);
     grid-gap: get-size('500');
+    grid-template-columns: repeat(3, 1fr);
   }
 }
