@@ -26,6 +26,8 @@ code {
   }
 }
 
+/* stylelint-disable */
+
 pre[class*='language-'] {
   margin-bottom: get-size('700');
   margin-left: 50%;
@@ -39,6 +41,7 @@ pre[class*='language-'] {
     border-radius: 0.25rem;
   }
 }
+
 
 // Code Blocks
 code[class*='language-'],
@@ -56,7 +59,7 @@ pre[class*='language-'] {
 }
 
 :not(pre) > code[class*='language-'],
-spre[class*='language-'] {
+pre[class*='language-'] {
   background: darken(get-color('dark-shade'), 10%);
 }
 
@@ -66,6 +69,8 @@ spre[class*='language-'] {
   padding: 0.1em;
   white-space: normal;
 }
+
+/* stylelint-enable */
 
 /* ---------------------------------------------------
  * Dracula Theme originally by Zeno Rocha [@zenorocha]

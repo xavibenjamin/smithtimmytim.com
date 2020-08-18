@@ -22,9 +22,11 @@
       margin-left: -1rem;
     }
 
+    /* stylelint-disable */
     p + p {
       margin-top: get-size('500');
     }
+    /* stylelint-enable */
   }
 
   .footnotes {
@@ -83,9 +85,11 @@
       width: 100vw;
     }
 
+    /* stylelint-disable */
     tbody td {
       border-top: 1px solid var(--color-bg-alt);
     }
+    /* stylelint-enable */
   }
 
   thead th {

@@ -67,7 +67,7 @@ $outputTokenCSS: false;
 }
 
 .archive__reading {
-  @extend .mini-headline;
+  @extend %miniheadline;
   color: var(--color-text-accent);
 
   font-size: get-size('300');

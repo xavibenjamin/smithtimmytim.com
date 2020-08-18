@@ -17,11 +17,8 @@
     display: block;
     height: 5rem;
     left: 80%;
-
     position: absolute;
-
     width: 5rem;
-
     z-index: 2;
 
     @include media-query('md') {
@@ -33,7 +30,6 @@
       bottom: 103%;
       height: 7rem;
       left: -1.4rem;
-
       width: 7rem;
     }
   }

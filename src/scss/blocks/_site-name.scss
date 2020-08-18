@@ -20,7 +20,6 @@
 }
 
 .site-pronouns {
-  color: var(--color);
   display: flex;
   font-size: get-size('400');
   font-weight: bold;
@@ -39,10 +38,12 @@
       content: '//';
       letter-spacing: -1.5px;
       margin: 0 0.3rem;
+    }
+  }
 
-      .site-header[data-variant='light'] & {
-        color: rgba(get-color('light-glare'), 0.5);
-      }
+  .site-header[data-variant='light'] & {
+    li::before {
+      color: rgba(get-color('light-glare'), 0.5);
     }
   }
 }
