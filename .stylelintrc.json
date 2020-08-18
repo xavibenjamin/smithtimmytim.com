@@ -11,5 +11,10 @@
         ]
       }
     ]
-  }
+  },
+  "ignoreFiles": [
+    "./node_modules/",
+    "./src/scss/_reset.scss",
+    "./src/scss/_config.scss"
+  ]
 }
