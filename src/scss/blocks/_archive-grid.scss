@@ -1,9 +1,9 @@
 .archive-grid {
   display: grid;
+  grid-gap: get-size('800');
   grid-template-areas:
     'sidebar'
     'main';
-  grid-gap: get-size('800');
 
   @include media-query('lg') {
     grid-template-areas: 'main sidebar';
@@ -17,13 +17,11 @@
 
 .grid__sidebar {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: get-size('600');
   grid-area: sidebar;
+  grid-gap: get-size('600');
+  grid-template-columns: 1fr 1fr;
 
   @include media-query('lg') {
     display: block;
-    // grid-template-columns: none;
-    // grid-gap: 0;
   }
 }

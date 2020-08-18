@@ -7,8 +7,8 @@
   grid-gap: get-size('700');
 
   @include media-query('md') {
-    grid-template-columns: 1fr 1fr;
     grid-gap: get-size('800');
+    grid-template-columns: 1fr 1fr;
   }
 }
 
@@ -18,6 +18,6 @@
 
 .footer__heading {
   color: get-color('light-glare');
-  margin-bottom: get-size('400');
   font-size: get-size('600');
+  margin-bottom: get-size('400');
 }

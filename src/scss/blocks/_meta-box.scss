@@ -17,8 +17,8 @@
     color: var(--color-heading);
     font-size: get-size('300');
     font-weight: bold;
-    text-transform: uppercase;
     letter-spacing: 1.2px;
+    text-transform: uppercase;
   }
 
   p {
@@ -26,8 +26,8 @@
   }
 
   ul {
-    padding-left: get-size('400');
     margin: 0;
+    padding-left: get-size('400');
   }
 
   p,

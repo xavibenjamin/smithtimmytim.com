@@ -1,9 +1,9 @@
 .headline {
-  font-size: get-size('800');
-  font-weight: bold;
   @include apply-utility('measure', 'long');
 
   @include apply-utility('font', 'display');
+  font-size: get-size('800');
+  font-weight: bold;
 
   @include media-query('md') {
     font-size: get-size('900');

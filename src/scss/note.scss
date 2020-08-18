@@ -5,7 +5,7 @@
 $outputTokenCSS: false;
 
 // Next: pull in gorko for design tokens
-@import '../../node_modules/gorko/gorko.scss';
+@import '../../node_modules/gorko/gorko';
 
 .note__body {
   margin-top: get-size('900');
@@ -24,8 +24,8 @@ $outputTokenCSS: false;
 }
 
 .note__url {
-  font-size: get-size('400');
   color: var(--color-text-alt);
+  font-size: get-size('400');
 }
 
 // Pull in blocks

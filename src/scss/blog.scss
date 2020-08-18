@@ -5,14 +5,13 @@
 $outputTokenCSS: false;
 
 // Next: pull in gorko for design tokens
-@import '../../node_modules/gorko/gorko.scss';
+@import '../../node_modules/gorko/gorko';
 
 // Pull in blocks
 @import 'blocks/page-content';
 @import 'blocks/feed-post';
 @import 'blocks/header-anchor';
 @import 'blocks/post-image';
-@import 'blocks/pagination';
 @import 'blocks/video';
 @import 'blocks/toc';
 

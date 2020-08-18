@@ -74,12 +74,9 @@ $gorko-config: (
   ),
   'font': (
     'items': (
-      'base':
-        '"Whitney SSm A", "Whitney SSm B",system,-apple-system,BlinkMacSystemFont,Avenir,sans-serif',
-      'heading':
-        '"Whitney A", "Whitney B",system,-apple-system,BlinkMacSystemFont,Avenir,sans-serif',
-      'display':
-        '"Whitney Narrow A", "Whitney Narrow B",system,-apple-system,BlinkMacSystemFont,Avenir,sans-serif',
+      'base': '"Whitney SSm A", "Whitney SSm B",system,-apple-system,BlinkMacSystemFont,Avenir,sans-serif',
+      'heading': '"Whitney A", "Whitney B",system,-apple-system,BlinkMacSystemFont,Avenir,sans-serif',
+      'display': '"Whitney Narrow A", "Whitney Narrow B",system,-apple-system,BlinkMacSystemFont,Avenir,sans-serif',
       'mono': '"JetBrains Mono", monospace',
     ),
     'output': 'standard',

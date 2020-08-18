@@ -5,7 +5,7 @@
 $outputTokenCSS: false;
 
 // Next: pull in gorko for design tokens
-@import '../../node_modules/gorko/gorko.scss';
+@import '../../node_modules/gorko/gorko';
 
 // Pull in blocks
 @import 'blocks/portfolio';

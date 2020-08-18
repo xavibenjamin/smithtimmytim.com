@@ -8,21 +8,25 @@
   }
 
   mark {
-    color: var(--color-text);
     background-color: var(--color-code);
+    color: var(--color-text);
   }
 
   blockquote:not([class]) {
-    color: var(--color-text-alt);
     border-left: 0.3rem solid var(--color-border);
+    color: var(--color-text-alt);
     padding-left: get-size('600');
+
     > ul,
     > ol {
       margin-left: -1rem;
     }
+
+    /* stylelint-disable */
     p + p {
       margin-top: get-size('500');
     }
+    /* stylelint-enable */
   }
 
   .footnotes {
@@ -35,17 +39,16 @@
   }
 
   hr {
+    @include apply-utility('measure', 'short');
     border: 0;
     border-bottom: 3px solid var(--color-border);
     margin: get-size('700') 0;
-
-    @include apply-utility('measure', 'short');
   }
 
   .footnote-ref {
+    @include apply-utility('font', 'mono');
     font-size: 0.7em;
     font-weight: bold;
-    @include apply-utility('font', 'mono');
 
     a {
       color: var(--color-link);
@@ -56,16 +59,16 @@
   .footnote-backref {
     border-radius: 50%;
     color: var(--color-link);
-    text-decoration: none;
     position: relative;
+    text-decoration: none;
     top: 0.15em;
   }
 
   .case-study__body & {
     > p:first-of-type {
+      @include apply-utility('font', 'heading');
       font-size: get-size('600');
       line-height: 1.3;
-      @include apply-utility('font', 'heading');
     }
   }
 
@@ -76,23 +79,24 @@
     width: 100%;
 
     @include media-query('lg') {
-      width: 100vw;
+      @include apply-utility('measure', 'xl');
       margin-left: 50%;
       transform: translateX(-50%);
-      @include apply-utility('measure', 'xl');
+      width: 100vw;
     }
 
+    /* stylelint-disable */
     tbody td {
       border-top: 1px solid var(--color-bg-alt);
     }
+    /* stylelint-enable */
   }
 
   thead th {
+    @include apply-utility('font', 'heading');
     color: var(--color-heading);
     font-weight: bold;
     text-align: left;
-
-    @include apply-utility('font', 'heading');
   }
 
   th,

@@ -5,7 +5,7 @@
 $outputTokenCSS: false;
 
 // Next: pull in gorko for design tokens
-@import '../../node_modules/gorko/gorko.scss';
+@import '../../node_modules/gorko/gorko';
 
 // Pull in blocks
 @import 'blocks/page-content';
@@ -29,23 +29,24 @@ $outputTokenCSS: false;
 @import 'syntax';
 
 .video {
+  margin-left: 50%;
   margin-top: -#{get-size('700')};
   padding: 0 get-size('600');
-  margin-left: 50%;
   transform: translateX(-50%);
   width: 100vw;
-  &:before {
-    background-color: var(--color-bg-alt);
-    content: '';
-    display: block;
-    position: absolute;
-    bottom: 50%;
-    left: 0;
-    right: 0;
-    top: 0;
-  }
 
   @include media-query('md') {
     margin-top: -#{get-size('900')};
+  }
+
+  &::before {
+    background-color: var(--color-bg-alt);
+    bottom: 50%;
+    content: '';
+    display: block;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
   }
 }

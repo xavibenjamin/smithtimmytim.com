@@ -1,5 +1,15 @@
-.mini-headline {
+/*
+ * Mini Headline
+ * - a utility for a small headline
+ *
+ */
+
+%miniheadline {
   font-size: get-size('400');
-  text-transform: uppercase;
   letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.mini-headline {
+  @extend %miniheadline;
 }

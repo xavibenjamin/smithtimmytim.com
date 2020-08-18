@@ -9,9 +9,9 @@
   }
 
   &[data-variant='full-bleed'] {
-    width: 100vw;
     margin-left: 50%;
     transform: translateX(-50%);
+    width: 100vw;
 
     img {
       border-radius: 0;
@@ -20,11 +20,10 @@
     }
 
     .image__caption {
+      @include apply-utility('measure', 'long');
       margin-left: auto;
       margin-right: auto;
       padding: 0 get-size('600');
-
-      @include apply-utility('measure', 'long');
 
       @include media-query('md') {
         padding: 0;
@@ -38,12 +37,12 @@
       align-items: flex-end;
       display: flex;
       flex-direction: row;
-
-      width: 100vw;
       margin-left: 50%;
-      transform: translateX(-50%);
       max-width: 72.5rem;
       padding: 0 get-size('700');
+      transform: translateX(-50%);
+
+      width: 100vw;
 
       .image__caption {
         padding-left: get-size('500');
@@ -68,17 +67,16 @@
 
   &[data-variant='extend-out'] {
     @include media-query('md') {
-      width: 100vw;
+      @include apply-utility('measure', 'xl');
       margin-left: 50%;
       transform: translateX(-50%);
-      @include apply-utility('measure', 'xl');
+      width: 100vw;
     }
 
     .image__caption {
+      @include apply-utility('measure', 'long');
       margin-left: auto;
       margin-right: auto;
-
-      @include apply-utility('measure', 'long');
     }
   }
 

@@ -31,16 +31,16 @@
   max-width: 32rem;
 
   img {
-    width: 100vw;
-    max-width: none;
     margin-left: 50%;
+    max-width: none;
     transform: translateX(-50%);
+    width: 100vw;
 
     @include media-query('md') {
-      width: 100%;
-      object-fit: cover;
       height: 75vh;
       max-height: 42rem;
+      object-fit: cover;
+      width: 100%;
     }
   }
 }

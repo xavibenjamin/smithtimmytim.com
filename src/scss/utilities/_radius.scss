@@ -1,3 +1,7 @@
+:root {
+  --border-radius: 0.25rem;
+}
+
 .radius {
-  border-radius: 0.25rem;
+  border-radius: var(--border-radius);
 }

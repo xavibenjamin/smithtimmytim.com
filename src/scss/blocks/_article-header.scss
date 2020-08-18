@@ -1,8 +1,8 @@
 .article__category {
   color: var(--color-link);
-  text-decoration: none;
   font-size: get-size('400');
   font-weight: bold;
+  text-decoration: none;
 
   text-transform: uppercase;
 }
@@ -23,16 +23,16 @@
 }
 
 .article__reading-time {
-  margin-left: get-size('400');
-  font-size: get-size('400');
   color: var(--color-text-accent);
+  font-size: get-size('400');
+  margin-left: get-size('400');
 }
 
 .article__syndicated {
-  font-size: 0.8rem;
-  margin-left: get-size('400');
-  justify-self: flex-end;
   flex: 1;
+  font-size: 0.8rem;
+  justify-self: flex-end;
+  margin-left: get-size('400');
   text-align: right;
 
   svg {
@@ -40,9 +40,10 @@
     position: relative;
     top: -0.1em;
     width: 0.85em;
-    g {
-      stroke: var(--color-text-alt);
-    }
+  }
+
+  g {
+    stroke: var(--color-text-alt);
   }
 
   .article__letterboxd-link {

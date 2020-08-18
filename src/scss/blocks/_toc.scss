@@ -7,29 +7,28 @@
   z-index: 2;
 
   @include media-query('md') {
+    @include apply-utility('measure', 'micro');
     float: right;
     margin-left: get-size('600');
-    @include apply-utility('measure', 'micro');
   }
 
   @include media-query('lg') {
     margin-right: -#{get-size('major')};
   }
 
-  &:before {
+  &::before {
+    @include apply-utility('font', 'heading');
     content: 'Table of Contents';
     display: block;
     font-size: get-size('300');
     font-weight: bold;
-    text-transform: uppercase;
     letter-spacing: 1.2px;
-
-    @include apply-utility('font', 'heading');
+    text-transform: uppercase;
   }
 
   ol {
-    padding-left: get-size('400') !important;
     margin-bottom: 0;
+    padding-left: get-size('400') !important;
   }
 
   li {

@@ -5,16 +5,16 @@
 $outputTokenCSS: false;
 
 // Next: pull in gorko for design tokens
-@import '../../node_modules/gorko/gorko.scss';
+@import '../../node_modules/gorko/gorko';
 
 .photo-landing {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
   grid-gap: 0.2rem;
-
-  width: 100vw;
+  grid-template-columns: repeat(3, 1fr);
   margin-left: 50% !important;
   transform: translateX(-50%);
+
+  width: 100vw;
 
   @include media-query('md') {
     grid-gap: get-size('600');
@@ -28,16 +28,16 @@ $outputTokenCSS: false;
 
 .photo__url {
   display: block;
-  position: relative;
   overflow: hidden;
+  position: relative;
 
   svg {
-    width: get-size('500');
-    height: get-size('500');
-    fill: white;
-    position: absolute;
     bottom: get-size('400');
+    fill: #fff;
+    height: get-size('500');
     left: get-size('400');
+    position: absolute;
+    width: get-size('500');
   }
 
   img {

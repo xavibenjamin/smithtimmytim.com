@@ -1,34 +1,35 @@
 .video {
-  position: relative;
   margin-bottom: get-size('700');
+  position: relative;
   width: 100%;
 }
 
 .video-container {
-  width: 100%;
   position: relative;
-  &:before {
+  width: 100%;
+
+  @include media-query('md') {
+    @include apply-utility('measure', 'xxl');
+    margin-left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+
+    iframe {
+      border-radius: 0.25rem;
+    }
+  }
+
+  &::before {
     content: '';
     display: block;
     padding-bottom: calc(100% / (16 / 9));
   }
 
   iframe {
+    height: 100%;
+    left: 0;
     position: absolute;
     top: 0;
-    left: 0;
-    height: 100%;
     width: 100%;
-  }
-
-  @include media-query('md') {
-    margin-left: 50%;
-    transform: translateX(-50%);
-    width: 100vw;
-    @include apply-utility('measure', 'xxl');
-
-    iframe {
-      border-radius: 0.25rem;
-    }
   }
 }

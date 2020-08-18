@@ -1,6 +1,6 @@
 .site-name__wrapper {
-  display: flex;
   align-items: center;
+  display: flex;
 }
 
 .site-name {
@@ -14,13 +14,12 @@
   }
 
   svg {
-    width: 5rem;
     fill: var(--color-accent);
+    width: 5rem;
   }
 }
 
 .site-pronouns {
-  color: var(--color);
   display: flex;
   font-size: get-size('400');
   font-weight: bold;
@@ -34,15 +33,17 @@
   }
 
   li + li {
-    &:before {
-      content: '//';
+    &::before {
       color: var(--color-border);
-      margin: 0 0.3rem;
+      content: '//';
       letter-spacing: -1.5px;
+      margin: 0 0.3rem;
+    }
+  }
 
-      .site-header[data-variant='light'] & {
-        color: rgba(get-color('light-glare'), 0.5);
-      }
+  .site-header[data-variant='light'] & {
+    li::before {
+      color: rgba(get-color('light-glare'), 0.5);
     }
   }
 }

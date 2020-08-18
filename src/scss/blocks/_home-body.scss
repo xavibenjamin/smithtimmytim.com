@@ -1,22 +1,22 @@
 .home-body__inner {
   display: grid;
+  grid-gap: get-size('900');
   grid-template-areas:
     'body'
     'sidebar';
-  grid-gap: get-size('900');
 
   @include media-query('md') {
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: 'sidebar body';
-    grid-gap: get-size('800');
     align-items: center;
+    grid-gap: get-size('800');
+    grid-template-areas: 'sidebar body';
+    grid-template-columns: 1fr 1fr;
   }
 
   @include media-query('lg') {
-    grid-template-columns: minmax(auto, 30rem) minmax(auto, 31rem);
-    grid-template-areas: 'sidebar body';
-    grid-gap: get-size('800');
     align-items: center;
+    grid-gap: get-size('800');
+    grid-template-areas: 'sidebar body';
+    grid-template-columns: minmax(auto, 30rem) minmax(auto, 31rem);
   }
 }
 

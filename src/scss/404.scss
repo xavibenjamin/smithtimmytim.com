@@ -5,7 +5,7 @@
 $outputTokenCSS: false;
 
 // Next: pull in gorko for design tokens
-@import '../../node_modules/gorko/gorko.scss';
+@import '../../node_modules/gorko/gorko';
 
 @import 'reset';
 
@@ -21,13 +21,13 @@ html {
 }
 
 body {
+  @include apply-utility('font', 'base');
   align-items: center;
   background-color: get-color('dark-shade');
   display: flex;
   font-size: get-size('500');
   justify-content: center;
   line-height: 1.6;
-  @include apply-utility('font', 'base');
 }
 
 main {
@@ -60,10 +60,10 @@ svg {
 }
 
 h1 {
-  color: get-color('light-glare');
-  line-height: 1.2;
-  font-size: get-size('800');
   @include apply-utility('font', 'display');
+  color: get-color('light-glare');
+  font-size: get-size('800');
+  line-height: 1.2;
 
   @include media-query('md') {
     font-size: get-size('major');
@@ -71,8 +71,8 @@ h1 {
 }
 
 p {
-  color: get-color('light');
   @include apply-utility('measure', 'long');
+  color: get-color('light');
 
   + p {
     margin-top: get-size('700');
@@ -85,15 +85,15 @@ a {
 }
 
 .home-link {
-  text-decoration: none;
   font-weight: bold;
+  text-decoration: none;
 }
 
 // High contrast selection because it can help visually-impaired
 // folks read the text easier
 ::selection {
-  color: get-color('light');
   background: rgba(get-color('dark'), 0.99);
+  color: get-color('light');
 }
 
 // Import utilities

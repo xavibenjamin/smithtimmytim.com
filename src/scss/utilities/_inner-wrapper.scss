@@ -1,7 +1,6 @@
 .inner-wrapper {
+  @include apply-utility('measure', 'long');
   margin-left: auto;
   margin-right: auto;
   position: relative;
-
-  @include apply-utility('measure', 'long');
 }

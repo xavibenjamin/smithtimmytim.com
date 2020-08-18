@@ -1,6 +1,6 @@
 .portfolio-hero {
-  padding-top: get-size('700');
   overflow: hidden;
+  padding-top: get-size('700');
 
   @include media-query('md') {
     padding-top: get-size('900');
