@@ -38,14 +38,13 @@ const globs = {
   photos: './src/content/photos/*.md',
   series: './src/content/series/*.md',
   topics: './src/content/topics/*.md',
+  work: './src/content/work/*.md',
 };
 
 module.exports = (config) => {
   // Pass through files
-  config.addPassthroughCopy('./src/images/');
-  config.addPassthroughCopy('./src/files/');
-  config.addPassthroughCopy('./src/fonts/');
-  config.addPassthroughCopy('./src/js/');
+  config.addPassthroughCopy({ './src/static': '/' });
+
 
   // Only minify HTML if we are in production
   if (isProduction) {
@@ -54,7 +53,7 @@ module.exports = (config) => {
 
   // Returns work items, sorted by display order
   config.addCollection('work', (collection) => {
-    return sortByDisplayOrder(collection.getFilteredByGlob('./src/work/*.md'));
+    return sortByDisplayOrder(collection.getFilteredByGlob(globs.work));
   });
 
   config.addCollection('posts', (collection) => {
