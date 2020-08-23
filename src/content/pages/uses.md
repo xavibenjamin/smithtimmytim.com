@@ -3,6 +3,7 @@ title: 'Uses'
 layout: 'layouts/page.html'
 summary: 'The stuff I use to make stuff.'
 featuredImage: '/images/uploads/2019/ea567f536e.jpg'
+permalink: '/uses/'
 ---
 
 [[toc]]

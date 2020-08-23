@@ -2,6 +2,7 @@
 title: 'Tim Smith (@smithtimmytim) is a geek, coffee snob, and maker of stuff'
 summary: 'I’m a talented designer and developer that’s worked on the web for over ten years building thoughtful, intuitive, and inclusive user experiences in Oceanside, CA.'
 layout: 'layouts/home.html'
+permalink: '/'
 ---
 
 I love *Star Wars*, [coffee](https://youtu.be/sNlf_SLh_v4), taking pictures, spending time with friends, [reading comics](https://leagueofcomicgeeks.com/profile/smithtimmytim), writing on my blog, [making YouTube videos](https://www.youtube.com/smithtimmytim), [watching movies](https://letterboxd.com/ttimsmith/), playing board games, and spending time naked near water (except lakes 🤮. Not a huge fan of lakes).
