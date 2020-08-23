@@ -2,6 +2,7 @@
 title: 'Photos'
 layout: 'layouts/photo-landing.html'
 summary: 'My life, told in pictures.'
+permalink: '/photos/'
 ---
 My life, told in pictures.
 
