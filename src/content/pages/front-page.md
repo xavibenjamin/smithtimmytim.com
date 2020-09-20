@@ -27,4 +27,4 @@ I had a blog called Bright Pixels (formerly The Bold Report) that I wrote from 2
 
 ## Contact
 
-I love [receiving email](mailto:smith@ttimsmith.com) from real people, so fire away! You can also find me on Twitter as @smithtimmytim.
+I love [receiving email](mailto:tim@smithtimmytim.com) from real people, so fire away! You can also find me on Twitter as @smithtimmytim.
