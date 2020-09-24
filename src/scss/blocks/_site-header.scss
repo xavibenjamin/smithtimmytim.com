@@ -1,5 +1,9 @@
 .site-header {
-  padding: get-size('300') 0;
+  padding: get-size('500') 0;
+
+  @include media-query('md') {
+    padding: get-size('300') 0;
+  }
 
   &[data-variant='light'] {
     border-bottom: 1px solid rgba(get-color('light'), 0.4);
