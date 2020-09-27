@@ -28,7 +28,10 @@
 }
 
 .cover__media {
-  max-width: 32rem;
+
+  @include media-query('md') {
+    max-width: 32rem;
+  }
 
   img {
     margin-left: 50%;
