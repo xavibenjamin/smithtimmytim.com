@@ -3,6 +3,15 @@
   "rules": {
     "selector-class-pattern": "^(?:(?:o|c|u|t|s|is|has|_|js|qa)-)?[a-zA-Z0-9]+(?:-[a-zA-Z0-9]+)*(?:__[a-zA-Z0-9]+(?:-[a-zA-Z0-9]+)*)?(?:--[a-zA-Z0-9]+(?:-[a-zA-Z0-9]+)*)?(?:\\[.+\\])?$",
     "scss/dollar-variable-pattern": "^[a-z][a-zA-Z0-9]+$",
+    "at-rule-empty-line-before": [
+      "always",
+      {
+        "except": [
+          "first-nested",
+          "blockless-after-blockless"
+        ]
+      }
+    ],
     "max-nesting-depth": [
       3,
       {
