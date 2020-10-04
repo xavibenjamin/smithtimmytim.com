@@ -2,7 +2,7 @@
   background-color: get-color('primary');
   border: 0;
   border-radius: var(--border-radius);
-  color: get-color('light');
+  color: var(--color-button-text);
   cursor: pointer;
   display: inline-block;
   font-size: get-size('400');
@@ -48,11 +48,11 @@
   }
 
   &[data-variant='dark'] {
-    background-color: get-color('dark-shade');
+    background-color: var(--color-dark-button);
 
     &:hover,
     &:focus {
-      background-color: get-color('dark');
+      background-color: var(--color-dark-button-hover);
     }
   }
 }

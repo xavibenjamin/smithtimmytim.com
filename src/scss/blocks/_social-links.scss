@@ -14,10 +14,10 @@
     text-decoration: none;
 
     &::before {
-      background-color: get-color('light');
+      background-color: var(--color-social-icon-bg);
       border-radius: 0.25rem;
       bottom: 170%;
-      color: get-color('dark');
+      color: var(--color-social-icon-label);
       content: attr(title);
       font-size: get-size('300');
       font-weight: bold;
@@ -32,7 +32,7 @@
     }
 
     &::after {
-      background-color: get-color('light-glare');
+      background-color: var(--color-social-icon-bg);
       border-radius: 100%;
       bottom: 0;
       content: '';
@@ -58,13 +58,13 @@
       }
 
       svg {
-        fill: get-color('primary');
+        fill: var(--color-accent);
       }
     }
   }
 
   svg {
-    fill: get-color('light-shade');
+    fill: var(--color-social-icon);
     height: get-size('600');
     position: relative;
     width: get-size('600');

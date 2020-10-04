@@ -60,7 +60,7 @@ pre[class*='language-'] {
 
 :not(pre) > code[class*='language-'],
 pre[class*='language-'] {
-  background: darken(get-color('dark-shade'), 10%);
+  background: var(--color-code-block-bg);
 }
 
 // Inline Code

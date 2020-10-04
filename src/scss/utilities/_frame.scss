@@ -1,4 +1,6 @@
-$frameColors: ('primary', 'light-shade', 'secondary');
+/**
+ * Frame
+ */
 
 .frame {
   position: relative;
@@ -18,15 +20,6 @@ $frameColors: ('primary', 'light-shade', 'secondary');
       border-width: 0.1rem;
       left: 0.5rem;
       top: -0.5rem;
-    }
-  }
-
-  // For each color, create a variant
-  @each $frame-color in $frameColors {
-    &[data-frame='#{$frame-color}'] {
-      &::before {
-        border-color: get-color($frame-color);
-      }
     }
   }
 }

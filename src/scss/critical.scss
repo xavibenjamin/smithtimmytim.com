@@ -1,14 +1,14 @@
 // First up: config and functions
+
 @import 'config';
 
 // Next: pull in gorko for design tokens
+
 @import '../../node_modules/gorko/gorko';
 
 // Local mixins
-@import 'mixins/dark-mode';
 
 @import 'theme';
-
 @import 'reset';
 @import 'mono-fonts';
 
@@ -32,11 +32,6 @@ body {
 a:not([class]) {
   color: var(--color-link);
   hyphens: none;
-  text-decoration-color: var(--color-link-alt);
-
-  &:visited {
-    color: var(--color-text);
-  }
 }
 
 :focus {
@@ -148,8 +143,8 @@ ol:not([class]),
 // High contrast selection because it can help visually-impaired
 // folks read the text easier
 ::selection {
-  background: rgba(get-color('dark'), 0.99);
-  color: get-color('light');
+  background: var(--color-accent);
+  color: #fff;
 }
 
 // Scrollbar styles
@@ -158,11 +153,12 @@ ol:not([class]),
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: get-color('primary');
+  background-color: var(--color-accent);
   border-radius: 25rem;
 }
 
 // Import blocks
+
 @import 'blocks/button';
 @import 'blocks/page-header';
 @import 'blocks/skip-link';
@@ -175,9 +171,9 @@ ol:not([class]),
 @import 'blocks/blogroll';
 @import 'blocks/subfooter';
 @import 'blocks/subnav';
-@import 'blocks/theme-toggle';
 
 // Import utilities
+
 @import 'utilities/flow';
 @import 'utilities/radius';
 @import 'utilities/visually-hidden';

@@ -29,7 +29,7 @@
 
   .cursor {
     animation: 1s blink step-end infinite;
-    background-color: get-color('secondary-glare');
+    background-color: var(--color-coding-cursor);
     display: inline-block;
     height: 1em;
     margin-left: 0.1rem;
@@ -90,17 +90,20 @@
   }
 
   .progress {
+    background-color: var(--color-accent-alt);
     border-radius: 20rem;
     width: 100%;
   }
 
   .progress-length {
+    background-color: var(--color-accent);
     border-radius: 20rem;
     height: 0.5rem;
   }
 }
 
 // Blink Animation
+
 @keyframes blink {
   from,
   to {

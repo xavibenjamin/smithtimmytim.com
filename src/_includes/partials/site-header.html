@@ -18,11 +18,6 @@
               <a class="nav__url"{% if layout === 'layouts/note.html' and item.url === '/blog/' %} data-state="active"{% endif %} href="{{ item.url }}" {{ helpers.getLinkActiveState(item.url, page.url) | safe }}>{{ item.text }}</a>
             </li>
           {% endfor %}
-            <li>
-              <button class="theme-toggle" aria-label="Toggle Site Theme">
-                {% include 'partials/icons/icon-theme.svg' %}
-              </button>
-            </li>
         </ul>
       </nav>
     </div>
