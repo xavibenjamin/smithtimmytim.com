@@ -15,7 +15,7 @@ module.exports = (content, path, alt, direction) => {
   <div class="wrapper">
     <div class="inner-wrapper">
       <figcaption class="image__caption" data-variant="top">
-        <p><span class="color-tertiary">${directionLabel}: </span>${content}</p>
+        <p><span class="caption__accent">${directionLabel}: </span>${content}</p>
       </figcaption>
     </div>
   </div>
@@ -31,7 +31,7 @@ module.exports = (content, path, alt, direction) => {
   <div class="wrapper">
     <div class="inner-wrapper">
       <figcaption class="image__caption">
-        <p><span class="color-tertiary">${directionLabel}: </span>${content}</p>
+        <p><span class="caption__accent">${directionLabel}: </span>${content}</p>
       </figcaption>
     </div>
   </div>

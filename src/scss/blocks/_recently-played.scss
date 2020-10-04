@@ -96,7 +96,7 @@
   width: 15rem;
 
   img {
-    border: 1px solid get-color('dark');
+    border: 1px solid var(--color-media-border);
     border-radius: 0.25rem;
   }
 }

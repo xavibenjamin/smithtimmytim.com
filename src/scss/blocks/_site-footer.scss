@@ -1,4 +1,6 @@
 .site-footer {
+  background-color: var(--color-footer-bg);
+  color: var(--color-footer-text);
   padding: get-size('900') 0;
 }
 
@@ -13,11 +15,11 @@
 }
 
 .site-footer__link {
-  color: var(--color-link-alt);
+  color: var(--color-footer-link);
 }
 
 .footer__heading {
-  color: get-color('light-glare');
+  color: var(--color-footer-heading);
   font-size: get-size('600');
   margin-bottom: get-size('400');
 }

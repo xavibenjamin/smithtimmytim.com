@@ -52,21 +52,6 @@ $gorko-colors: (
  * to enabling/disabling pre-built components/utilities.
  */
 $gorko-config: (
-  'bg': (
-    'items': $gorko-colors,
-    'output': 'standard',
-    'property': 'background',
-  ),
-  'color': (
-    'items': $gorko-colors,
-    'output': 'standard',
-    'property': 'color',
-  ),
-  'fill': (
-    'items': $gorko-colors,
-    'output': 'standard',
-    'property': 'fill',
-  ),
   'flow-space': (
     'items': $gorko-size-scale,
     'output': 'responsive',

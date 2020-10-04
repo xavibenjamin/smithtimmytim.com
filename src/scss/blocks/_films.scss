@@ -55,7 +55,7 @@
   }
 
   + .film__entry {
-    border-top: 1px solid var(--color-bg-shade);
+    border-top: 1px solid var(--color-border);
     margin-top: get-size('500');
     padding-top: get-size('500');
   }
@@ -63,7 +63,7 @@
 
 .film__media {
   img {
-    border: 1px solid var(--color-text);
+    border: 1px solid var(--color-media-border);
     border-radius: 0.25rem;
   }
 }
