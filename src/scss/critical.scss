@@ -8,7 +8,6 @@
 
 // Local mixins
 
-@import 'mixins/dark-mode';
 @import 'theme';
 @import 'reset';
 @import 'mono-fonts';
@@ -172,7 +171,6 @@ ol:not([class]),
 @import 'blocks/blogroll';
 @import 'blocks/subfooter';
 @import 'blocks/subnav';
-@import 'blocks/theme-toggle';
 
 // Import utilities
 
