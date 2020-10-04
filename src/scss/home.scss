@@ -1,16 +1,17 @@
 // First up: config and functions
+
 @import 'config';
 
 // Set Gorko to output no CSS for this file
 $outputTokenCSS: false;
 
 // Next: pull in gorko for design tokens
+
 @import '../../node_modules/gorko/gorko';
 
-// Local mixins
-@import 'mixins/dark-mode';
 
 // Pull in blocks
+
 @import 'blocks/cover';
 @import 'blocks/films';
 @import 'blocks/home-body';
@@ -20,4 +21,5 @@ $outputTokenCSS: false;
 @import 'blocks/coding-stats';
 
 // Pull in utilites
+
 @import 'utilities/subhead';
