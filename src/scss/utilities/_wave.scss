@@ -1,10 +1,10 @@
 .wave {
   margin-top: -#{get-size('500')};
-  transform: translateY(2px);
 
   svg {
     display: block;
     height: 6rem;
+    transform: translateY(2px);
     width: 100%;
   }
 }
