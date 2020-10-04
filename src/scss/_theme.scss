@@ -87,13 +87,18 @@
     background-size: 100%;
     content: '';
     content: '';
-    height: 40rem;
+    height: 100%;
     left: -15%;
     mix-blend-mode: color-dodge;
     pointer-events: none;
     position: absolute;
-    top: -21%;
-    width: 40rem;
+    top: -10%;
+    width: 60%;
     z-index: 10;
+
+    @include media-query('md') {
+      top: -21%;
+      width: 50%;
+    }
   }
 }
