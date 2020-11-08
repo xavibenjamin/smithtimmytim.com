@@ -3,6 +3,7 @@ title: 'Listening: Positions by Ariana Grande 🎶'
 featuredImage: '/images/uploads/2020/ariana-positions-feat.jpg'
 socialImage: '/images/uploads/2020/ariana-positions-feat.jpg'
 topics: 'music'
+date: 2020-11-06T08:49-07:00
 ---
 
 I've been an Ariana stan since day one. _Yours Truly_ was on repeat for a solid month.
