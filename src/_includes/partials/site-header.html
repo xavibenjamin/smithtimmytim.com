@@ -1,25 +1,23 @@
-<a href="#main-content" class="skip-link button">Skip to content</a>
+<a href="#main-content" class="[ skip-link ] [ button ]">Skip to content</a>
 <header class="site-header" role="banner"{% if isCaseStudy %} style="background-color: #{{ color }}" data-variant="light"{% endif %}>
-  <div class="wrapper">
-    <div class="site-header__inner">
-      <div class="site-name__wrapper">
-        <a href="/" aria-label="{{ site.name }} - home" class="site-name">
-          {% include "partials/icons/icon-smith-logo.svg" %}
-        </a>
-        <ul class="site-pronouns">
-          <li>he</li>
-          <li>him</li>
-        </ul>
+  <div class="[ site-header__inner ] [ wrapper ]">
+    <div class="[ site-id ] [ h-card ]">
+      <div class="site-id__image">
+        <img class="u-photo" src="/images/home/tim-smith-avatar.jpg" alt="Tim Smith Avatar Illustration">
       </div>
-      <nav class="[ nav ] [ site-header__nav ]" aria-label="Primary">
-        <ul class="nav__list">
-          {% for item in navigation.items %}
-            <li>
-              <a class="nav__url"{% if layout === 'layouts/note.html' and item.url === '/blog/' %} data-state="active"{% endif %} href="{{ item.url }}" {{ helpers.getLinkActiveState(item.url, page.url) | safe }}>{{ item.text }}</a>
-            </li>
-          {% endfor %}
-        </ul>
-      </nav>
+      <div class="site-id__info">
+        <h1 class="site-name"><a class="p-name u-url" rel="me" href="/">Timothy Smith</a><span class="site-pronouns">he/him</span></h1>
+        <p class="site-bio">Geek, coffee snob, and maker of stuff.</p>
+      </div>
     </div>
-  </div>
+    <nav class="[ nav ] [ site-header__nav ]" aria-label="Primary Navigation">
+      <ul class="nav__list">
+        {% for item in navigation.items %}
+          <li>
+            <a class="nav__url"{% if layout === 'layouts/note.html' and item.url === '/blog/' %} data-state="active"{% endif %} href="{{ item.url }}" {{ helpers.getLinkActiveState(item.url, page.url) | safe }}>{{ item.text }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </nav>
+  </div>  
 </header>
