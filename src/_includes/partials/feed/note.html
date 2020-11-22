@@ -1,13 +1,32 @@
-<article class="[ feed-post ] [ feed-entry h-entry ]">
+<article class="[ feed-post ] [ feed-entry ]">
 
-  <div class="[ page-content ] [ flow  flow-space-500 hyphens ] [ e-content ]">
+  <div class="[ page-content ] [ flow  flow-space-500 hyphens ]">
     {{ item.templateContent | safe }}
+
+    {% if item.data.photo %}
+    <figure class="[ photo-list ] [ flow flow-space-600 ]">
+      {% for item in item.data.photo %}
+        {% set photoUrl = item.url | replace("https://smithtimmytim.com", "") %}
+        {% if build.env === 'production' %}
+        <img 
+          src="https://res.cloudinary.com/smithtimmytim/image/fetch/w_480,f_auto,q_auto/{{ site.url }}{{ photoUrl }}" srcset="https://res.cloudinary.com/smithtimmytim/image/fetch/w_480,f_auto,q_auto/{{ site.url }}{{ photoUrl }} 480w, https://res.cloudinary.com/smithtimmytim/image/fetch/w_1000,f_auto,q_auto/{{ site.url }}{{ photoUrl }} 1000w, https://res.cloudinary.com/smithtimmytim/image/fetch/w_1800,f_auto,q_auto/{{ site.url }}{{ photoUrl }} 1800w"
+          {% if item.alt %}alt="{{ item.alt }}"{% endif %}
+          width="1000"
+          loading="lazy" />
+        {% else %}
+          <img 
+          src="{{ photoUrl }}" 
+          {% if item.alt %}alt="{{ item.alt }}"{% endif %} />
+        {% endif %}
+      {% endfor %}
+    </figure>
+    {% endif %}
   </div>
 
   <header class="[ feed-post__header ] [ gap-top-700 ]">
     <div class="feed-post__meta">
-      <a href="{{ item.url }}" class="[ feed-post__date ] [ u-url ]">
-        <time datetime="{{ item.date | dateIso }}" class="dt-published">{{ item.date | dateReadable('ddd, MMM Do, YYYY [at] h:mm a') }}</time>
+      <a href="{{ item.url }}" class="feed-post__date">
+        <time datetime="{{ item.date | dateIso }}">{{ item.date | dateReadable('ddd, MMM Do, YYYY [at] h:mm a') }}</time>
       </a>
     </div>
   </header>

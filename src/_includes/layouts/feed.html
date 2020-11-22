@@ -1,19 +1,11 @@
 {% extends "layouts/base.html" %}
 {% set pageCriticalStyles = ['css/blog.css'] %}
-{% set blogItems = collections.posts.slice(0,20) %}
+{% set blogItems = collections.feed.slice(0,20) %}
 
 {% set pageHeaderTitle = title %}
 {% set pageHeaderSummary = content %}
 {% set postListItems = blogItems %}
 
 {% block content %}
-  {% include "partials/page-header.html" %}
-
   {% include "partials/post-list.html" %}
-
-  <div class="[ wrapper ] [ gap-top-major gap-bottom-700 md:gap-bottom-900 ]">
-    <div class="inner-wrapper">
-      <span class="mini-headline"><a class="feed__archive-link" href="/archive/">Visit the Archive&nbsp;&rarr;</a></span>
-    </div>
-  </div>
 {% endblock %}
