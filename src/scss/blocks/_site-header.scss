@@ -11,9 +11,16 @@
 }
 
 .site-header__inner {
+  align-items: center;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+
+
   @include media-query('md') {
     align-items: center;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
   }
 }
