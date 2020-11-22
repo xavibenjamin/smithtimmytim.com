@@ -18,7 +18,9 @@
 }
 
 html {
-  font-size: clamp(12.8px, 1.3vw, 19.2px);
+  font-size: clamp(13px, 1.2vw, 18px);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
