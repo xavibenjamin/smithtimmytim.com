@@ -1,6 +1,6 @@
 .nav {
   font-size: get-size('400');
-  margin-top: get-size('500');
+  margin-bottom: get-size('600');
 
   @include media-query('md') {
     margin-bottom: 0;
