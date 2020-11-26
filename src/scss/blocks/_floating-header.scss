@@ -1,18 +1,27 @@
 .floating-header {
   background-color: var(--color-bg);
   left: 0;
-  padding-bottom: get-size('600');
-  padding-top: get-size('600');
+  padding-bottom: get-size('500');
+  padding-top: get-size('500');
   position: absolute;
   right: 0;
   top: 0;
   z-index: 120;
+
+  @include media-query('md') {
+    padding-bottom: get-size('600');
+    padding-top: get-size('600');
+  }
 
   .nav {
     margin: 0;
   }
 
   .nav__list {
-    justify-content: flex-end;
+    justify-content: center;
+
+    @include media-query('md') {
+      justify-content: flex-end;
+    }
   }
 }
