@@ -2,6 +2,12 @@
 
 @import 'config';
 
+// About page specific vars
+:root {
+  --cover-max-width: 100rem;
+  --cover-max-height: 60rem;
+}
+
 // Set Gorko to output no CSS for this file
 $outputTokenCSS: false;
 
@@ -12,9 +18,10 @@ $outputTokenCSS: false;
 
 // Pull in blocks
 
+@import 'blocks/floating-header';
 @import 'blocks/cover';
 @import 'blocks/films';
-@import 'blocks/home-body';
+@import 'blocks/about-body';
 @import 'blocks/header-anchor';
 @import 'blocks/page-content';
 @import 'blocks/recently-played';

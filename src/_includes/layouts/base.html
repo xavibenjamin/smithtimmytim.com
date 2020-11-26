@@ -28,7 +28,12 @@
   </head>
   <body>
     <div class="site-wrap">
-      {% include "partials/site-header.html" %}
+
+      {% if layout === 'layouts/about.html' %}
+        {% include "partials/floating-header.html" %}
+      {% else %}
+        {% include "partials/site-header.html" %}
+      {% endif %}
 
       <main tabindex="-1" id="main-content">
         {% block content %}{% endblock %}

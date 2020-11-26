@@ -11,7 +11,7 @@
 
 .site-id__image {
   margin-bottom: get-size('300');
-  width: 65px;
+  width: 55px;
 
   @include media-query('md') {
     margin-bottom: 0;

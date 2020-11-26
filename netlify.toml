@@ -1,3 +1,9 @@
 [build]
   command = "npm run production"
   publish = "dist"
+
+# Redirect old URLs
+[[redirects]]
+  from = "/blog"
+  to = "/"
+  force = true

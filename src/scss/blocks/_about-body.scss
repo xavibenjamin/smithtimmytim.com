@@ -1,4 +1,16 @@
-.home-body__inner {
+.about-body {
+  background-color: var(--color-bg);
+  padding-bottom: get-size('700');
+  padding-top: get-size('700');
+  position: relative;
+
+  @include media-query('md') {
+    padding-bottom: get-size('900');
+    padding-top: get-size('900');
+  }
+}
+
+.about-body__inner {
   display: grid;
   grid-gap: get-size('900');
   grid-template-areas:
@@ -20,10 +32,10 @@
   }
 }
 
-.home-body__sidebar {
+.about-body__sidebar {
   grid-area: sidebar;
 }
 
-.home-body__content {
+.about-body__content {
   grid-area: body;
 }

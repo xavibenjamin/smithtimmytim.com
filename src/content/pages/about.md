@@ -1,6 +1,6 @@
 ---
 title: 'About Me'
-layout: 'layouts/home.html'
+layout: 'layouts/about.html'
 permalink: '/about/'
 ---
 
