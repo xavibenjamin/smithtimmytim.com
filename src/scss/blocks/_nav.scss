@@ -30,7 +30,7 @@
     color: var(--color-text-alt);
   }
 
-  .site-header[data-variant='light'] & {
+  [data-variant='light'] & {
     color: get-color('light');
 
     &:focus,
