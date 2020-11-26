@@ -2,6 +2,7 @@
   background-color: var(--color-footer-bg);
   color: var(--color-footer-text);
   padding: get-size('900') 0;
+  position: relative;
 }
 
 .site-footer__inner {

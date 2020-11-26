@@ -1,5 +1,6 @@
 .wave {
   margin-top: -#{get-size('500')};
+  position: relative;
 
   svg {
     display: block;
