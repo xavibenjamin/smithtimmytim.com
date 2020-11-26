@@ -1,53 +1,38 @@
 .cover {
-  background-color: var(--color-bg-alt);
-  @include media-query('md') {
-    height: 75vh;
-    max-height: 42rem;
-  }
-}
-
-.cover__inner {
-  display: flex;
-  flex-direction: column-reverse;
-
-  @include media-query('md') {
-    flex-direction: row;
-  }
-}
-
-.cover__text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: get-size('700') 0;
-
-  @include media-query('md') {
-    margin-right: get-size('800');
-    max-width: 55ch;
-  }
+  height: 100vh;
+  margin-left: auto;
+  margin-right: auto;
+  max-height: var(--cover-max-height);
+  max-width: var(--cover-max-width);
+  overflow: hidden;
+  position: relative;
 }
 
 .cover__media {
-
-  @include media-query('md') {
-    max-width: 32rem;
-  }
+  height: 100vh;
+  max-height: var(--cover-max-height);
+  max-width: var(--cover-max-width);
+  overflow: hidden;
+  position: fixed;
+  width: 100vw;
 
   img {
-    margin-left: 50%;
-    max-width: none;
-    transform: translateX(-50%);
-    width: 100vw;
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
 
-    @include media-query('md') {
-      height: 75vh;
-      max-height: 42rem;
-      object-fit: cover;
-      width: 100%;
+    @include media-query('xxl') {
+      height: auto;
     }
   }
 }
 
-.cover__description {
-  margin-top: get-size('600');
+.cover__text {
+  background: linear-gradient(0deg, var(--color-bg), transparent);
+  bottom: 0;
+  left: 0;
+  padding: get-size('800');
+  position: absolute;
+  right: 0;
+  z-index: 100;
 }
