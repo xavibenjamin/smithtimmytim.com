@@ -8,11 +8,6 @@
   top: 0;
   z-index: 120;
 
-  @include media-query('md') {
-    padding-bottom: get-size('600');
-    padding-top: get-size('600');
-  }
-
   .nav {
     margin: 0;
   }
