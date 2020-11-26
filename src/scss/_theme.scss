@@ -45,3 +45,41 @@
   --color-dark-button-hover: var(--jagger);
   --color-button-text: var(--chardon);
 }
+
+[data-theme='bright-pixels'] {
+  --vulcan: #343743;
+  --very-light-grey: #ccc;
+  --black-russian: #23252a;
+  --glacier: #7bb2bf;
+  --ship-cove: #818fae;
+  --heather: #afb6bd;
+  --charcoal-blue: #1c1d21;
+  --chenin: #dbbb76;
+
+  --color-bg: var(--black-russian);
+  --color-bg-alt: var(--vulcan);
+  --color-nav-hover-bg: var(--vulcan);
+  --color-heading: var(--very-light-grey);
+  --color-text: var(--heather);
+  --color-text-alt: var(--ship-cove);
+  --color-accent: var(--persian-pink);
+  --color-accent-alt: var(--cotton-candy);
+  --color-border: var(--persian-pink);
+  --color-link: var(--glacier);
+  --color-media-border: var(--heather);
+  --color-newsletter-bg: var(--charcoal-blue);
+  --color-footer-bg: var(--black-russian);
+  --color-footer-heading: var(--very-light-grey);
+  --color-footer-text: var(--heather);
+  --color-footer-link: var(--glacier);
+  --color-code: var(--vulcan);
+  --color-code-block-bg: var(--charcoal-blue);
+  --color-coding-cursor: var(--chenin);
+  --color-social-icon: var(--heather);
+  --color-social-icon-bg: var(--charcoal-blue);
+  --color-social-icon-label: var(--glacier);
+  --color-text-accent: var(--chenin);
+  --color-dark-button: var(--vulcan);
+  --color-dark-button-hover: var(--black-russian);
+  --color-button-text: var(--heather);
+}
