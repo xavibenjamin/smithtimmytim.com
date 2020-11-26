@@ -1,0 +1,42 @@
+{% extends "layouts/base.html" %}
+{% set pageCriticalStyles = ['css/about.css'] %}
+
+
+{% block content %}
+
+  <div class="cover">
+    <div class="cover__media">
+      <img 
+        src="https://res.cloudinary.com/smithtimmytim/image/fetch/w_800,f_auto,q_auto/{{ site.url }}/images/home/cover-image.jpg"
+        alt="Image of Timothy Smith"
+        srcset="https://res.cloudinary.com/smithtimmytim/image/fetch/w_800,f_auto,q_auto/{{ site.url }}/images/home/cover-image.jpg 800w, https://res.cloudinary.com/smithtimmytim/image/fetch/w_1000,f_auto,q_auto/{{ site.url }}/images/home/cover-image.jpg 1000w, https://res.cloudinary.com/smithtimmytim/image/fetch/w_2500,f_auto,q_auto/{{ site.url }}/images/home/cover-image.jpg 1800w"
+        loading="lazy" />
+    </div>
+    
+    <div class="[ cover__text ] [ flow flow-space-300 ]">
+      <h1 class="cover__title headline">Howdy! I’m&nbsp;Tim&nbsp;&mdash;</h1>
+      <h2 class="cover__subhead subhead">a Latinx geek, coffee snob, and maker of stuff in <a href="https://en.wikipedia.org/wiki/Oceanside,_California" target="_blank" rel="noopener">Oceanside,&nbsp;CA</a></h2>
+    </div>
+  </div>
+
+  <div class="about-body">
+    <div class="[ about-body__inner ] [ wrapper ]">
+      <div class="about-body__sidebar">
+
+        {% include "partials/film-diary.html" %}
+
+        {% include "partials/coding.html" %}
+
+      </div>
+      <div class="about-body__content">
+        <h1 class="[ about-body__title ] [ gap-bottom-600 ]">About Me</h1>
+        <div class="page-content flow flow-space-500">
+          {{ content | safe }}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {% include "partials/recently-played.html" %}
+
+{% endblock %}
