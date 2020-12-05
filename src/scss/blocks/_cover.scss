@@ -21,7 +21,7 @@
     object-fit: cover;
     width: 100%;
 
-    @include media-query('xxl') {
+    @include media-query('xl') {
       height: auto;
     }
   }
