@@ -23,6 +23,7 @@ const youtube = require('./src/shortcodes/youtube.js');
 
 // Transforms
 const htmlMinTransform = require('./src/transforms/html-min-transform.js');
+const typesetTransform = require('./src/transforms/typeset-transform.js');
 
 // Utilities
 const markdown = require('./src/utils/markdown.js');
@@ -50,6 +51,13 @@ module.exports = (config) => {
   if (isProduction) {
     config.addTransform('htmlmin', htmlMinTransform);
   }
+
+  // Typeset Transform
+  config.addTransform('typeset', 
+    typesetTransform({
+      only: '.page-content',
+    })
+  );
 
   // Returns work items, sorted by display order
   config.addCollection('work', (collection) => {
