@@ -39,13 +39,13 @@
     "markdown-it-mentions": "^1.0.0",
     "markdown-it-table-of-contents": "^0.4.4",
     "moment": "^2.29.1",
-    "moment-timezone": "^0.5.31",
+    "moment-timezone": "^0.5.32",
     "sanitize-html": "^1.27.5",
-    "sass": "^1.27.0",
+    "sass": "^1.30.0",
     "stylelint-config-sass-guidelines": "^7.1.0"
   },
   "devDependencies": {
-    "stylelint": "^13.7.2",
+    "stylelint": "^13.8.0",
     "stylelint-config-standard": "^20.0.0"
   }
 }
