@@ -47,17 +47,19 @@ module.exports = (config) => {
   config.addPassthroughCopy({ './src/static': '/' });
 
 
-  // Only minify HTML if we are in production
+  // Only execute if we are in production
   if (isProduction) {
-    config.addTransform('htmlmin', htmlMinTransform);
-  }
 
-  // Typeset Transform
-  config.addTransform('typeset', 
-    typesetTransform({
-      only: '.page-content',
-    })
-  );
+    // HTML Min Transform
+    config.addTransform('htmlmin', htmlMinTransform);
+
+    // Typeset Transform
+    config.addTransform('typeset', 
+      typesetTransform({
+        only: '.page-content',
+      })
+    );
+  }
 
   // Returns work items, sorted by display order
   config.addCollection('work', (collection) => {
