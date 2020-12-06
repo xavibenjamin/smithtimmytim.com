@@ -65,7 +65,7 @@
 
   .case-study__body & {
     > p:first-of-type {
-      @include apply-utility('font', 'heading');
+      @include apply-utility('font', 'display');
       font-size: get-size('600');
       line-height: 1.3;
     }
@@ -92,7 +92,7 @@
   }
 
   thead th {
-    @include apply-utility('font', 'heading');
+    @include apply-utility('font', 'display');
     color: var(--color-heading);
     font-weight: bold;
     text-align: left;
@@ -101,5 +101,9 @@
   th,
   td {
     padding: 0.45rem 0 get-size('300');
+  }
+
+  .small-caps {
+    @include apply-utility('font', 'small');
   }
 }

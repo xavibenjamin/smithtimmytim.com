@@ -83,7 +83,7 @@
 }
 
 .film__title {
-  @include apply-utility('font', 'heading');
+  @include apply-utility('font', 'display');
   color: var(--color-text);
 
   font-weight: bold;

@@ -36,7 +36,7 @@
 }
 
 .site-name {
-  @include apply-utility('font', 'heading');
+  @include apply-utility('font', 'display');
   align-items: baseline;
   display: flex;
   justify-content: center;
@@ -48,6 +48,7 @@
   a {
     color: var(--color-heading);
     font-size: get-size('600');
+    font-weight: 700;
     margin-right: 0.5rem;
     text-decoration: none;
 

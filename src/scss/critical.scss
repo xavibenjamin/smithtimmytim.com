@@ -54,7 +54,7 @@ h1 {
 
 h2,
 h3 {
-  @include apply-utility('font', 'heading');
+  @include apply-utility('font', 'display');
   font-weight: 700;
   hyphens: none;
   line-height: 1.1;

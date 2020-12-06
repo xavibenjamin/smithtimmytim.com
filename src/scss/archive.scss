@@ -120,7 +120,7 @@ $outputTokenCSS: false;
 }
 
 .archive__title {
-  @include apply-utility('font', 'heading');
+  @include apply-utility('font', 'display');
   font-size: get-size('700');
   font-weight: 400;
   margin-bottom: 0.5rem;

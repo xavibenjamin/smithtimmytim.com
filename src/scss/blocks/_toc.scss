@@ -17,7 +17,7 @@
   }
 
   &::before {
-    @include apply-utility('font', 'heading');
+    @include apply-utility('font', 'display');
     content: 'Table of Contents';
     display: block;
     font-size: get-size('400');
