@@ -1,13 +1,16 @@
 // First up: config and functions
+
 @import 'config';
 
 // Set Gorko to output no CSS for this file
 $outputTokenCSS: false;
 
 // Next: pull in gorko for design tokens
+
 @import '../../node_modules/gorko/gorko';
 
 // Pull in blocks
+
 @import 'blocks/header-anchor';
 @import 'blocks/page-content';
 @import 'blocks/featured-image';
@@ -15,6 +18,6 @@ $outputTokenCSS: false;
 @import 'blocks/toc';
 
 // Pull in utilites
-@import 'utilities/inner-wrapper';
 
+@import 'utilities/inner-wrapper';
 @import 'syntax';
