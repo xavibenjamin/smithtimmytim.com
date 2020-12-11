@@ -23,3 +23,9 @@ $outputTokenCSS: false;
 @import 'utilities/inner-wrapper';
 @import 'utilities/mini-headline';
 @import 'syntax';
+
+.photo-list {
+  img {
+    border-radius: 0.25rem;
+  }
+}
