@@ -32,7 +32,7 @@ $success: #00c32a;
   }
 
   .alert__label {
-    @include apply-utility('font', 'heading');
+    @include apply-utility('font', 'display');
     color: var(--color-heading);
     font-weight: bold;
     line-height: 1.1;
