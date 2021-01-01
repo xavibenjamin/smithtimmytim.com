@@ -11,9 +11,9 @@ And yet, I've found happiness. Not a happiness rooted in rose-colored glasses, o
 
 But for me it's always been about truth. Was what I believed *true*? Not does it make me feel good, not does it surround me with mostly loving (albeit conditional) people, not because it would dissappoint my family if I didn't.
 
-**Is it the truth?** 
+**Is it the truth?**
 
-The answer for me is resounding no.
+The answer for me is a resounding no.
 
 Ultimately, going into 2021, I'm a completely different person to who I was just two years ago. It's change at a magnitude I didn't expect, but as the storm in my head settles, I'm a person I love deeply and accept fully. I know who I am, what I stand for, and the values that guide my life. I want to live a loving and thoughtful life, and I'm doing my best to do so.
 
