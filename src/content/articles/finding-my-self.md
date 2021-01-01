@@ -1,6 +1,7 @@
 ---
 title: 'Finding My Self'
-date: 2021-01-01T23:08:52.642-00:00
+date: 2021-01-01T15:14-07:00
+topics: 'personal'
 ---
 2019 and 2020 have been some of the most influential years in my life. I left the religious cult I grew up in, had some pretty life-changing breakthroughs in therapy, and I'm slowly finding a political voice I wasn't allowed to have previously.
 
