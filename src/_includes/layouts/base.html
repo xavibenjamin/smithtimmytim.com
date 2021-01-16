@@ -5,7 +5,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     {% include "partials/meta-info.html" %}
-    <link rel="alternate" type="application/rss+xml" href="{{ site.url }}/feed.xml" />
 
     <style>{% include "css/critical.css" %}</style>
 
@@ -26,30 +25,17 @@
 
     <link rel="stylesheet" type="text/css" href="https://cloud.typography.com/7114076/7888832/css/fonts.css" media="print" onload="this.media='all'" />
   </head>
-  <body>
+  <body class="{{ page.fileSlug }}">
     <div class="site-wrap">
 
-      {% if layout === 'layouts/about.html' %}
-        {% include "partials/floating-header.html" %}
-      {% else %}
-        {% include "partials/site-header.html" %}
-      {% endif %}
+      {% include "partials/site-header.html" %}
 
       <main tabindex="-1" id="main-content">
         {% block content %}{% endblock %}
       </main>
 
-      <div class="[ site-newsletter ] [ panel ]">
-        <div class="[ wrapper ] [ flow flow-space-300 ]">
-          <h2 class="headline">Stay in the Loop</h2>
-          <p class="measure-medium">I send a periodic email with life updates and new projects. No spam. No shenanigans.</p>
-          {% include "partials/newsletter-form.html" %}
-        </div>
-      </div>
-
       {% include "partials/site-footer.html" %}
     </div>
-    
 
     <script aync src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
     <script>
