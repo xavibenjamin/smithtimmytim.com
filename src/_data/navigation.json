@@ -1,16 +1,12 @@
 {
   "items": [
     {
+      "text": "Home",
+      "url": "/"
+    },
+    {
       "text": "Archive",
       "url": "/archive/"
-    },
-    {
-      "text": "About",
-      "url": "/about/"
-    },
-    {
-      "text": "Photos",
-      "url": "/photos/"
     },
     {
       "text": "Work",
