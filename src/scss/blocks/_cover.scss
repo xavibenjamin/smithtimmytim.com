@@ -13,17 +13,12 @@
   max-height: var(--cover-max-height);
   max-width: var(--cover-max-width);
   overflow: hidden;
-  position: fixed;
   width: 100vw;
 
   img {
     height: 100%;
     object-fit: cover;
     width: 100%;
-
-    @include media-query('xl') {
-      height: auto;
-    }
   }
 }
 
