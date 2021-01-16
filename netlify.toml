@@ -5,5 +5,11 @@
 # Redirect old URLs
 [[redirects]]
   from = "/blog"
-  to = "/"
+  to = "https://timmmmy.blog/"
   force = true
+
+[[redirects]]
+  from = "/blog/feed.xml"
+  to = "https://timmmmy.blog/feed/"
+  force = true
+  status = 301
