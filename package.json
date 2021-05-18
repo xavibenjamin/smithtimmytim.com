@@ -40,7 +40,7 @@
     "markdown-it-table-of-contents": "^0.4.4",
     "moment": "^2.29.1",
     "moment-timezone": "^0.5.33",
-    "sanitize-html": "^1.27.5",
+    "sanitize-html": "^2.3.2",
     "sass": "^1.32.8",
     "stylelint-config-sass-guidelines": "^7.1.0",
     "typeset": "^0.3.1"
